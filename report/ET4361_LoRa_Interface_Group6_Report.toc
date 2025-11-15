@@ -1,0 +1,10 @@
+\thispagestyle {empty}
+\contentsline {section}{\hbox to\@tempdima {\hfil } DANH MỤC KÝ HIỆU VÀ CHỮ VIẾT TẮT}{i}{section*.5}%
+\contentsline {section}{\hbox to\@tempdima {\hfil }DANH MỤC HÌNH VẼ}{ii}{section*.6}%
+\contentsline {section}{\hbox to\@tempdima {\hfil } DANH MỤC BẢNG BIỂU}{iii}{section*.7}%
+\contentsline {section}{\hbox to\@tempdima {\hfil }CHƯƠNG 1. CƠ SỞ LÝ THUYẾT}{1}{section*.7}%
+\contentsline {subsection}{\numberline {1.1}Giới thiệu về công nghệ truyền thông Lora}{1}{subsection.1.1}%
+\contentsline {subsubsection}{\numberline {1.1.1}Kỹ thuật trải phổ}{2}{subsubsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.2}Các thông số của Anten}{2}{subsection.1.2}%
+\contentsline {subsubsection}{\numberline {1.2.1}Tham số $S_{11}$}{2}{subsubsection.1.2.1}%
+\contentsline {section}{\hbox to\@tempdima {\hfil }TÀI LIỆU THAM KHẢO}{3}{section*.9}%

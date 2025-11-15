@@ -1,0 +1,278 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[fontsize=13pt]{scrextend}
+\usepackage[paperheight=29.7cm,paperwidth=21cm,right=2cm,left=3cm,top=2cm,bottom=2.5cm,twoside]{geometry}% Chuẩn A4, căn lề phải, trái, trên, dưới.
+\usepackage{mathptmx}
+\usepackage{amsmath}
+\usepackage{graphicx} % Thư viện chèn ảnh
+\usepackage{float} % Set vị trí chèn ảnh
+\usepackage{tikz} % Thư viện tạo khung bìa
+\usepackage{fontspec}
+\setmonofont{Courier New}
+\usetikzlibrary{calc} % Thư viện tikz
+\usepackage{indentfirst} % Thư viện thụt đầu dòng
+\usepackage{booktabs} % To thicken table lines
+
+\renewcommand{\baselinestretch}{1.2} % Giãn dòng 1.2
+\setlength{\parskip}{6pt} % Spacing after
+\setlength{\parindent}{1cm} % Set khoảng cách thụt đầu dòng mỗi đoạn
+\usepackage{titlesec} % Thư viện để set up các kiểu chữ
+\usepackage{listings}
+\usepackage{matlab-prettifier}
+\setcounter{secnumdepth}{4} % 4 Heading
+\titlespacing*{\section}{0pt}{0pt}{30pt} % Heading 1
+\titleformat*{\section}{\fontsize{16pt}{0pt}\selectfont \bfseries \centering}
+
+\titlespacing*{\subsection}{0pt}{10pt}{0pt} % Heading 2
+\titleformat*{\subsection}{\fontsize{14pt}{0pt}\selectfont \bfseries}
+
+\titlespacing*{\subsubsection}{0pt}{10pt}{0pt} % Heading 3
+\titleformat*{\subsubsection}{\fontsize{13pt}{0pt}\selectfont \bfseries \itshape}
+
+\titlespacing*{\paragraph}{0pt}{10pt}{0pt} % Heading 4
+\titleformat*{\paragraph}{\fontsize{13pt}{0pt}\selectfont \itshape}
+
+\renewcommand{\figurename}{\fontsize{12pt}{0pt}\selectfont \bfseries Hình}
+\renewcommand{\thefigure}{\thesection.\arabic{figure}}
+\usepackage[font=bf]{caption}
+\captionsetup[figure]{labelsep=space}
+
+\renewcommand{\tablename}{\fontsize{12pt}{0pt}\selectfont \bfseries Bảng}
+\renewcommand{\thetable}{\thesection.\arabic{table}}
+\captionsetup[table]{labelsep=space}
+
+\usepackage{tabularx}
+\newcolumntype{s}{>{\hsize=.3\hsize}X}
+\newcolumntype{y}{>{\hsize=.4\hsize}X}
+\newcolumntype{d}{>{\hsize=.1\hsize}X}
+\newcolumntype{a}{>{\hsize=1.1\hsize}X}
+\newcolumntype{g}{>{\hsize=5\hsize}X}
+\renewcommand{\tabularxcolumn}[1]{>{\small}m{#1}}
+
+\renewcommand{\theequation}{\thesection.\arabic{equation}} % Thay đổi đánh số phương trình mặc định
+\newtheorem{theorem}{Định lý}[section]
+\newtheorem{defn}[theorem]{Định nghĩa}
+\newtheorem{corollary}[theorem]{Hệ quả}
+\newtheorem{lemma}[theorem]{Bổ đề}
+\usepackage{lipsum} % Thư viện tạo chữ linh tinh.
+
+\usepackage[unicode]{hyperref}
+\usepackage{colortbl}
+\definecolor{LightCyan}{rgb}{0.88,1,1}
+\usepackage{forloop}
+\newcounter{loopcntr}
+\newcommand{\rpt}[2][1]{\forloop{loopcntr}{0}{\value{loopcntr}<#1}{#2}}
+
+\begin{document}
+	\setmainfont{Times New Roman}
+	\thispagestyle{empty}
+	\begin{center}
+		\vspace{-12pt}  \fontsize{14pt}{0pt}\selectfont ĐẠI HỌC BÁCH KHOA HÀ NỘI \\[6pt]
+		\textbf{\fontsize{18pt}{0pt}\selectfont TRƯỜNG ĐIỆN - ĐIỆN TỬ}
+		\vspace{0.75cm}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[height=4.25cm]{logoHUST.png}
+		\end{figure}
+		\vspace{1cm}
+		\textbf{\fontsize{28pt}{0pt}\selectfont HỆ THỐNG NHÚNG VÀ} \\
+		\textbf{\fontsize{28pt}{0pt}\selectfont THIẾT KẾ GIAO TIẾP NHÚNG}
+		\vspace{0.5cm}
+	\end{center}
+	\begin{center}
+		\textbf{\fontsize{24pt}{0pt}\selectfont Đánh giá hiệu năng của giao thức}\\
+		\textbf{\fontsize{24pt}{0pt}\selectfont truyền thông LoRa trong nhiều môi trường}\\
+		\vspace{1cm}
+		
+		\begin{tabular}{l l}
+			\centering
+			\begin{minipage}{0.5\textwidth}
+				\centering
+				\textbf{\fontsize{18pt}{0pt}\selectfont BÙI THỊ QUỲNH} \\[6pt]
+				\fontsize{16pt}{0pt}\selectfont quynh.bt224121@sis.hust.edu.vn 
+			\end{minipage}
+			&
+			\begin{minipage}{0.5\textwidth}
+				\centering
+				\textbf{\fontsize{18pt}{0pt}\selectfont VŨ VĂN LUẬT} \\[6pt]
+				\fontsize{16pt}{0pt}\selectfont luat.vv223795@sis.hust.edu.vn
+			\end{minipage}
+			\\[35pt]
+		\end{tabular}
+		\begin{minipage}{1.00\textwidth}
+			\centering
+			\textbf{\fontsize{18pt}{0pt}\selectfont ĐẶNG QUANG VŨ} \\[6pt]
+			\fontsize{16pt}{0pt}\selectfont vu.dq223830@sis.hust.edu.vn 
+		\end{minipage}
+
+		\vspace{0.75cm}
+		\vspace{0.75cm}
+		\begin{table}[H]
+			\centering
+			\begin{tabular}{l l l}
+				\fontsize{16pt}{0pt}\selectfont \textbf{Giảng viên hướng dẫn:}    & \fontsize{16pt}{0pt}\selectfont TS. Đào Việt Hùng \vspace{6pt} & \_\_\_\_\_\_\_\_\_\_\_ \\ 
+			\end{tabular}
+		\end{table}
+		\vspace{2cm}
+		\fontsize{16pt}{0pt}\selectfont \textbf{Hà Nội, 12/2025}
+	\end{center}
+	\cleardoublepage
+	\thispagestyle{empty}
+	\begin{center}
+		\vspace{-12pt}  \fontsize{14pt}{0pt}\selectfont ĐẠI HỌC BÁCH KHOA HÀ NỘI \\[6pt]
+		\textbf{\fontsize{18pt}{0pt}\selectfont TRƯỜNG ĐIỆN - ĐIỆN TỬ}
+		\vspace{0.75cm}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[height=4.25cm]{logoHUST.png}
+		\end{figure}
+		\vspace{1cm}
+		\textbf{\fontsize{28pt}{0pt}\selectfont HỆ THỐNG NHÚNG VÀ} \\
+		\textbf{\fontsize{28pt}{0pt}\selectfont THIẾT KẾ GIAO TIẾP NHÚNG}
+		\vspace{0.5cm}
+	\end{center}
+	\begin{center}
+		\textbf{\fontsize{24pt}{0pt}\selectfont Đánh giá hiệu năng của giao thức}\\
+		\textbf{\fontsize{24pt}{0pt}\selectfont truyền thông LoRa trong nhiều môi trường}\\
+		\vspace{1cm}
+		
+		\begin{tabular}{l l}
+			\centering
+			\begin{minipage}{0.5\textwidth}
+				\centering
+				\textbf{\fontsize{18pt}{0pt}\selectfont BÙI THỊ QUỲNH} \\[6pt]
+				\fontsize{16pt}{0pt}\selectfont quynh.bt224121@sis.hust.edu.vn 
+			\end{minipage}
+			&
+			\begin{minipage}{0.5\textwidth}
+				\centering
+				\textbf{\fontsize{18pt}{0pt}\selectfont VŨ VĂN LUẬT} \\[6pt]
+				\fontsize{16pt}{0pt}\selectfont luat.vv223795@sis.hust.edu.vn
+			\end{minipage}
+			\\[35pt]
+		\end{tabular}
+		\begin{minipage}{1.00\textwidth}
+			\centering
+			\textbf{\fontsize{18pt}{0pt}\selectfont ĐẶNG QUANG VŨ} \\[6pt]
+			\fontsize{16pt}{0pt}\selectfont vu.dq223830@sis.hust.edu.vn 
+		\end{minipage}
+		
+		\vspace{0.75cm}
+		\vspace{0.75cm}
+		\begin{table}[H]
+			\centering
+			\begin{tabular}{l l l}
+				\fontsize{16pt}{0pt}\selectfont \textbf{Giảng viên hướng dẫn:}    & \fontsize{16pt}{0pt}\selectfont TS. Đào Việt Hùng \vspace{6pt} &  \\ 
+			\end{tabular}
+		\end{table}
+		\vspace{2cm}
+		\fontsize{16pt}{0pt}\selectfont \textbf{Hà Nội, 12/2025}
+	\end{center}
+	\cleardoublepage
+	
+	
+	\section*{LỜI NÓI ĐẦU}
+	\thispagestyle{empty}
+	xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz .
+	
+	xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz .
+	
+	xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz .
+	
+	
+	Em xin chân thành cảm ơn!
+	\cleardoublepage
+	
+	\newpage 
+	\addtocontents{toc}{\protect\thispagestyle{empty}}
+	\renewcommand{\contentsname}{MỤC LỤC}
+	\tableofcontents 
+	\thispagestyle{empty}
+	\cleardoublepage
+	\newpage
+	
+	\pagenumbering{roman} % Đánh số thứ tự la mã
+	\section*{DANH MỤC KÝ HIỆU VÀ CHỮ VIẾT TẮT}
+	\phantomsection \addcontentsline{toc}{section}{\numberline {} DANH MỤC KÝ HIỆU VÀ CHỮ VIẾT TẮT}
+	
+	\begin{tabular}{ l l }
+		\hspace{1cm} IoT & \hspace{4cm} Internet of Things \\  
+		\hspace{1cm} AI & \hspace{4cm} Artificial Intelligence    \\
+		\hspace{1cm} BS  & \hspace{4cm} Base Station\\
+		\hspace{1cm} CSI & \hspace{4cm} Channel State Information \\  
+	\end{tabular}  
+	
+	\newpage
+	
+	
+	\renewcommand{\listfigurename}{DANH MỤC HÌNH VẼ}
+	{\let\oldnumberline\numberline
+		\renewcommand{\numberline}{Hình~\oldnumberline}
+		\listoffigures} 
+		\phantomsection\addcontentsline{toc}{section}{\numberline {}DANH MỤC HÌNH VẼ}
+	\newpage
+	
+	
+	\renewcommand{\listtablename}{DANH MỤC BẢNG BIỂU}
+	{\let\oldnumberline\numberline
+		\renewcommand{\numberline}{Bảng~\oldnumberline}
+		\listoftables}
+		\phantomsection\addcontentsline{toc}{section}{\numberline {} DANH MỤC BẢNG BIỂU}
+	\newpage
+	
+	
+	\pagenumbering{arabic}
+	\section*{CHƯƠNG 1. CƠ SỞ LÝ THUYẾT}
+	\addcontentsline{toc}{section}{\numberline{}CHƯƠNG 1. CƠ SỞ LÝ THUYẾT}
+	\setcounter{section}{1}
+	\setcounter{subsection}{0}
+	\setcounter{figure}{0}
+	\setcounter{table}{0}
+	\setcounter{equation}{0}
+	\subsection{Giới thiệu về công nghệ truyền thông Lora}
+	
+	LoRa (Long Range) là một loại công nghệ tần số vô tuyến không dây cho phép truyền tín hiệu ở khoảng cách xa đồng thời vẫn giữ được mức tiêu thụ năng lượng cực kỳ thấp giữa các thiết bị. Nhờ khả năng kết hợp giữa phạm vi truyền tải rộng và hiệu quả năng lượng cao, công nghệ LoRa được sử dụng trong các dự án yêu cầu tiêu thụ điện năng thấp, đặc biệt là ở những khu vực khó tiếp cận hoặc không có nguồn điện ổn định và phạm vi truyền nhận dữ liệu bao phủ tầm xa của mạng lưới thiết bị.
+	
+	LoRa sử dụng một kỹ thuật điều chế không dây có nguồn gốc từ công
+	nghệ CSS (Chirp Spread Spectrum), một phương pháp giúp tăng cường khả năng chống nhiễu, mở rộng phạm vi truyền và nâng cao độ tin cậy trong môi trường truyền thông không lý tưởng. Nó mã hóa thông tin trên sóng vô tuyến bằng cách sử dụng xung chirp, tương tự như cách cá heo và dơi giao tiếp. Truyền điều chế LoRa mạnh mẽ, chống nhiễu loạn và có thể được nhận trên khoảng cách xa.
+	
+	LoRa có khả năng hoạt động trong các dải tần sub-gigahertz không cần cấp phép, chẳng hạn như 915 MHz, 868 MHz và 433 MHz. Ngoài ra, LoRa cũng có thể hoạt động ở tần số 2,4 GHz, giúp tăng tốc độ truyền dữ liệu so với các băng tần dưới gigahertz, đổi lại là phạm vi truyền bị giảm. Những dải tần này thuộc băng tần ISM, được dành riêng cho các ứng dụng trong công nghiệp, khoa học và y tế.
+	
+	LoRa đặc biệt thích hợp cho các ứng dụng truyền tải những khối dữ liệu nhỏ với tốc độ bit thấp. Công nghệ này cho phép truyền dữ liệu ở khoảng cách xa hơn nhiều so với các chuẩn như WiFi, Bluetooth hay ZigBee. Nhờ những đặc điểm đó, LoRa trở thành lựa chọn lý tưởng cho các cảm biến và thiết bị truyền động hoạt động trong chế độ tiêu thụ năng lượng thấp.
+	
+	\begin{table}[h!]
+		\caption[Bảng trạng thái của mã tích chập (2, 1, 2)]{\bfseries \fontsize{12pt}{0pt}\selectfont Bảng trạng thái của mã tích chập (2, 1, 2)}
+		\label{bang11}
+		\centering
+		\begin{tabular}{|c|c|c|c|c|c|c|}
+			\hline
+			\textbf{Input} & \textbf{$S_1$} & \textbf{$S_2$} & \textbf{$V_1$} & \textbf{$V_2$} & \textbf{$S_1'$} & \textbf{$S_2'$} \\ 
+			\hline
+			0 & 0 & 0 & 0 & 0 & 0 & 0 \\ 
+			0 & 0 & 1 & 1 & 1 & 0 & 0 \\ 
+			0 & 1 & 0 & 1 & 0 & 0 & 1 \\ 
+			0 & 1 & 1 & 0 & 1 & 0 & 1 \\ 
+			1 & 0 & 0 & 1 & 1 & 1 & 0 \\ 
+			1 & 0 & 1 & 1 & 0 & 1 & 0 \\ 
+			1 & 1 & 0 & 0 & 1 & 1 & 1 \\ 
+			1 & 1 & 1 & 1 & 0 & 1 & 1 \\ 
+			\hline
+		\end{tabular}
+	\end{table}
+	
+	\subsubsection{Kỹ thuật trải phổ}
+	
+	\subsection{Các thông số của Anten}
+	
+	Trong lĩnh vực tần số vô tuyến (RF) và vi sóng (microwave), việc truyền tín hiệu điện giữa các thiết bị qua không gian đóng vai trò then chốt. Anten là thành phần quan trọng, vừa phát vừa thu sóng điện từ. Để anten hoạt động hiệu quả, cần nắm vững các thông số đặc trưng của anten, bao gồm trở kháng đầu vào, độ phản xạ, hệ số truyền, cũng như khả năng phối hợp trở kháng với đường truyền.
+	
+	\subsubsection{Tham số $S_{11}$}
+	
+	\newpage
+	
+	\phantomsection\addcontentsline{toc}{section}{\numberline {}TÀI LIỆU THAM KHẢO}
+	\renewcommand{\refname}{TÀI LIỆU THAM KHẢO}
+	\nocite{*}
+	\bibliographystyle{IEEEtran}
+	\bibliography{Ref}
+\end{document}
