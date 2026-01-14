@@ -21,8 +21,10 @@ Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, -1);
 #define LORA_IRQ 2
 
 int currentCR = 7;
+unsigned long startTime = 0;
 unsigned long lastReceiveTime = 0;
 float bitrate = 0;
+unsigned long packetCount = 0;
 
 void setup() {
   Serial.begin(115200);
@@ -53,6 +55,8 @@ void setup() {
   LoRa.setCodingRate4(currentCR);
   LoRa.enableCrc();
 
+  startTime = millis();
+
   display.clearDisplay();
   display.println("LoRa RX Ready!");
   display.display();
@@ -75,8 +79,10 @@ void loop() {
 
     lastReceiveTime = now;
 
-    Serial.printf("RX: %s | RSSI=%d | SNR=%.2f | CR=%d\n",
-                  msg.c_str(), rssi, snr, currentCR);
+    float t = (millis() - startTime) / 1000.0;
+    packetCount++;
+
+    Serial.printf("RX[%lu]: %s | RSSI=%d | SNR=%.2f | t=%.2fs\n", packetCount, msg.c_str(), rssi, snr, t);
 
     // Display
     display.clearDisplay();

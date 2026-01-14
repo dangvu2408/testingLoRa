@@ -1,0 +1,1 @@
+Hình 2.1. Sơ đồ chân của ESP32 Dev Kit V1 - https://esp32.implrust.com/esp32-intro/pinout.html

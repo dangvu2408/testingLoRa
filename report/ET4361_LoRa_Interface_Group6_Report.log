@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 24.1) (preloaded format=xelatex 2024.4.20)  15 NOV 2025 10:15
+This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 24.1) (preloaded format=xelatex 2024.4.20)  14 JAN 2026 23:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1021,67 +1021,160 @@ Overfull \hbox (24.0pt too wide) in paragraph at lines 139--159
 ] [5] [6
 
 
-] (ET4361_LoRa_Interface_Group6_Report.toc)
+] (ET4361_LoRa_Interface_Group6_Report.toc [7])
 \tf@toc=\write5
 \openout5 = `ET4361_LoRa_Interface_Group6_Report.toc'.
 
- [7] [8
+ [8] [1
 
 
-] [1]
-(ET4361_LoRa_Interface_Group6_Report.lof)
+]
+(ET4361_LoRa_Interface_Group6_Report.lof [2])
 \tf@lof=\write6
 \openout6 = `ET4361_LoRa_Interface_Group6_Report.lof'.
 
- [2]
+ [3]
 (ET4361_LoRa_Interface_Group6_Report.lot)
 \tf@lot=\write7
 \openout7 = `ET4361_LoRa_Interface_Group6_Report.lot'.
 
- [3] [1]
+ [4] [1]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 269.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 269.
+(hyperref)                removing `math shift' on input line 292.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 269.
+(hyperref)                removing `subscript' on input line 292.
 
-[2] (ET4361_LoRa_Interface_Group6_Report.bbl
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 292.
+
+[2]
+File: fig21.png Graphic file (type bmp)
+<fig21.png>
+File: fig22.png Graphic file (type bmp)
+<fig22.png>
+ [3]
+Overfull \hbox (10.15234pt too wide) in paragraph at lines 338--339
+[]\TU/TimesNewRoman(0)/m/n/13 - Chân RTC thời gian thực: Các chân GPIO12–GPIO15
+, GPIO25–GPIO27, GPIO32–
+ []
+
+[4] [5]
+File: fig23.png Graphic file (type bmp)
+<fig23.png>
+ [6] [7]
+File: fig241.jpg Graphic file (type bmp)
+<fig241.jpg>
+ [8]
+Underfull \hbox (badness 10000) in paragraph at lines 510--510
+[]|\TU/CourierNew(0)/m/n/13 "Hello World
+ []
+
+File: minhchung/hanhlang_d8.jpg Graphic file (type bmp)
+<minhchung/hanhlang_d8.jpg>
+File: measure_img/sum_rssi_clear_10th-d8.png Graphic file (type bmp)
+<measure_img/sum_rssi_clear_10th-d8.png>
+[9] [10]
+File: measure_img/sum_snr_clear_10th-d8.png Graphic file (type bmp)
+<measure_img/sum_snr_clear_10th-d8.png>
+
+Underfull \hbox (badness 1622) in paragraph at lines 560--560
+[]|\TU/TimesNewRoman(0)/m/n/13 Tín hiệu rất mạnh, SNR cao,
+ []
+
+
+Underfull \hbox (badness 1565) in paragraph at lines 566--566
+\TU/TimesNewRoman(0)/m/n/13 SNR thấp hơn ở một số thời
+ []
+
+
+Underfull \hbox (badness 6708) in paragraph at lines 568--568
+[]|\TU/TimesNewRoman(0)/m/n/13 RSSI giảm mạnh, SNR vẫn
+ []
+
+
+Overfull \hbox (0.50766pt too wide) in paragraph at lines 556--578
+ [][] 
+ []
+
+[11] [12]
+File: fig35_1.pdf Graphic file (type pdf)
+<use fig35_1.pdf>
+File: measure_img/rssi_snr_d8_d6_1.png Graphic file (type bmp)
+<measure_img/rssi_snr_d8_d6_1.png>
+File: measure_img/rssi_snr_d8_d9.png Graphic file (type bmp)
+<measure_img/rssi_snr_d8_d9.png>
+ [13]
+File: fig37.png Graphic file (type bmp)
+<fig37.png>
+File: measure_img/rssi_snr_hobaymau_mono.png Graphic file (type bmp)
+<measure_img/rssi_snr_hobaymau_mono.png>
+ [14] [15]
+File: measure_img/rssi_snr_hobaymau_dual.png Graphic file (type bmp)
+<measure_img/rssi_snr_hobaymau_dual.png>
+ [16]
+File: fig36.pdf Graphic file (type pdf)
+<use fig36.pdf>
+File: measure_img/rssi_snr_600m_hotay.png Graphic file (type bmp)
+<measure_img/rssi_snr_600m_hotay.png>
+File: measure_img/rssi_snr_600m_hotay.png Graphic file (type bmp)
+<measure_img/rssi_snr_600m_hotay.png>
+File: measure_img/rssi_snr_600m_hotay.png Graphic file (type bmp)
+<measure_img/rssi_snr_600m_hotay.png>
+File: measure_img/rssi_snr_600m_hotay.png Graphic file (type bmp)
+<measure_img/rssi_snr_600m_hotay.png>
+File: measure_img/rssi_snr_600m_hotay.png Graphic file (type bmp)
+<measure_img/rssi_snr_600m_hotay.png>
+File: measure_img/rssi_snr_600m_hotay.png Graphic file (type bmp)
+<measure_img/rssi_snr_600m_hotay.png>
+ [17] [18]
+Underfull \hbox (badness 1454) in paragraph at lines 717--717
+\TU/TimesNewRoman(0)/m/n/13 nhờ khả năng giải mã ở
+ []
+
+
+Underfull \hbox (badness 5878) in paragraph at lines 729--729
+\TU/TimesNewRoman(0)/m/n/13 trì trong điều kiện môi
+ []
+
+
+Underfull \hbox (badness 1132) in paragraph at lines 732--732
+[]|\TU/TimesNewRoman(0)/m/n/13 Tín hiệu sát ngưỡng thu,
+ []
+
+[19] [20]
+File: fig31.png Graphic file (type bmp)
+<fig31.png>
+File: fig34.pdf Graphic file (type pdf)
+<use fig34.pdf>
+File: fig35.pdf Graphic file (type pdf)
+<use fig35.pdf>
+ [21] [22] [23] (ET4361_LoRa_Interface_Group6_Report.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 26--31
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
 [][][][][][][][] []
  []
 
-) [3] (ET4361_LoRa_Interface_Group6_Report.aux)
+) [24] (ET4361_LoRa_Interface_Group6_Report.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
  ***********
-
-
-Package rerunfilecheck Warning: File `ET4361_LoRa_Interface_Group6_Report.out' 
-has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `ET4361_LoRa_Interface_Group6_Report
-.out':
-(rerunfilecheck)             Before: F7EBFF1C034264BBE4BC9024BD763FB9;1538
-(rerunfilecheck)             After:  BF70B6768099DD2644254180451AB250;1711.
+Package rerunfilecheck Info: File `ET4361_LoRa_Interface_Group6_Report.out' has
+ not changed.
+(rerunfilecheck)             Checksum: B119525B4C6D852FDB1EF295B075AC58;5829.
  ) 
 Here is how much of TeX's memory you used:
- 27186 strings out of 409617
- 539698 string characters out of 5778276
+ 27396 strings out of 409617
+ 544489 string characters out of 5778276
  1935191 words of memory out of 5000000
- 48835 multiletter control sequences out of 15000+600000
- 566839 words of font info for 90 fonts, out of 8000000 for 9000
+ 49021 multiletter control sequences out of 15000+600000
+ 566863 words of font info for 93 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 108i,11n,107p,573b,437s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 108i,15n,107p,1062b,448s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on ET4361_LoRa_Interface_Group6_Report.pdf (14 pages).
+Output written on ET4361_LoRa_Interface_Group6_Report.pdf (36 pages).

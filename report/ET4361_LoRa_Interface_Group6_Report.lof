@@ -1,0 +1,23 @@
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Sơ đồ chân của ESP32 Dev Kit V1}}{3}{figure.caption.10}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces ESP-WROOM-32}}{4}{figure.caption.11}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Module Ra-02}}{6}{figure.caption.13}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Màn hình OLED SSD1306}}{8}{figure.caption.15}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Hình ảnh môi trường truyền hành lang D8}}{10}{figure.caption.17}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Kết quả đo RSSI theo thời gian ở môi trường không vật cản ở các khoảng cách khác nhau}}{10}{figure.caption.18}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Kết quả đo SNR theo thời gian ở môi trường không vật cản ở các khoảng cách khác nhau}}{11}{figure.caption.19}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Bản đồ các địa điểm đo tại tòa D6, D8, D9}}{13}{figure.caption.21}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Kết quả đo RSSI và SNR tại điểm đo ở hai tòa D6-D8}}{13}{figure.caption.22}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Kết quả đo RSSI và SNR tại điểm đo ở hai tòa D8-D9}}{14}{figure.caption.23}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Bản đồ địa điểm đo tại hồ Bảy Mẫu}}{15}{figure.caption.24}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Kết quả đo RSSI và SNR tại Hồ Bảy Mẫu với 2 anten monopole 12dBi}}{15}{figure.caption.25}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Kết quả đo RSSI và SNR tại Hồ Bảy Mẫu với anten NI-770r}}{16}{figure.caption.26}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Bản đồ các địa điểm đo tại Hồ Tây}}{17}{figure.caption.27}%
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Kết quả đo RSSI và SNR tại Hồ Tây tại điểm thu 1 - Vườn hoa Trích Sài}}{17}{figure.caption.28}%
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Kết quả đo RSSI và SNR tại Hồ Tây tại điểm thu 2 - Đối diện 151 Trích Sài}}{18}{figure.caption.29}%
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Kết quả đo RSSI và SNR tại Hồ Tây tại điểm thu 3 - Sân chơi Cụm 10}}{18}{figure.caption.30}%
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Kết quả đo RSSI và SNR tại Hồ Tây tại điểm thu 4 - Đối diện 441 Lạc Long Quân}}{18}{figure.caption.31}%
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Kết quả đo RSSI và SNR tại Hồ Tây tại điểm thu 5 - Đối diện Chùa Vạn Niên}}{19}{figure.caption.32}%
+\contentsline {figure}{\numberline {3.16}{\ignorespaces Kết quả đo RSSI và SNR tại Hồ Tây tại điểm thu 6 - Cạnh Công viên nước Hồ Tây}}{19}{figure.caption.33}%
+\contentsline {figure}{\numberline {3.17}{\ignorespaces Bản đồ địa điểm đo tại hồ Tiền}}{21}{figure.caption.35}%
+\contentsline {figure}{\numberline {3.18}{\ignorespaces Kết quả đo RSSI theo thời gian ở hai môi trường khác nhau}}{21}{figure.caption.36}%
+\contentsline {figure}{\numberline {3.19}{\ignorespaces Kết quả đo SNR theo thời gian ở hai môi trường khác nhau}}{22}{figure.caption.37}%

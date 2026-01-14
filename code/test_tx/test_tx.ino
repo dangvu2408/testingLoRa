@@ -59,19 +59,19 @@ void setup() {
 }
 
 void loop() {
-  // String msg = "Hello World " + String(counter);
-  byte bitValue = counter % 2;
+  String msg = "Hello World " + String(counter);
+  // byte bitValue = counter % 2;
 
   
   LoRa.beginPacket();
-  LoRa.print(bitValue);
+  LoRa.print(msg);
   LoRa.endPacket();
 
 
   // Display to OLED
   display.clearDisplay();
   display.setCursor(0, 0);
-  display.printf("TX bit: %d\n", bitValue);
+  display.printf("TX: %s\n", msg.c_str());
   display.display();
 
   counter++;

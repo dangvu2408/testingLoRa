@@ -195,12 +195,35 @@
 	\section*{DANH MỤC KÝ HIỆU VÀ CHỮ VIẾT TẮT}
 	\phantomsection \addcontentsline{toc}{section}{\numberline {} DANH MỤC KÝ HIỆU VÀ CHỮ VIẾT TẮT}
 	
-	\begin{tabular}{ l l }
-		\hspace{1cm} IoT & \hspace{4cm} Internet of Things \\  
-		\hspace{1cm} AI & \hspace{4cm} Artificial Intelligence    \\
-		\hspace{1cm} BS  & \hspace{4cm} Base Station\\
-		\hspace{1cm} CSI & \hspace{4cm} Channel State Information \\  
-	\end{tabular}  
+	\begin{table}[h!]
+		\centering
+		\renewcommand{\arraystretch}{1.3}
+		\begin{tabular}{|>{\centering\arraybackslash}p{2.5cm}
+				|>{\centering\arraybackslash}p{6cm}
+				|>{\centering\arraybackslash}p{6cm}|}
+			\hline
+			\textbf{Từ viết tắt} & \textbf{Tên tiếng Anh} & \textbf{Nghĩa tiếng Việt} \\ \hline
+			IoT & Internet of Things & Internet vạn vật \\ \hline
+			CSS & Chirp Spread Spectrum & Trải phổ điều chế Chirp \\ \hline
+			ISM & Industrial, Scientific and Medical & Băng tần công nghiệp, khoa học và y tế \\ \hline
+			RF & Radio Frequency & Tần số vô tuyến \\ \hline
+			GPIO & General Purpose Input/Output & Chân vào/ra đa dụng \\ \hline
+			ADC & Analog-to-Digital Converter & Bộ chuyển đổi tương tự sang số \\ \hline
+			DAC & Digital-to-Analog Converter & Bộ chuyển đổi số sang tương tự \\ \hline
+			SPI & Serial Peripheral Interface & Giao tiếp nối tiếp ngoại vi \\ \hline
+			RTC & Real-Time Clock & Đồng hồ thời gian thực \\ \hline
+			PWM & Pulse Width Modulation & Điều chế độ rộng xung \\ \hline
+			I\textsubscript{2}C & Inter-Integrated Circuit & Giao tiếp liên mạch tích hợp \\ \hline
+			SDA & Serial Data Line & Đường dữ liệu nối tiếp \\ \hline
+			SCL & Serial Clock Line & Đường xung nhịp nối tiếp \\ \hline
+			UART & Universal Asynchronous Receiver/Transmitter & Bộ thu phát nối tiếp không đồng bộ \\ \hline
+			BLE & Bluetooth Low Energy & Bluetooth năng lượng thấp \\ \hline
+			SRAM & Static Random Access Memory & Bộ nhớ truy cập ngẫu nhiên tĩnh \\ \hline
+			MQTT & Message Queuing Telemetry Transport & Giao thức truyền thông hàng đợi nhẹ \\ \hline
+			HTTP & Hypertext Transfer Protocol & Giao thức truyền tải siêu văn bản \\ \hline
+			FreeRTOS & Free Real-Time Operating System & Hệ điều hành thời gian thực mã nguồn mở \\ \hline
+		\end{tabular}
+	\end{table}
 	
 	\newpage
 	
@@ -267,6 +290,485 @@
 	Trong lĩnh vực tần số vô tuyến (RF) và vi sóng (microwave), việc truyền tín hiệu điện giữa các thiết bị qua không gian đóng vai trò then chốt. Anten là thành phần quan trọng, vừa phát vừa thu sóng điện từ. Để anten hoạt động hiệu quả, cần nắm vững các thông số đặc trưng của anten, bao gồm trở kháng đầu vào, độ phản xạ, hệ số truyền, cũng như khả năng phối hợp trở kháng với đường truyền.
 	
 	\subsubsection{Tham số $S_{11}$}
+	
+	\newpage
+	
+	\section*{CHƯƠNG 2. HỆ THỐNG PHẦN CỨNG}
+	\addcontentsline{toc}{section}{\numberline{}CHƯƠNG 2. HỆ THỐNG PHẦN CỨNG}
+	\setcounter{section}{2}
+	\setcounter{subsection}{0}
+	\setcounter{figure}{0}
+	\setcounter{table}{0}
+	\setcounter{equation}{0}
+	
+	\subsection{Vi điều khiển ESP32}
+	
+	ESP32 là một vi điều khiển giá rẻ, tiêu thụ năng lượng thấp, hỗ trợ cả Wi-Fi và Bluetooth dual-mode (Bluetooth chế độ kép), hỗ trợ trạng thái chế độ tiêu thụ điện năng thấp như ngủ sâu để tiết kiệm điện năng. Chip sử dụng bộ xử lý Tensilica Xtensa LX6, có sẵn ở các biến thể lõi đơn và lõi kép. Bên trong, ESP32 tích hợp nhiều thành phần như công tắc antenna, RF balun, bộ khuếch đại công suất, bộ khuếch đại thu nhiễu thấp, bộ lọc, và module quản lý năng lượng. 
+	
+	ESP32 được thiết kế bởi Espressif Systems, một công ty công nghệ có trụ sở tại Thượng Hải, Trung Quốc. Chip này được sản xuất bởi TSMC sử dụng công nghệ 40 nm, đảm bảo hiệu suất cao và kích thước nhỏ gọn, phù hợp với các ứng dụng IoT và nhúng. Đây cũng là sản phẩm kế thừa của ESP8266, được tích hợp nhiều tính năng mới. Sơ đồ chân của dòng ESP32 Dev Kit V1 được biểu diễn trên Hình \ref{fig21}.
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[clip, width=13cm]{fig21.png}
+		\caption[Sơ đồ chân của ESP32 Dev Kit V1]{\bfseries \fontsize{12pt}{0pt}\selectfont Sơ đồ chân của ESP32 Dev Kit V1}
+		\label{fig21}
+	\end{figure}
+	
+	\subsubsection{Thông số kỹ thuật}
+	
+	Hình \ref{fig22} minh họa cho module ESP-WROOM-32, là module Wi-Fi và Bluetooth tích hợp trên vi điều khiển ESP32.
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[clip, width=3.5cm]{fig22.png}
+		\caption[ESP-WROOM-32]{\bfseries \fontsize{12pt}{0pt}\selectfont ESP-WROOM-32}
+		\label{fig22}
+	\end{figure}
+	
+	ESP32 cung cấp nhiều loại chân với các chức năng chuyên biệt, bao gồm:
+	
+	- Chân chỉ đầu vào: GPIO từ 34 đến 39 chỉ hỗ trợ đầu vào, không có điện trở kéo lên/kéo xuống bên trong và không thể dùng làm đầu ra.
+	
+	- Chân tích hợp Flash: GPIO từ 6 đến 11 được sử dụng để kết nối Flash SPI chip ESP-WROOM-32, không dùng cho mục đích khác.
+	
+	- Bộ chuyển đổi ADC: Có 18 kênh ADC 12 bit (GPIO32–GPIO39, GPIO12–GPIO15, GPIO25–GPIO27, GPIO0, GPIO2, GPIO4) dùng để chuyển đổi tín hiệu tương tự sang số.
+	
+	- Bộ chuyển đổi DAC: ESP32 có 2 kênh DAC 8 bit (GPIO25–DAC1, GPIO26–DAC2) để chuyển đổi tín hiệu số sang tương tự với giá trị từ 0–255, tương ứng điện áp từ 0 đến 3.3V.
+	
+	- Chân RTC thời gian thực: Các chân GPIO12–GPIO15, GPIO25–GPIO27, GPIO32–GPIO36, GPIO0, GPIO2, GPIO4, GPIO39 có thể đánh thức ESP32 từ chế độ ngủ sâu và được dùng làm chân ngắt ngoài.
+	
+	- Chân PWM: ESP32 có 16 kênh PWM độc lập để tạo tín hiệu PWM với nhiều thuộc tính khác nhau. Tất cả các chân hỗ trợ đầu ra đều có thể dùng làm chân PWM, ngoại trừ GPIO34–GPIO39.
+	
+	- Chân I2C: Có hai kênh I2C và bất kỳ chân nào cũng đặt làm SDA hoặc SCL. Mặc định khi dùng Arduino IDE, GPIO21 là SDA và GPIO22 là SCL.
+	
+	- Chân SPI: Dùng giao tiếp giữa ESP32 với thiết bị ngoại vi khác như cảm biến, màn hình và bộ nhớ flash… gọi là SPI0, SPI1, HSPI, VSPI.
+	
+	- Chân ngắt ngoài: Tất cả các chân Module Doit ESP32 Devkit đều có thể sử dụng ngắt ngoài.
+	
+	- Nút EN (Enable) trên board: Reset Button, sử dụng để reset lại vi điều khiển. Khi nhấn nút điện áp trên chân EN bị kéo xuống LOW, khiến ESP32 ngừng hoạt động. Khi nhả nút EN, điện áp trở lại mức HIGH nhờ điện trở pull-up và ESP32 khởi động lại từ đầu.
+	
+	- Nút BOOT trên board: Dùng trong chế độ Flash Mode, giúp ESP32 nhận firmware mới từ máy tính, nhấn giữ BOOT khi nạp code bị lỗi. 
+	
+	\begin{table}[H]
+		\caption[Thông số kỹ thuật của vi điều khiển ESP32]{\bfseries \fontsize{12pt}{0pt}\selectfont Thông số kỹ thuật của vi điều khiển ESP32}
+		\label{tab21}
+		\centering
+		\begin{tabular}{|p{4cm}|p{9cm}|}
+			\hline
+			\textbf{Thành phần} & \textbf{Mô tả} \\ 
+			\hline
+			CPU & Dual-core Xtensa 32-bit LX6 (tối đa 240 MHz) \\ 
+			\hline
+			RAM & 520 KB SRAM \\ 
+			\hline
+			Flash & 4 MB (tùy phiên bản đến 16 MB) \\ 
+			\hline
+			Wi-Fi & 802.11 b/g/n, hỗ trợ chế độ AP và STA \\ 
+			\hline
+			Bluetooth & Bluetooth Low Energy (BLE) v4.2 và Bluetooth Classic \\ 
+			\hline
+			GPIO & Khoảng 34 chân I/O (tùy cấu hình) \\ 
+			\hline
+			ADC / DAC & 18 kênh ADC 12-bit, 2 kênh DAC 8-bit \\ 
+			\hline
+			PWM & 16 kênh PWM \\ 
+			\hline
+			I\textsubscript{2}C / SPI / UART & Hỗ trợ đầy đủ các bus giao tiếp ngoại vi \\ 
+			\hline
+			Timers & Bộ định thời và watchdog tích hợp \\ 
+			\hline
+		\end{tabular}
+	\end{table}
+	
+	\subsubsection{Ưu điểm của ESP32}
+	
+	Vi điều khiển ESP32 nổi bật nhờ tích hợp sẵn hai chuẩn truyền thông không dây Wi-Fi và Bluetooth, giúp giảm chi phí phần cứng và độ phức tạp của hệ thống. Bên cạnh đó, ESP32 cung cấp nhiều chân I/O và hỗ trợ đa dạng các giao tiếp phổ biến như UART, SPI, I\textsubscript{2}C, PWM, ADC và DAC, đáp ứng tốt yêu cầu của các ứng dụng nhúng. Với bộ vi xử lý hai nhân Xtensa LX6 có xung nhịp lên đến 240 MHz cùng khả năng hỗ trợ hệ điều hành thời gian thực FreeRTOS, ESP32 cho phép xử lý hiệu quả các tác vụ phức tạp và lập trình đa nhiệm. 
+	
+	\subsubsection{Nhược điểm của ESP32}
+	
+	Bên cạnh các ưu điểm, ESP32 vẫn tồn tại một số hạn chế cần lưu ý. Mức tiêu thụ năng lượng của vi điều khiển tương đối cao khi sử dụng Wi-Fi hoặc Bluetooth liên tục, do đó cần tối ưu chế độ ngủ đối với các ứng dụng dùng pin. Độ chính xác của bộ chuyển đổi ADC ở mức trung bình và dễ bị nhiễu, chưa phù hợp cho các ứng dụng yêu cầu đo lường chính xác cao. Ngoài ra, các chân GPIO chỉ chịu được mức điện áp 3.3 V và chip có thể sinh nhiệt đáng kể khi hoạt động lâu dài, ảnh hưởng đến độ ổn định nếu không có giải pháp phù hợp.
+	
+	\subsubsection{Ứng dụng phổ biến của ESP32}
+	
+	Nhờ tích hợp khả năng xử lý mạnh và truyền thông không dây, ESP32 được sử dụng rộng rãi trong các hệ thống Internet of Things (IoT) như nhà thông minh và giám sát môi trường. Vi điều khiển này cũng được ứng dụng trong các hệ thống truyền dữ liệu không dây sử dụng các giao thức như MQTT và HTTP, cũng như trong các dự án Arduino nâng cao. Bên cạnh đó, với sự hỗ trợ của FreeRTOS, ESP32 phù hợp cho các ứng dụng nhúng đa nhiệm và các đồ án học thuật liên quan đến thu thập, xử lý và hiển thị dữ liệu.
+	
+	\subsection{Module Ra-02}
+	
+	Module Ra-02 (Hình \ref{fig23}) là module truyền thông không dây tầm xa sử dụng công nghệ LoRa, được tích hợp chip SX1278 của hãng Semtech. Công nghệ LoRa cho phép truyền dữ liệu ở khoảng cách lớn với tốc độ thấp, đồng thời có mức tiêu thụ năng lượng rất thấp và khả năng chống nhiễu cao. Nhờ các đặc tính này, Ra-02 đặc biệt phù hợp cho các ứng dụng IoT, nhất là trong môi trường ngoài trời hoặc các khu vực có điều kiện hạ tầng hạn chế như vùng sâu, vùng xa.
+	
+	Module Ra-02 hoạt động trong dải tần ISM 433 MHz và hỗ trợ nhiều phương thức điều chế khác nhau như LoRa, FSK và OOK. Module giao tiếp với vi điều khiển thông qua chuẩn SPI, đồng thời cung cấp các chân DIO0 đến DIO5 phục vụ cho việc cấu hình, điều khiển quá trình truyền và nhận dữ liệu.
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[clip, width=4.5cm]{fig23.png}
+		\caption[Module Ra-02]{\bfseries \fontsize{12pt}{0pt}\selectfont Module Ra-02}
+		\label{fig23}
+	\end{figure}
+	
+	\subsubsection{Thông số kỹ thuật}
+	
+	Bảng \ref{tab22} mô tả các thông số kỹ thuật của Module Ra-02.
+	
+	\begin{table}[H]
+		\caption[Thông số kỹ thuật của Module Ra-02]{\bfseries \fontsize{12pt}{0pt}\selectfont Thông số kỹ thuật của Module Ra-02}
+		\label{tab22}
+		\centering
+		\begin{tabular}{|p{3.5cm}|p{9.5cm}|}
+			\hline
+			\textbf{Thành phần} & \textbf{Mô tả} \\ 
+			\hline
+			Chip RF & SemtechSX1278 (LoRa/FSK/OOK) \\ 
+			\hline
+			Băng tần & 410 đến 525 MHz (thường cấu hình 433 MHz) \\ 
+			\hline
+			Công suất TX & Tối đa +17 dBm (xấp xỉ 50 mW) \\ 
+			\hline
+			Độ nhạy RX & Tối đa $-148$ dBm (SF12, 433 MHz) \\ 
+			\hline
+			Tốc độ dữ liệu & 0.018 đến 37.5 kbps, tối đa 300 kbps (FSK/OOK) \\ 
+			\hline
+			Giao tiếp MCU & SPI (NSS, MOSI, MISO, SCK) + DIO0 - DIO5 \\ 
+			\hline
+			Điện áp cấp & 1.8 đến 3.7 V (điển hình 3.3 V) \\ 
+			\hline
+			Dòng tiêu thụ & TX 93mA; RX 12mA; Standby 1.6mA \\ 
+			\hline
+			Antenna & Anten rời u.FL / IPEX, trở kháng $50\Omega$  \\ 
+			\hline
+			Kích thước & 17 mm × 16 mm × 3 mm; khối lượng xấp xỉ 0.45 g \\ 
+			\hline
+		\end{tabular}
+	\end{table}
+	
+	\subsubsection{Ưu điểm của Module Ra-02}
+	
+	Module Ra-02 sở hữu nhiều ưu điểm nổi bật, đặc biệt về khả năng truyền thông tầm xa nhờ công nghệ trải phổ LoRa (LoRa spread-spectrum). Trong điều kiện truyền thẳng không vật cản (LOS), module có thể đạt khoảng cách truyền từ 5 đến 10 km. Bên cạnh đó, độ nhạy thu rất cao, có thể đạt tới $-148$ dBm, giúp tăng đáng kể link budget của hệ thống, từ đó nâng cao khả năng chống nhiễu và đảm bảo tính ổn định của liên kết truyền thông trong các môi trường phức tạp.
+	
+	Ngoài ưu thế về phạm vi truyền, Ra-02 còn có mức tiêu thụ năng lượng rất thấp, đặc biệt ở chế độ chờ, khiến module trở thành lựa chọn phù hợp cho các ứng dụng IoT sử dụng nguồn pin, chẳng hạn như pin CR123 hoặc pin lithium dung lượng nhỏ. Module sử dụng chuẩn giao tiếp SPI phổ biến, đồng thời được hỗ trợ bởi nhiều thư viện phần mềm sẵn có trên các nền tảng như Arduino và PlatformIO, giúp giảm đáng kể thời gian phát triển và thử nghiệm hệ thống. Hơn nữa, chi phí thấp cùng với cộng đồng người dùng và các dự án mẫu phong phú cũng là một lợi thế lớn của Ra-02 trong quá trình nghiên cứu và triển khai thực tế.
+	
+	\subsubsection{Nhược điểm của Module Ra-02}
+	
+	Bên cạnh các ưu điểm, module Ra-02 cũng tồn tại một số hạn chế nhất định. Do đặc thù của công nghệ LoRa, thông lượng dữ liệu của module tương đối thấp, không phù hợp với các ứng dụng yêu cầu truyền tải dữ liệu lớn hoặc thời gian thực. Ngoài ra, khi hoạt động trong băng tần ISM 433 MHz, hệ thống cần tuân thủ các quy định về duty-cycle, điều này có thể hạn chế tần suất truyền dữ liệu trong một số kịch bản ứng dụng.
+	
+	Về mặt phần cứng, Ra-02 yêu cầu sử dụng anten ngoài với trở kháng và mạch matching phù hợp để đạt hiệu quả truyền thông tối ưu. Việc thiết kế hoặc hàn anten không đúng kỹ thuật có thể dẫn đến suy giảm tín hiệu hoặc mất liên lạc. Bên cạnh đó, module chỉ hỗ trợ mức điện áp logic 3.3 V và không chịu được tín hiệu 5 V; việc cấp sai điện áp hoặc kết nối trực tiếp với vi điều khiển mức logic 5 V có thể gây hư hỏng nghiêm trọng cho khối RF front-end của module.
+	
+	\subsubsection{Ứng dụng phổ biến của Module Ra-02}
+	
+	Nhờ khả năng truyền thông tầm xa và tiêu thụ năng lượng thấp, module Ra-02 được ứng dụng rộng rãi trong các mạng cảm biến không dây, đặc biệt là trong lĩnh vực nông nghiệp thông minh và các trạm quan trắc thời tiết từ xa. Module cho phép thu thập dữ liệu môi trường như nhiệt độ, độ ẩm, lượng mưa và truyền về trung tâm giám sát với chi phí triển khai thấp.
+	
+	Ngoài ra, Ra-02 còn được sử dụng trong các hệ thống theo dõi và định vị tài sản, vật nuôi hoặc hàng hóa trong lĩnh vực logistics. Trong công nghiệp và đô thị thông minh, module có thể được tích hợp vào các hệ thống đo mực nước, cảnh báo lũ, giám sát môi trường hoặc điều khiển thiết bị từ xa trong môi trường có mức nhiễu cao. Bên cạnh đó, Ra-02 cũng thường được sử dụng làm nút đầu cuối trong các hệ thống gateway LoRa kết nối Internet thông qua các giao thức như MQTT hoặc HTTP, đóng vai trò quan trọng trong các kiến trúc smart city hiện đại.
+	
+	\subsection{Màn hình SSD-1306}
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[clip, width=4.5cm]{fig241.jpg}
+		\caption[Màn hình OLED SSD1306]{\bfseries \fontsize{12pt}{0pt}\selectfont Màn hình OLED SSD-1306}
+		\label{fig24}
+	\end{figure}
+	
+	\subsection{Mạch ổn áp LM2596}
+	
+	\subsection{Anten truyền/nhận sóng}
+	
+	\newpage
+	
+	\section*{CHƯƠNG 3. KẾT QUẢ THỰC NGHIỆM}
+	\addcontentsline{toc}{section}{\numberline{}CHƯƠNG 3. KẾT QUẢ THỰC NGHIỆM}
+	\setcounter{section}{3}
+	\setcounter{subsection}{0}
+	\setcounter{figure}{0}
+	\setcounter{table}{0}
+	\setcounter{equation}{0}
+	
+	\subsection{Kiểm thử truyền tín hiệu LoRa trong các điều kiện cơ bản}
+	
+	Để kiểm nghiệm hiệu quả của LoRa trong các điều kiện môi trường khác nhau,
+	nhóm đã đề xuất một số kịch bản kiểm thử như đề cấp ở các mục sau đây. Trong các
+	kịch bản này, các thiết bị đo và cấu hình được sử dụng như sau:
+	
+	- Nguồn phát và nguồn thu đều sử dụng module Ra-02 điều khiển bởi bo mạch ESP32
+	và đầu phát/thu nối với một anten (mặc định là anten monopole 12dBi)
+	
+	- Bản tin có cấu hình được biểu diễn ở Bảng \ref{tab31}.
+	
+	- Phía thu sẽ hiển thị bản tin được nhận, RSSI, SNR và CR của bản tin đó.
+	
+	\begin{table}[H]
+		\caption[Bảng thông số cấu hình bản tin LoRa]{\bfseries \fontsize{12pt}{0pt}\selectfont Bảng thông số cấu hình bản tin LoRa}
+		\label{tab31}
+		\centering
+		\renewcommand{\arraystretch}{1.3}
+		\begin{tabular}{|p{3cm}|p{4cm}|p{7.5cm}|} 
+			\hline
+			\textbf{Tham số} & \textbf{Giá trị} & \textbf{Mô tả} \\ 
+			\hline
+			Tần số truyền & 433 MHz & Dải tần ISM, truyền tốt trong môi trường nhiều vật cản. \\ 
+			\hline
+			Chu kỳ truyền & 2 giây & Mỗi 2 giây gửi một bản tin. \\ 
+			\hline
+			Nội dung bản tin & \texttt{"Hello World <tick>"} & Chuỗi ký tự chứa thông tin về số thứ tự bản tin gửi đi. \\ 
+			\hline
+			Giao tiếp & Đơn hướng & Một bên chỉ phát, bên còn lại chỉ thu, không yêu cầu phản hồi. \\ 
+			\hline
+			Hệ số trải phổ & 12 & Độ nhạy cao, truyền xa, tốc độ thấp. \\ 
+			\hline
+		\end{tabular}
+	\end{table}
+	
+	\subsubsection{Kịch bản kiểm thử trong điều kiện truyền thẳng, không vật cản}
+	
+	Trong kịch bản kiểm thử này, hệ thống được đánh giá trong điều kiện truyền thẳng (Line-of-Sight - LOS), tức là giữa anten phát và anten thu tồn tại đường truyền trực tiếp không bị che khuất bởi các vật cản vật lý. 
+	
+	\paragraph{Môi trường hành lang kín, không che khuất trực tiếp}\mbox{}
+	
+	Quá trình truyền nhận tín hiệu được tiến hành trong môi trường không có vật cản trực tiếp, hai anten monopole phát và thu được bố trí đối diện nhau trong một hành lang dài, tạo thành đường truyền nhìn thẳng (Hình \ref{fig30}). Không gian hành lang có dạng ống dẫn sóng mở, với các bề mặt tường và sàn phản xạ tín hiệu, tuy nhiên không có vật cản che khuất trực tiếp giữa anten phát và anten thu. Sau khi đo, nhóm đã thu được kết quả của RSSI (Hình \ref{fig31}) và SNR (Hình \ref{fig32}) và được tổng hợp trong Bảng \ref{tab32}.
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[clip, width=12cm]{minhchung/hanhlang_d8.jpg}
+		\caption[Hình ảnh môi trường truyền hành lang D8]{\bfseries \fontsize{12pt}{0pt}\selectfont Hình ảnh môi trường truyền hành lang D8}
+		\label{fig30}
+	\end{figure}
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[clip, width=16cm]{measure_img/sum_rssi_clear_10th-d8.png}
+		\caption[Kết quả đo RSSI theo thời gian ở môi trường không vật cản ở các khoảng cách khác nhau]{\bfseries \fontsize{12pt}{0pt}\selectfont Kết quả đo RSSI theo thời gian ở môi trường không vật cản ở các khoảng cách khác nhau}
+		\label{fig31}
+	\end{figure}
+	
+	Kết quả cho thấy giá trị RSSI có xu hướng giảm dần theo khoảng cách truyền, phù hợp với quy luật suy hao đường truyền trong không gian. Ở các khoảng cách ngắn (0 đến 5 m), RSSI duy trì ở mức cao, dao động quanh $-55$ đến $-65$ dBm, cho thấy tín hiệu thu mạnh và ổn định. Khi khoảng cách tăng lên 10 đến 20 m, RSSI giảm xuống khoảng $-70$ đến $-80$ dBm, và tại các khoảng cách xa hơn (40 đến 49 m), RSSI đạt mức $-88$ đến $-100$ dBm, tiệm cận ngưỡng thu của hệ thống. Mặc dù xuất hiện các dao động theo thời gian do ảnh hưởng của phản xạ đa đường trong môi trường hành lang kín, các giá trị RSSI thu được vẫn nằm trong vùng đảm bảo khả năng giải mã tin cậy đối với chuẩn LoRa sử dụng.
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[clip, width=16cm]{measure_img/sum_snr_clear_10th-d8.png}
+		\caption[Kết quả đo SNR theo thời gian ở môi trường không vật cản ở các khoảng cách khác nhau]{\bfseries \fontsize{12pt}{0pt}\selectfont Kết quả đo SNR theo thời gian ở môi trường không vật cản ở các khoảng cách khác nhau}
+		\label{fig32}
+	\end{figure}
+	
+	Đối với SNR, kết quả cho thấy giá trị này luôn duy trì ở mức dương trong toàn bộ quá trình đo, với biên độ dao động phụ thuộc vào khoảng cách truyền. Cụ thể, tại các khoảng cách gần, SNR đạt khoảng 13 đến 15 dB, trong khi ở các khoảng cách xa hơn (40 đến 49 m), SNR giảm xuống còn khoảng 9 đến 11 dB. Mặc dù tồn tại một số thời điểm SNR suy giảm cục bộ do nhiễu và hiệu ứng giao thoa đa đường, các giá trị đo được vẫn cao hơn đáng kể so với ngưỡng yêu cầu tối thiểu của hệ thống LoRa (đặc biệt với SF12). Điều này cho thấy liên kết truyền thông có biên dự trữ nhiễu lớn, đảm bảo độ ổn định và tin cậy của quá trình truyền dữ liệu trong điều kiện đường truyền có tầm nhìn thẳng.
+	
+	\begin{table}[H]
+		\caption[Bảng tổng hợp khả năng truyền ở các khoảng cách khác nhau]{\bfseries \fontsize{12pt}{0pt}\selectfont Bảng tổng hợp khả năng truyền ở các khoảng cách khác nhau}
+		\label{tab32}
+		\centering
+		\begin{tabular}{|c|c|c|p{6cm}|}
+			\hline
+			\textbf{Khoảng cách} & \textbf{RSSI (dBm)} & \textbf{SNR (dB)} & \textbf{Nhận xét} \\ \hline
+			0 m  & $-24$ đến $-18$ & $8.5$ đến $14.0$ 
+			& Tín hiệu rất mạnh, SNR cao, truyền ổn định, không ghi nhận lỗi gói tin. \\ \hline
+			1 m  & $-63$ đến $-55$ & $10.25$ đến $13.25$ 
+			& Tín hiệu suy giảm rõ rệt so với 0 m nhưng vẫn ổn định, SNR tốt, truyền liên tục. \\ \hline
+			2 m  & $-64$ đến $-58$ & $9.25$ đến $14.0$ 
+			& Tín hiệu ổn định, RSSI giảm nhẹ, SNR dao động, chưa xuất hiện mất gói đáng kể. \\ \hline
+			3 m  & $-67$ đến $-62$ & $9.0$ đến $14.0$ 
+			& Chất lượng tín hiệu giảm dần, SNR thấp hơn ở một số thời điểm, truyền vẫn duy trì ổn định. \\ \hline
+			5 m  & $-74$ đến $-68$ & $9.0$ đến $15.5$ 
+			& RSSI giảm mạnh, SNR vẫn tương đối cao nhờ điều chế LoRa, bắt đầu nhạy cảm với nhiễu môi trường. \\ \hline
+			10 m & $-102$ đến $-76$ & $7.75$ đến $14.25$
+			& RSSI suy giảm rõ rệt, dao động lớn; SNR vẫn đủ cao để duy trì truyền ổn định, hầu như không mất gói. \\ \hline
+			20 m & $-79$ đến $-73$ & $9.25$ đến $15.75$
+			& Liên kết rất ổn định, RSSI tập trung, SNR cao; điều kiện truyền tốt, hiệu quả cao. \\ \hline
+			40 m & $-92$ đến $-88$ & $8.25$ đến $15.00$
+			& Tín hiệu yếu hơn, bắt đầu chịu ảnh hưởng nhiễu; LoRa vẫn duy trì truyền ổn định. \\ \hline
+			49 m & $-100$ đến $-94$ & $9.50$ đến $13.75$
+			& RSSI thấp nhưng ổn định, SNR trung bình; liên kết đáng tin cậy trong phạm vi gần 50 m. \\ \hline
+		\end{tabular}
+	\end{table}
+	
+	\paragraph{Môi trường không gian mở, truyền thẳng với phản xạ tối thiểu}\mbox{}
+	
+	Nhằm đánh giá ảnh hưởng của môi trường lan truyền đến chất lượng tín hiệu trong điều kiện truyền thẳng, nhóm tiếp tục tiến hành thí nghiệm trong một kịch bản LOS khác với đặc tính xạ được thay thế bằng môi trường không gian mở, nơi ảnh hưởng của phản xạ và truyền đa đường được giảm thiểu.
+	
+	Nhóm đã tiến hành đo đạc trong các kịch bản truyền thẳng, trong đó mỗi phép đo bao gồm một điểm phát và một điểm thu đặt tại hai vị trí khác nhau. Cụ thể, các cặp vị trí phát - thu được bố trí lần lượt tại hành lang tầng 4 tòa D6 và cửa sổ phòng 501 tòa D8 (khoảng 12,5 mét); cũng như tại cửa hành lang tầng 5 tòa D8 và khu vực cầu thang giữa tầng 3-4 tòa D9 (khoảng 75 mét). Bản đồ vị trí đo được biểu diễn trên Hình \ref{fig33}.
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[trim = 15pt 15pt 15pt 15pt, clip, width=16cm]{fig35_1.pdf}
+		\caption[Bản đồ các địa điểm đo tại tòa D6, D8, D9]{\bfseries \fontsize{12pt}{0pt}\selectfont Bản đồ các địa điểm đo tại tòa D6, D8, D9}
+		\label{fig33}
+	\end{figure}
+	
+	Sau khi đo, nhóm đã thu được kết quả của RSSI và SNR được biểu diễn bằng đồ thị trên Hình \ref{fig34} và Hình \ref{fig35}.
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[clip, width=16cm]{measure_img/rssi_snr_d8_d6_1.png}
+		\caption[Kết quả đo RSSI và SNR tại điểm đo ở hai tòa D6-D8]{\bfseries \fontsize{12pt}{0pt}\selectfont Kết quả đo RSSI và SNR tại điểm đo ở hai tòa D6-D8}
+		\label{fig34}
+	\end{figure}
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[clip, width=16cm]{measure_img/rssi_snr_d8_d9.png}
+		\caption[Kết quả đo RSSI và SNR tại điểm đo ở hai tòa D8-D9]{\bfseries \fontsize{12pt}{0pt}\selectfont Kết quả đo RSSI và SNR tại điểm đo ở hai tòa D8-D9}
+		\label{fig35}
+	\end{figure}
+	
+	Kết quả đo ở hai tòa D6 và D8 cho thấy giá trị RSSI dao động chủ yếu trong khoảng từ khoảng $-85$ dBm đến $-100$ dBm, với mức suy hao tương đối ổn định theo thời gian và chỉ xuất hiện một số dao động cục bộ ngắn hạn. Điều này phản ánh điều kiện truyền thẳng tốt ở cự ly ngắn, trong đó suy hao đường truyền chủ yếu đến từ khoảng cách và đặc tính anten, thay vì do che khuất hay nhiễu mạnh từ môi trường. Bên cạnh đó, giá trị SNR duy trì tương đối ổn định quanh mức 11 đến 13 dB, cho thấy tỷ lệ tín hiệu trên nhiễu đủ cao để đảm bảo chất lượng liên kết truyền thông tốt, ít xảy ra lỗi gói và phù hợp cho các ứng dụng truyền dữ liệu tốc độ thấp như LoRa trong điều kiện LOS.
+	
+	Khi khoảng cách truyền tăng lên đáng kể, với kết quả đo giữa hai tòa D8-D9, RSSI chủ yếu nằm trong khoảng từ $-85$ dBm đến $-95$ dBm và xuất hiện biên độ dao động lớn hơn so với trường hợp D6-D8. Sự biến thiên này có thể được giải thích bởi suy hao không gian tự do tăng theo khoảng cách, kết hợp với ảnh hưởng của định hướng anten, độ cao đặt anten và các yếu tố môi trường xung quanh dù vẫn duy trì điều kiện LOS. Giá trị SNR trong kịch bản này dao động trong khoảng 10 đến 14 dB, thấp hơn và kém ổn định hơn so với khoảng cách ngắn, tuy nhiên vẫn nằm trên ngưỡng hoạt động tin cậy của hệ thống.
+	
+	Sau khi đánh giá đặc tính RSSI và SNR của hệ thống trong điều kiện truyền thẳng ở cự ly trung bình khoảng 75 m giữa hai tòa nhà, nhóm tiếp tục mở rộng kịch bản kiểm thử sang khoảng cách lớn hơn nhằm khảo sát khả năng suy giảm tín hiệu theo cự ly trong môi trường không gian mở. Cụ thể, phép đo được thực hiện tại hai đầu hồ Bảy Mẫu trong công viên Thống Nhất, nơi tồn tại đường truyền nhìn thẳng với khoảng cách xấp xỉ 600 m (Hình \ref{fig36}).
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[clip, width=7.5cm]{fig37.png}
+		\caption[Bản đồ địa điểm đo tại hồ Bảy Mẫu]{\bfseries \fontsize{12pt}{0pt}\selectfont Bản đồ địa điểm đo tại hồ Bảy Mẫu}
+		\label{fig36}
+	\end{figure}
+	
+	Sau khi đo, nhóm đã thu được kết quả của RSSI và SNR được biểu diễn bằng đồ thị trên Hình \ref{fig37}.
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[clip, width=16cm]{measure_img/rssi_snr_hobaymau_mono.png}
+		\caption[Kết quả đo RSSI và SNR tại Hồ Bảy Mẫu với 2 anten monopole 12dBi]{\bfseries \fontsize{12pt}{0pt}\selectfont Kết quả đo RSSI và SNR tại Hồ Bảy Mẫu với 2 anten monopole 12dBi}
+		\label{fig37}
+	\end{figure}
+	
+	Quan sát quá trình truyền thử nghiệm tại Hồ Bảy Mẫu với khoảng cách 593,92 m LOS, ngoài việc RSSI duy trì ở mức thấp quanh $-113$ dBm và SNR dao động chủ yếu trong vùng âm, hệ thống còn ghi nhận hiện tượng mất hoàn toàn 5 gói dữ liệu đầu tiên ngay khi bắt đầu phiên truyền. Hiện tượng này không xuất hiện ở các kịch bản đo với khoảng cách ngắn hơn (75 m LOS), cho thấy sự suy giảm rõ rệt của biên liên kết khi cự ly truyền tăng lên gần 600 m.
+
+	Việc mất các gói đầu có thể được lý giải bởi SNR ban đầu không đủ để bộ thu thực hiện đồng bộ và giải điều chế thành công, đặc biệt trong bối cảnh RSSI đã tiệm cận ngưỡng độ nhạy thu. Chỉ sau khi quá trình truyền ổn định hơn, các gói dữ liệu tiếp theo mới được thu nhận, tuy nhiên chất lượng liên kết vẫn không bền vững do SNR tiếp tục dao động mạnh trong khoảng −10 đến −20 dB. Điều này cho thấy cấu hình anten monopole hiện tại không đảm bảo đủ công suất bức xạ hiệu dụng để thiết lập liên kết một cách tin cậy ngay từ đầu phiên truyền.
+	
+	Trước khi tiến hành phép đo trong môi trường không gian mở với khoảng cách lớn tại Hồ Bảy Mẫu, nhóm đã tiến hành tìm hiểu và lựa chọn phương án anten phù hợp nhằm cải thiện chất lượng liên kết so với cấu hình monopole ban đầu. Trên cơ sở phân tích đặc tính bức xạ, dải tần hoạt động và khả năng triển khai thực tế, anten NI-770r được lựa chọn để sử dụng trong kịch bản đo này.
+	
+	Anten NI-770r là anten monopole dual band hoạt động trong dải tần 140-430 MHz, có chiều dài vật lý 97 cm. So với anten monopole ngắn được sử dụng trước đó, NI-770R có chiều dài lớn hơn, giúp cải thiện hiệu suất bức xạ và khả năng cộng hưởng tại tần số làm việc. Anten có đặc tính bức xạ tương đối đẳng hướng, phù hợp cho các phép đo ngoài trời trong điều kiện LOS, đồng thời đảm bảo sự ổn định khi triển khai thực địa mà không yêu cầu căn chỉnh hướng chính xác.
+	
+	Sau khi đo bằng anten NI-770r, nhóm đã thu được kết quả của RSSI và SNR được biểu diễn bằng đồ thị trên Hình \ref{fig38}.
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[clip, width=16cm]{measure_img/rssi_snr_hobaymau_dual.png}
+		\caption[Kết quả đo RSSI và SNR tại Hồ Bảy Mẫu với anten NI-770r]{\bfseries \fontsize{12pt}{0pt}\selectfont Kết quả đo RSSI và SNR tại Hồ Bảy Mẫu với anten NI-770r}
+		\label{fig38}
+	\end{figure}
+	
+	Dựa trên biểu đồ đo RSSI và SNR tại Hồ Bảy Mẫu khi sử dụng anten NI-770R 97 cm, có thể nhận thấy RSSI duy trì chủ yếu trong khoảng $-104$ đến $-113$ dBm. Mặc dù mức RSSI này đã cải thiện so với cấu hình monopole ngắn trước đó, tín hiệu thu vẫn tiệm cận ngưỡng độ nhạy của bộ thu, cho thấy liên kết đang hoạt động ở trạng thái biên công suất.
+	
+	Về SNR, giá trị đo được chủ yếu dao động trong khoảng 0 đến 6 dB, một số thời điểm đạt trên 8 dB, cho thấy hệ thống đã duy trì được liên kết ổn định, khác với trường hợp SNR âm liên tục ở phép đo trước. Tuy nhiên, SNR không duy trì ở mức cao và có xu hướng giảm dần theo thời gian, phản ánh ảnh hưởng của nhiễu nền, fading và giới hạn gain của anten phát. Điều này cho thấy anten NI-770R giúp đưa SNR từ vùng âm lên vùng dương, đủ để truyền dữ liệu ổn định ở cự ly gần 600 m, nhưng chưa tạo ra biên dự phòng đủ lớn cho các khoảng cách xa hơn.
+	
+	Sau khi đánh giá đặc tính truyền dẫn trong điều kiện LOS ở các khoảng cách ngắn và trung bình (12,5 m; 75 m; ~600 m), nhóm tiếp tục mở rộng kịch bản đo sang khu vực Hồ Tây - một khu vực không gian mở lớn cho phép thiết lập các liên kết truyền thẳng với khoảng cách lên tới vài kilomet, đồng thời vẫn mang đặc trưng của môi trường đô thị nội thành với sự hiện diện của nhà cao tầng, cây xanh và các bề mặt phản xạ phức tạp (Hình \ref{fig39}). Trong kịch bản này, anten phát được giữ nguyên là NI-770R nhằm đảm bảo tính nhất quán giữa các phép đo và làm rõ ảnh hưởng của khoảng cách cũng như điều kiện môi trường truyền dẫn lên chất lượng tín hiệu thu. Do đó, để đảm bảo khả năng thu ổn định và cải thiện link budget trong các điều kiện truyền xa và LOS không lý tưởng, nhóm lựa chọn thay thế anten thu monopole bằng anten định hướng Yagi có gain cao, giúp tập trung năng lượng thu theo hướng anten phát, giảm ảnh hưởng nhiễu và nâng cao SNR mà không cần tăng công suất phát.
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[trim = 15pt 15pt 15pt 15pt, clip, width=12.5cm]{fig36.pdf}
+		\caption[Bản đồ các địa điểm đo tại Hồ Tây]{\bfseries \fontsize{12pt}{0pt}\selectfont Bản đồ các địa điểm đo tại Hồ Tây}
+		\label{fig39}
+	\end{figure}
+	
+	Sau khi đo, nhóm đã thu được kết quả của RSSI và SNR tại Hồ Tây được biểu diễn trên các Hình \ref{fig310},  và được tổng hợp trên Bảng \ref{tab33}.
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[clip, width=16cm]{measure_img/rssi_snr_600m_hotay.png}
+		\caption[Kết quả đo RSSI và SNR tại Hồ Tây tại điểm thu 1 - Vườn hoa Trích Sài]{\bfseries \fontsize{12pt}{0pt}\selectfont Kết quả đo RSSI và SNR tại Hồ Tây tại điểm thu 1 - Vườn hoa Trích Sài}
+		\label{fig310}
+	\end{figure}
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[clip, width=16cm]{measure_img/rssi_snr_600m_hotay.png}
+		\caption[Kết quả đo RSSI và SNR tại Hồ Tây tại điểm thu 2 - Đối diện 151 Trích Sài]{\bfseries \fontsize{12pt}{0pt}\selectfont Kết quả đo RSSI và SNR tại Hồ Tây tại điểm thu 2 - Đối diện 151 Trích Sài}
+		\label{fig311}
+	\end{figure}
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[clip, width=16cm]{measure_img/rssi_snr_600m_hotay.png}
+		\caption[Kết quả đo RSSI và SNR tại Hồ Tây tại điểm thu 3 - Sân chơi Cụm 10]{\bfseries \fontsize{12pt}{0pt}\selectfont Kết quả đo RSSI và SNR tại Hồ Tây tại điểm thu 3 - Sân chơi Cụm 10}
+		\label{fig312}
+	\end{figure}
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[clip, width=16cm]{measure_img/rssi_snr_600m_hotay.png}
+		\caption[Kết quả đo RSSI và SNR tại Hồ Tây tại điểm thu 4 - Đối diện 441 Lạc Long Quân]{\bfseries \fontsize{12pt}{0pt}\selectfont Kết quả đo RSSI và SNR tại Hồ Tây tại điểm thu 4 - Đối diện 441 Lạc Long Quân}
+		\label{fig313}
+	\end{figure}
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[clip, width=16cm]{measure_img/rssi_snr_600m_hotay.png}
+		\caption[Kết quả đo RSSI và SNR tại Hồ Tây tại điểm thu 5 - Đối diện Chùa Vạn Niên]{\bfseries \fontsize{12pt}{0pt}\selectfont Kết quả đo RSSI và SNR tại Hồ Tây tại điểm thu 5 - Đối diện Chùa Vạn Niên}
+		\label{fig314}
+	\end{figure}
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[clip, width=16cm]{measure_img/rssi_snr_600m_hotay.png}
+		\caption[Kết quả đo RSSI và SNR tại Hồ Tây tại điểm thu 6 - Cạnh Công viên nước Hồ Tây]{\bfseries \fontsize{12pt}{0pt}\selectfont Kết quả đo RSSI và SNR tại Hồ Tây tại điểm thu 6 - Cạnh Công viên nước Hồ Tây}
+		\label{fig315}
+	\end{figure}
+	
+	Kết quả đo RSSI tại khu vực Hồ Tây cho thấy tín hiệu thu không suy giảm đơn điệu theo khoảng cách. Trong khi tại mốc 2 km RSSI giảm xuống mức thấp do suy hao lớn và ảnh hưởng của môi trường đô thị, giá trị RSSI tại khoảng cách 2,4 km lại có xu hướng ổn định và cải thiện hơn. Hiện tượng này có thể được giải thích bởi điều kiện không gian truyền sóng thuận lợi hơn, bao gồm khu vực thoáng đãng gần mặt nước và sự xuất hiện của các kết cấu kim loại lớn xung quanh, góp phần tạo ra các thành phần phản xạ có lợi. Điều này cho thấy RSSI trong môi trường thực tế phụ thuộc mạnh vào hình học truyền dẫn và đặc điểm môi trường, không chỉ đơn thuần vào khoảng cách.
+	
+	Giá trị SNR thể hiện rõ tính thất thường của liên kết vô tuyến trong môi trường nội đô. Tại các khoảng cách 1 km đến 2 km, SNR chủ yếu âm và dao động mạnh, đặc biệt suy giảm sâu tại mốc 1,3 km do ảnh hưởng của nhà cao tầng và tán cây gây che khuất đường truyền và vùng Fresnel. Tuy nhiên, tại khoảng cách 2,4 km, SNR tăng lên và tiệm cận ngưỡng 0 dB, cho thấy môi trường truyền sóng tại vị trí này thuận lợi hơn, với khả năng giảm nhiễu và tăng tỷ lệ tín hiệu hữu ích nhờ hiệu ứng phản xạ có lợi. Kết quả này một lần nữa khẳng định ưu thế của công nghệ LoRa trong việc duy trì liên kết ở SNR thấp, đồng thời nhấn mạnh vai trò quan trọng của môi trường và hướng anten trong các kịch bản truyền xa.
+	
+	\begin{table}[H]
+		\caption[Bảng tổng hợp khả năng truyền ở các khoảng cách khác nhau tại Hồ Tây]{\bfseries \fontsize{12pt}{0pt}\selectfont Bảng tổng hợp khả năng truyền ở các khoảng cách khác nhau tại Hồ Tây}
+		\label{tab33}
+		\centering
+		\begin{tabular}{|c|c|c|p{5cm}|}
+			\hline
+			\textbf{Khoảng cách} & \textbf{RSSI (dBm)} & \textbf{SNR (dB)} & \textbf{Nhận xét} \\ \hline
+			600 m & $-113$ đến $-102$ & $-11.00$ đến $9.25$
+			& RSSI thấp, SNR dao động mạnh; vẫn duy trì liên kết nhờ khả năng giải mã ở SNR thấp của LoRa. \\ \hline
+			
+			1 km & $-111$ đến $-107$ & $-16.50$ đến $-1.25$
+			& Tín hiệu tiệm cận ngưỡng thu, SNR chủ yếu âm; bắt đầu xuất hiện mất gói, liên kết kém ổn định. \\ \hline
+			
+			1.3 km & $-113$ đến $-109$ & $-22.50$ đến $-15.25$
+			& Suy hao mạnh do vật cản; SNR âm sâu, liên kết tồn tại nhưng độ tin cậy thấp. \\ \hline
+			
+			2 km & $-114$ đến $-110$ & $-19.75$ đến $-6.75$
+			& Tín hiệu rất yếu, SNR âm; vẫn truyền được nhờ link budget lớn của LoRa nhưng tỷ lệ mất gói cao. \\ \hline
+			
+			2.4 km & $-110$ đến $-108$ & $-8.00$ đến $3.50$
+			& RSSI ổn định, SNR quanh ngưỡng 0 dB; liên kết duy trì trong điều kiện môi trường thuận lợi. \\ \hline
+			
+			3 km & $-113$ đến $-111$ & $-12.75$ đến $-7.50$
+			& Tín hiệu sát ngưỡng thu, SNR âm; vẫn giải mã được gói tin nhưng liên kết kém ổn định, dễ mất gói. \\ \hline
+		\end{tabular}
+	\end{table}
+	
+	\subsubsection{Kịch bản kiểm thử trong môi trường nước}
+	
+	Sau khi đánh giá hiệu năng của hệ thống trong các kịch bản truyền thẳng không vật cản trong môi trường không khí, nhóm tiếp tục mở rộng phạm vi kiểm thử sang một điều kiện truyền dẫn khắc nghiệt hơn nhằm khảo sát giới hạn hoạt động của công nghệ LoRa. Cụ thể, nhóm tiến hành thử nghiệm trong môi trường nước tĩnh, nơi sóng vô tuyến chịu suy hao rất lớn do đặc tính hấp thụ mạnh của môi trường nước. Kịch bản này được xây dựng nhằm mô phỏng các ứng dụng thực tế như giám sát ngập lụt, quan trắc môi trường ao hồ hoặc các tình huống thiên tai, qua đó đánh giá khả năng duy trì liên kết và thu nhận dữ liệu của hệ thống trong điều kiện truyền dẫn bất lợi.
+	
+	Trong kịch bản kiểm thử này, hai anten monopole ngắn được sử dụng cho cả phía phát và phía thu. Các phép đo được tiến hành trong môi trường hồ nước tĩnh, cụ thể địa điểm đo là ở hai góc hồ Tiền (Hình \ref{fig318}), với độ sâu đặt anten xấp xỉ 0,5 m so với mặt nước. Quá trình đo được chia thành ba giai đoạn nhằm đánh giá ảnh hưởng của môi trường nước đến đặc tính truyền dẫn vô tuyến. Ở giai đoạn đầu, anten thu được thả hoàn toàn xuống nước trong khi anten phát vẫn được đặt trong không khí, nhằm khảo sát khả năng thu tín hiệu xuyên qua mặt phân cách không khí-nước. Sau khoảng 50 mẫu đo, vị trí hai anten được hoán đổi cho nhau, trong đó anten phát được đặt dưới nước và anten thu đặt trên không khí. Tiếp theo, kể từ mẫu đo thứ 75, cả anten phát và anten thu đều được thả xuống nước để đánh giá trường hợp truyền dẫn hoàn toàn trong môi trường nước. Trong suốt quá trình thử nghiệm, hệ thống tiếp tục phát bản tin định kỳ để thu thập các chỉ số RSSI, SNR và đánh giá khả năng duy trì liên kết.
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[clip, width=8cm]{fig31.png}
+		\caption[Bản đồ địa điểm đo tại hồ Tiền]{\bfseries \fontsize{12pt}{0pt}\selectfont Bản đồ địa điểm đo tại hồ Tiền}
+		\label{fig318}
+	\end{figure}
+	
+	Kết quả của nhóm sau khi tiến hành thu 100 mẫu được biểu diễn trên biểu đồ ở Hình \ref{fig316} và Hình \ref{fig317}.
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[trim = 15pt 15pt 15pt 15pt, clip, width=16cm]{fig34.pdf}
+		\caption[Kết quả đo RSSI theo thời gian ở hai môi trường khác nhau]{\bfseries \fontsize{12pt}{0pt}\selectfont Kết quả đo RSSI theo thời gian ở hai môi trường khác nhau}
+		\label{fig316}
+	\end{figure}
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[trim = 15pt 15pt 15pt 15pt, clip, width=16cm]{fig35.pdf}
+		\caption[Kết quả đo SNR theo thời gian ở hai môi trường khác nhau]{\bfseries \fontsize{12pt}{0pt}\selectfont Kết quả đo SNR theo thời gian ở hai môi trường khác nhau}
+		\label{fig317}
+	\end{figure}
+	
+	\textbf{Giai đoạn 1:} Anten phát ở trong không khí, anten thu ở dưới nước: Ở giai đoạn này, RSSI duy trì ở mức rất thấp và khá ổn định, chủ yếu trong khoảng từ $-117$ dBm đến $-114$ dBm, cho thấy suy hao truyền dẫn lớn do tín hiệu phải đi qua mặt phân cách không khí-nước, nơi xảy ra phản xạ mạnh và hấp thụ năng lượng. Chỉ số SNR dao động quanh ngưỡng âm, phổ biến từ khoảng $-13$ dB đến 0 dB, với một số thời điểm tăng nhẹ lên giá trị dương nhỏ. Sự dao động này phản ánh hiện tượng giao thoa và nhiễu cục bộ trong môi trường nước, nơi tín hiệu bị suy giảm mạnh trong khi mức nhiễu nền không giảm tương ứng. Mặc dù vậy, hệ thống vẫn duy trì được liên kết, thể hiện khả năng giải mã tín hiệu ở SNR thấp của công nghệ LoRa. 
+	
+	\textbf{Giai đoạn 2:} Cả anten phát và anten thu đều ở trong không khí: Giai đoạn này, hai anten tạo thành đường truyền nhìn thẳng với khoảng cách xấp xỉ 88,44 m. Trên biểu đồ, giai đoạn này thể hiện rất rõ bằng sự cải thiện đột ngột của cả RSSI và SNR. Cụ thể, RSSI tăng mạnh từ mức khoảng $-113$ dBm lên đến $-103$ dBm và $-101$ dBm, trong khi SNR đạt giá trị dương cao, lên tới 7,75 dB đến 10,75 dB. Sự thay đổi rõ rệt này cho thấy môi trường truyền trong không khí ít suy hao hơn rất nhiều so với truyền xuyên nước, đồng thời xác nhận rằng suy giảm ở các giai đoạn trước chủ yếu đến từ môi trường nước chứ không phải cấu hình phần cứng hay công suất phát.
+	
+	\textbf{Giai đoạn 3:} Anten phát ở dưới nước, anten thu ở trong không khí: Sau khi hoán đổi vị trí, anten phát được đặt dưới nước trong khi anten thu ở trên không khí. Trong giai đoạn này, RSSI giảm trở lại về khoảng $-114$ dBm đến $-110$ dBm, và SNR chủ yếu âm, dao động trong khoảng $-12$ dB đến $-3$ dB. Điều này cho thấy việc phát tín hiệu từ môi trường nước gây suy hao lớn ngay tại phía phát, làm giảm đáng kể năng lượng bức xạ ra ngoài không khí. 
+	
+	\textbf{Giai đoạn 4:} Cả hai anten ở dưới nước: SNR giảm sâu rõ rệt, nhiều mẫu đạt mức $-18$ dB đến $-22$ dB, trong khi RSSI gần như không cải thiện và tiếp tục nằm sát ngưỡng thu. Trên biểu đồ, giai đoạn này thể hiện bằng một “vùng đáy” của SNR, phản ánh môi trường truyền hoàn toàn trong nước có hệ số hấp thụ cao, làm suy giảm mạnh tín hiệu và khiến liên kết trở nên rất kém ổn định, dù vẫn có thể thu rải rác một số gói tin nhờ link budget lớn của LoRa.
 	
 	\newpage
 	
