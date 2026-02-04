@@ -21,20 +21,38 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
-\bibitem{huunghi2023ngatuso}
-\BIBentryALTinterwordspacing
-M.~Q.~H. Nghị. (2023) Ngã tư sở thông suốt giờ cao điểm sau khi
-  phân luồng lại. [Truy cập ngày 8 tháng 3 năm 2025]. [Online].
-  Available:
-  \url{https://dantri.com.vn/xa-hoi/nga-tu-so-thong-suot-gio-cao-diem-sau-khi-phan-luong-lai-20231226200219792.htm}
-\BIBentrySTDinterwordspacing
+\bibitem{Balanis2012}
+C.~A. Balanis, \emph{Antenna Theory: Analysis and Design}.\hskip 1em plus 0.5em
+  minus 0.4em\relax John Wiley \& Sons, 2012.
 
-\bibitem{the2024tatden}
-\BIBentryALTinterwordspacing
-T.~Thế. (2024) Dự kiến tắt đèn giao thông, rào chắn một ngã
-  tư ở hà nội. [Truy cập ngày 8 tháng 3 năm 2025]. [Online].
-  Available:
-  \url{https://laodong.vn/xa-hoi/du-kien-tat-den-giao-thong-rao-chan-mot-nga-tu-o-ha-noi-1466533.ldo}
-\BIBentrySTDinterwordspacing
+\bibitem{Kraus2002}
+J.~D. Kraus and R.~J. Marhefka, \emph{Antennas for All Applications}.\hskip 1em
+  plus 0.5em minus 0.4em\relax McGraw-Hill, 2002.
+
+\bibitem{Stutzman2012}
+W.~L. Stutzman and G.~A. Thiele, \emph{Antenna Theory and Design}.\hskip 1em
+  plus 0.5em minus 0.4em\relax John Wiley \& Sons, 2012.
+
+\bibitem{SemtechSX1278}
+{Semtech Corporation}, \emph{SX1276/77/78/79 - LoRa{\textregistered} Long
+  Range, Low Power RF Transceiver Datasheet}, Semtech Corporation, n.d.,
+  datasheet.
+
+\bibitem{EspressifESP32}
+{Espressif Systems}, \emph{ESP32 Datasheet}, Espressif Systems, n.d.,
+  datasheet.
+
+\bibitem{EspressifIDF}
+------, \emph{ESP-IDF Programming Guide}, Espressif Systems, n.d., programming
+  Guide.
+
+\bibitem{LoRaAllianceRegionalParameters}
+{LoRa Alliance}, \emph{LoRaWAN Regional Parameters}, LoRa Alliance, n.d.,
+  specification.
+
+\bibitem{White1992}
+I.~White, R.~Blackwell, and R.~S. of~Great~Britain, \emph{The VHF/UHF DX
+  Book}.\hskip 1em plus 0.5em minus 0.4em\relax DIR, 1992, vol.~1, [Online].
+  Available: https://books.google.com.vn/books?id=BDSrAQAACAAJ.
 
 \end{thebibliography}

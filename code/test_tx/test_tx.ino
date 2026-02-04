@@ -75,5 +75,5 @@ void loop() {
   display.display();
 
   counter++;
-  delay(500);
+  delay(1000);
 }

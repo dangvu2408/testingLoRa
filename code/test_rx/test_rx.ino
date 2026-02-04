@@ -20,11 +20,22 @@ Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, -1);
 #define LORA_RST 14
 #define LORA_IRQ 2
 
+/* ================= STATISTICS ================= */
+long lastSeq = -1;              // SEQ gói trước
+unsigned long okPackets = 0;    // Gói đúng
+unsigned long errPackets = 0;   // Gói lỗi payload
+unsigned long lostPackets = 0;  // Gói mất (SEQ nhảy)
+
 int currentCR = 7;
 unsigned long startTime = 0;
 unsigned long lastReceiveTime = 0;
 float bitrate = 0;
 unsigned long packetCount = 0;
+
+String crop(String s, int maxLen) {
+  if (s.length() <= maxLen) return s;
+  return s.substring(0, maxLen - 3) + "...";
+}
 
 void setup() {
   Serial.begin(115200);
@@ -53,7 +64,7 @@ void setup() {
   LoRa.setSpreadingFactor(12);
   LoRa.setSignalBandwidth(125E3);
   LoRa.setCodingRate4(currentCR);
-  LoRa.enableCrc();
+  LoRa.disableCrc();
 
   startTime = millis();
 
@@ -64,34 +75,53 @@ void setup() {
 
 void loop() {
   int packetSize = LoRa.parsePacket();
+  if (!packetSize) return;
 
-  if (packetSize) {
-    String msg = LoRa.readString();
-    int rssi = LoRa.packetRssi();
-    float snr = LoRa.packetSnr();
+  float time_s = (millis() - startTime) / 1000.0;
 
-    unsigned long now = micros();
-
-    if (lastReceiveTime != 0) {
-      float dt = (now - lastReceiveTime) / 1000000.0; // giây giữa 2 gói
-      bitrate = 1.0 / dt; // vì TX gửi 1 bit mỗi lần
-    }
-
-    lastReceiveTime = now;
-
-    float t = (millis() - startTime) / 1000.0;
-    packetCount++;
-
-    Serial.printf("RX[%lu]: %s | RSSI=%d | SNR=%.2f | t=%.2fs\n", packetCount, msg.c_str(), rssi, snr, t);
-
-    // Display
-    display.clearDisplay();
-    display.setCursor(0, 0);
-    display.printf("RX: %s\n", msg.c_str());
-    display.printf("RSSI: %d dBm\n", rssi);
-    display.printf("SNR : %.2f dB\n", snr);
-    display.printf("CR  : %d\n", currentCR);
-    display.printf("Rate: %.2f bps\n", bitrate);
-    display.display();
+  String raw = "";
+  while (LoRa.available()) {
+    raw += (char)LoRa.read();
   }
+
+  int rssi = LoRa.packetRssi();
+  float snr = LoRa.packetSnr();
+
+  long seq = -1;
+  int lastSpace = raw.lastIndexOf(' ');
+  if (lastSpace >= 0) {
+    seq = raw.substring(lastSpace + 1).toInt();
+  }
+
+  bool payloadOK = raw.startsWith("Hello World ");
+
+  if (!payloadOK || seq < 0) {
+    errPackets++;
+  } else {
+    okPackets++;
+    if (lastSeq != -1 && seq > lastSeq + 1) {
+      lostPackets += (seq - lastSeq - 1);
+    }
+    lastSeq = seq;
+  }
+
+  Serial.printf(
+    "RAW=\"%s\" | RSSI=%d | SNR=%.2f | Time=%.2f\n",
+    raw.c_str(),
+    rssi,
+    snr,
+    time_s
+  );
+
+  display.clearDisplay();
+  display.setCursor(0, 0);
+  display.printf("t=%.1fs\n", time_s);
+  display.println(crop(raw, 21));
+  display.println(crop(raw.substring(21), 21));
+  display.printf("RSSI=%d\n", rssi);
+  display.printf("SNR=%.2f\n", snr);
+  display.printf("OK:%lu\n", okPackets);
+  display.printf("ERR:%lu\n", errPackets);
+  display.printf("LOST:%lu\n", lostPackets);
+  display.display();
 }

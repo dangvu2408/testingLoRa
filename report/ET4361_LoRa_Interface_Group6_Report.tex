@@ -1,14 +1,14 @@
 \documentclass{article}
 \usepackage[utf8]{inputenc}
+\usepackage[T5]{fontenc}
 \usepackage[fontsize=13pt]{scrextend}
+\usepackage[vietnamese]{babel}
 \usepackage[paperheight=29.7cm,paperwidth=21cm,right=2cm,left=3cm,top=2cm,bottom=2.5cm,twoside]{geometry}% Chuẩn A4, căn lề phải, trái, trên, dưới.
 \usepackage{mathptmx}
 \usepackage{amsmath}
 \usepackage{graphicx} % Thư viện chèn ảnh
 \usepackage{float} % Set vị trí chèn ảnh
 \usepackage{tikz} % Thư viện tạo khung bìa
-\usepackage{fontspec}
-\setmonofont{Courier New}
 \usetikzlibrary{calc} % Thư viện tikz
 \usepackage{indentfirst} % Thư viện thụt đầu dòng
 \usepackage{booktabs} % To thicken table lines
@@ -64,7 +64,7 @@
 \newcommand{\rpt}[2][1]{\forloop{loopcntr}{0}{\value{loopcntr}<#1}{#2}}
 
 \begin{document}
-	\setmainfont{Times New Roman}
+	%\setmainfont{Times New Roman}
 	\thispagestyle{empty}
 	\begin{center}
 		\vspace{-12pt}  \fontsize{14pt}{0pt}\selectfont ĐẠI HỌC BÁCH KHOA HÀ NỘI \\[6pt]
@@ -114,7 +114,7 @@
 			\end{tabular}
 		\end{table}
 		\vspace{2cm}
-		\fontsize{16pt}{0pt}\selectfont \textbf{Hà Nội, 12/2025}
+		\fontsize{16pt}{0pt}\selectfont \textbf{Hà Nội, 01/2026}
 	\end{center}
 	\cleardoublepage
 	\thispagestyle{empty}
@@ -166,21 +166,26 @@
 			\end{tabular}
 		\end{table}
 		\vspace{2cm}
-		\fontsize{16pt}{0pt}\selectfont \textbf{Hà Nội, 12/2025}
+		\fontsize{16pt}{0pt}\selectfont \textbf{Hà Nội, 01/2026}
 	\end{center}
 	\cleardoublepage
 	
 	
 	\section*{LỜI NÓI ĐẦU}
 	\thispagestyle{empty}
-	xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz .
 	
-	xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz .
+	Trong bối cảnh cuộc Cách mạng công nghiệp lần thứ tư đang diễn ra mạnh mẽ, các công nghệ không dây ngày càng khẳng định vai trò quan trọng trong hầu hết các lĩnh vực của đời sống hiện đại. Đặc biệt, sự phát triển của Internet vạn vật (IoT – Internet of Things) đã tạo nên một hệ sinh thái kết nối rộng khắp, cho phép các thiết bị từ đơn giản đến phức tạp có thể trao đổi dữ liệu liên tục, góp phần nâng cao hiệu quả vận hành và tối ưu hóa quy trình trong nhiều lĩnh vực như công nghiệp, nông nghiệp, y tế, giao thông và đô thị thông minh.
 	
-	xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz xyz .
+	Để hiện thực hóa tiềm năng của IoT, các công nghệ truyền thông không dây công suất thấp đóng vai trò then chốt, trong đó nổi bật là LPWAN (Low Power Wide Area Network). Các công nghệ thuộc nhóm LPWAN cho phép thiết bị IoT hoạt động trong thời gian dài với mức tiêu thụ năng lượng thấp, đồng thời vẫn đảm bảo khả năng truyền dữ liệu trên khoảng cách xa. Trong số đó, LoRa là một công nghệ tiêu biểu nhờ khả năng phủ sóng rộng, tính linh hoạt cao và phù hợp với nhiều kịch bản triển khai thực tế.
 	
+	Việc đánh giá khả năng truyền xa và độ ổn định của công nghệ LoRa có ý nghĩa quan trọng trong quá trình thiết kế và triển khai các hệ thống IoT. Các tham số cấu hình của LoRa như băng thông, tốc độ truyền, hệ số trải phổ và công suất phát có ảnh hưởng trực tiếp đến phạm vi phủ sóng cũng như chất lượng tín hiệu thu. Do đó, việc thực hiện đo đạc, phân tích và đánh giá hiệu suất truyền dẫn trong các điều kiện khác nhau sẽ giúp lựa chọn cấu hình phù hợp, từ đó nâng cao hiệu quả, độ tin cậy và tính bền vững của hệ thống trong thực tế.
 	
-	Em xin chân thành cảm ơn!
+	Thông qua bài tập lớn này, nhóm tiến hành khảo sát, đo đạc và đánh giá chất lượng tín hiệu LoRa thông qua các chỉ số RSSI và SNR tại nhiều khoảng cách khác nhau, qua đó rút ra nhận xét về khả năng truyền xa và giới hạn kết nối của hệ thống.
+	
+	Nhóm xin gửi lời cảm ơn chân thành tới thầy Đào Việt Hùng đã tận tình hướng dẫn, truyền đạt những kiến thức quý báu và tạo điều kiện thuận lợi trong suốt quá trình thực hiện bài tập lớn. Đồng thời, nhóm cũng xin cảm ơn các bạn sinh viên và các tài liệu tham khảo đã hỗ trợ để nhóm hoàn thành báo cáo này.
+	
+	Mặc dù đã nỗ lực hoàn thiện, báo cáo khó tránh khỏi những thiếu sót nhất định. Nhóm rất mong nhận được những ý kiến đóng góp từ thầy cô và các bạn để có thể rút kinh nghiệm và hoàn thiện hơn trong các nghiên cứu tiếp theo.
+	
 	\cleardoublepage
 	
 	\newpage 
@@ -263,33 +268,309 @@
 	
 	LoRa đặc biệt thích hợp cho các ứng dụng truyền tải những khối dữ liệu nhỏ với tốc độ bit thấp. Công nghệ này cho phép truyền dữ liệu ở khoảng cách xa hơn nhiều so với các chuẩn như WiFi, Bluetooth hay ZigBee. Nhờ những đặc điểm đó, LoRa trở thành lựa chọn lý tưởng cho các cảm biến và thiết bị truyền động hoạt động trong chế độ tiêu thụ năng lượng thấp.
 	
-	\begin{table}[h!]
-		\caption[Bảng trạng thái của mã tích chập (2, 1, 2)]{\bfseries \fontsize{12pt}{0pt}\selectfont Bảng trạng thái của mã tích chập (2, 1, 2)}
-		\label{bang11}
-		\centering
-		\begin{tabular}{|c|c|c|c|c|c|c|}
-			\hline
-			\textbf{Input} & \textbf{$S_1$} & \textbf{$S_2$} & \textbf{$V_1$} & \textbf{$V_2$} & \textbf{$S_1'$} & \textbf{$S_2'$} \\ 
-			\hline
-			0 & 0 & 0 & 0 & 0 & 0 & 0 \\ 
-			0 & 0 & 1 & 1 & 1 & 0 & 0 \\ 
-			0 & 1 & 0 & 1 & 0 & 0 & 1 \\ 
-			0 & 1 & 1 & 0 & 1 & 0 & 1 \\ 
-			1 & 0 & 0 & 1 & 1 & 1 & 0 \\ 
-			1 & 0 & 1 & 1 & 0 & 1 & 0 \\ 
-			1 & 1 & 0 & 0 & 1 & 1 & 1 \\ 
-			1 & 1 & 1 & 1 & 0 & 1 & 1 \\ 
-			\hline
-		\end{tabular}
-	\end{table}
-	
 	\subsubsection{Kỹ thuật trải phổ}
+	
+	Kỹ thuật trải phổ (Spread Spectrum) là một phương pháp truyền thông trong đó tín hiệu được phát trên một dải tần rộng hơn nhiều so với băng thông tối thiểu cần thiết để truyền dữ liệu. Mục tiêu của kỹ thuật này là nâng cao khả năng chống nhiễu, giảm ảnh hưởng của giao thoa tần số, đồng thời tăng mức độ bảo mật và hạn chế nguy cơ bị can thiệp hoặc đánh chặn từ các nguồn bên ngoài. Nhờ đó, trải phổ đặc biệt phù hợp với các môi trường truyền dẫn phức tạp, nơi tín hiệu dễ bị suy hao hoặc chịu nhiều tác động từ nhiễu nền.
+	
+	Khác với truyền thông thông thường (truyền trong băng hẹp), trong kỹ thuật trải phổ, năng lượng tín hiệu được “rải” trên một dải tần rộng, làm cho công suất tại từng tần số riêng lẻ trở nên nhỏ hơn. Điều này khiến tín hiệu khó bị phát hiện và khó bị gây nhiễu có chủ đích. Ở phía thu, nhờ quá trình giải trải phổ (despreading) và giải điều chế phù hợp, tín hiệu vẫn có thể được khôi phục chính xác ngay cả khi bị nhiễu hoặc suy giảm trong quá trình truyền.
+	
+	Hiện nay, hai kỹ thuật trải phổ phổ biến thường được nhắc đến gồm trải phổ chuỗi trực tiếp (Direct Sequence Spread Spectrum – DSSS) và trải phổ nhảy tần (Frequency Hopping Spread Spectrum – FHSS). Với DSSS, tín hiệu gốc được nhân với một chuỗi mã giả ngẫu nhiên (pseudo-random) có tốc độ cao nhằm mở rộng băng thông tín hiệu, từ đó tăng độ bền vững trước nhiễu và hạn chế ảnh hưởng của tín hiệu giả mạo; kỹ thuật này từng được ứng dụng trong chuẩn IEEE 802.11b (WiFi). Trong khi đó, FHSS hoạt động bằng cách cho tín hiệu liên tục “nhảy” qua nhiều tần số theo một chuỗi xác định, giúp giảm khả năng bị theo dõi hoặc gây nhiễu tập trung tại một tần số; kỹ thuật này thường xuất hiện trong một số hệ thống Bluetooth đời cũ và các ứng dụng chuyên dụng.
+	
+	Bên cạnh đó, một biến thể quan trọng của trải phổ là Chirp Spread Spectrum (CSS) – kỹ thuật được sử dụng trong công nghệ LoRa. CSS dựa trên các tín hiệu “chirp”, tức tín hiệu có tần số thay đổi tuyến tính theo thời gian, nhờ vậy đạt khả năng chống nhiễu tốt, truyền xa và vẫn đảm bảo mức tiêu thụ năng lượng thấp. Đây là yếu tố giúp LoRa trở thành một lựa chọn phù hợp cho các hệ thống IoT cần liên kết tầm xa trong điều kiện môi trường nhiều suy hao và nhiễu.
+	
+	Tóm lại, kỹ thuật trải phổ giữ vai trò quan trọng trong nhiều hệ thống truyền thông hiện đại như IoT, WiFi, GPS và các ứng dụng chuyên dụng khác. Việc mở rộng phổ tín hiệu không chỉ giúp tăng độ tin cậy của liên kết mà còn nâng cao khả năng chống nhiễu và tính bảo mật – những yếu tố then chốt trong các hệ thống truyền thông không dây thực tế.
+	
+	\subsubsection{LoRa Chirp Spread Spectrum (CSS)}
+	
+	Chirp Spread Spectrum (CSS) là một kỹ thuật trải phổ sử dụng tín hiệu có tần số thay đổi theo thời gian, gọi là tín hiệu chirp. Trong công nghệ LoRa, CSS được áp dụng nhằm đáp ứng yêu cầu truyền thông tầm xa nhưng vẫn đảm bảo tiêu thụ năng lượng thấp, phù hợp với các hệ thống IoT hoạt động trong thời gian dài. Nhờ đặc tính trải phổ, CSS giúp LoRa có khả năng chống nhiễu tốt, duy trì độ tin cậy cao trong môi trường có nhiều giao thoa tần số, đồng thời vẫn giữ được thiết kế phần cứng tương đối đơn giản.
+	
+	Tín hiệu chirp là dạng tín hiệu mà tần số biến thiên tuyến tính theo thời gian. Hai dạng cơ bản thường gặp gồm upchirp (tần số tăng dần theo thời gian) và downchirp (tần số giảm dần theo thời gian). Một tín hiệu chirp lý tưởng có thể được mô tả bởi biểu thức \ref{eq11}.
+	
+	\begin{equation}\label{eq11}
+		s(t) = A \cdot \cos \left(2\pi f_0 t + \pi k t^2\right), 0 \leq t < T
+	\end{equation}
+	
+	trong đó $A$ là biên độ tín hiệu, $f_0$ là tần số bắt đầu, $T$ là thời gian của một chirp và $k$ là tốc độ quét tần (chirp rate). Với băng thông tín hiệu là $B$, hệ số $k$ được tính theo phương trình \ref{eq12}.
+	
+	\begin{equation}\label{eq12}
+		k = \dfrac{B}{T}
+	\end{equation}
+	
+	Khi đó, tần số tức thời tại thời điểm $t$ được tính theo phương trình \ref{eq13}.
+	
+	\begin{equation}\label{eq13}
+		f(t) = f_0 + \dfrac{B}{T}t
+	\end{equation}
+	
+	và pha tức thời của tín hiệu là:
+	
+	\begin{equation}\label{eq14}
+		\varphi (t) = 2\pi f_0 t + \pi \dfrac{B}{T}t^2
+	\end{equation}
+	
+	Trong LoRa, mỗi ký hiệu dữ liệu (symbol) được biểu diễn bằng một tín hiệu chirp và được dịch tần để mã hóa giá trị thông tin. Giá trị symbol nằm trong khoảng từ 0 đến $2^{SF} - 1$, với $SF$ là Spreading Factor. Mỗi symbol sẽ được trải thành $2^{SF}$ chip, do đó khi $SF$ tăng lên, tín hiệu được trải rộng hơn, giúp tăng độ nhạy thu và cải thiện khả năng truyền xa, tuy nhiên đồng thời làm giảm tốc độ truyền dữ liệu.
+	
+	Tốc độ bit của LoRa có thể được xấp xỉ theo công thức \ref{eq15}:
+	
+	\begin{equation}\label{eq15}
+		R_b = \dfrac{SF \cdot BW}{2^{SF}}
+	\end{equation}
+	
+	trong đó $BW$ là băng thông sử dụng (thường là 125 kHz, 250 kHz hoặc 500 kHz).
+	
+	Nhờ kỹ thuật CSS, LoRa có thể truyền dữ liệu ở khoảng cách lên đến hàng chục km trong điều kiện phù hợp, đặc biệt hiệu quả trong các môi trường có nhiễu cao hoặc tín hiệu suy hao mạnh. Với ưu điểm chống nhiễu tốt và tiêu thụ năng lượng thấp, LoRa trở thành một giải pháp phù hợp cho nhiều ứng dụng IoT như giám sát môi trường, nông nghiệp thông minh, theo dõi thiết bị từ xa và các hệ thống đô thị thông minh.
+	
+	\subsubsection{Các thông số kỹ thuật quan trọng của LoRa}
+	
+	Trong quá trình thiết kế và triển khai hệ thống truyền thông LoRa, việc lựa chọn cấu hình phù hợp là yếu tố quyết định đến phạm vi liên lạc, độ ổn định đường truyền, cũng như mức tiêu thụ năng lượng của thiết bị. Một số thông số kỹ thuật quan trọng thường được quan tâm gồm:
+	
+	\textbf{Tần số sóng mang (Carrier Frequency – CF):} Đây là tần số trung tâm dùng để điều chế và truyền tín hiệu LoRa. Tùy theo quy định tần số của từng khu vực và loại module sử dụng, LoRa có thể hoạt động ở nhiều dải tần khác nhau. Với các module phổ biến như SX1278, người dùng có thể tham khảo các dải tần hỗ trợ cụ thể trong datasheet để lựa chọn cấu hình phù hợp.
+	
+	\textbf{Băng thông (Bandwidth – BW):} Băng thông thể hiện độ rộng phổ tần mà tín hiệu chiếm dụng trong quá trình truyền. Các module LoRa như SX1276 hỗ trợ BW trong khoảng từ 7.8 kHz đến 500 kHz, trong đó các giá trị thường dùng là 125 kHz, 250 kHz và 500 kHz. BW càng lớn thì tốc độ truyền dữ liệu càng cao, tuy nhiên đổi lại độ nhạy thu giảm, khả năng chống nhiễu kém hơn và mức tiêu thụ năng lượng có xu hướng tăng.
+	
+	\textbf{Hệ số trải phổ (Spreading Factor – SF):} SF là tham số quan trọng phản ánh mức độ trải phổ của tín hiệu chirp trong LoRa. Khi SF tăng, tín hiệu được trải rộng hơn theo thời gian, giúp cải thiện khả năng thu trong điều kiện tín hiệu yếu, từ đó tăng phạm vi truyền và khả năng chống nhiễu. Tuy nhiên, SF càng cao thì tốc độ truyền dữ liệu càng giảm và thời gian truyền gói tin tăng lên. Thông thường, SF được cấu hình trong khoảng từ SF6 đến SF12.
+	
+	\textbf{Tỷ lệ mã hóa (Coding Rate – CR):} LoRa sử dụng cơ chế sửa lỗi tiến (FEC – Forward Error Correction) để tăng độ tin cậy của dữ liệu truyền. CR càng cao thì khả năng phát hiện và sửa lỗi càng tốt, giúp giảm lỗi khi truyền trong môi trường nhiễu hoặc suy hao mạnh. Tuy nhiên, CR cao cũng làm tăng số bit cần truyền, kéo theo thời gian truyền lâu hơn. Các mức CR phổ biến gồm 4/5, 4/6, 4/7 và 4/8.
+	
+	\textbf{Công suất phát (Transmit Power – TX Power):} Công suất phát là mức năng lượng mà thiết bị sử dụng để phát tín hiệu ra môi trường, ảnh hưởng trực tiếp đến khoảng cách truyền và mức tiêu thụ pin. Công suất phát càng lớn thì khả năng truyền xa càng cao, nhưng đồng thời làm tăng tiêu thụ năng lượng và có thể bị giới hạn bởi quy định phát xạ của từng khu vực. Thực tế, nhiều module LoRa hỗ trợ công suất phát tối đa khoảng 18 dBm, do đó cần lựa chọn mức công suất phù hợp để đảm bảo hiệu quả truyền thông và tối ưu thời gian hoạt động của thiết bị.
+	
+	\subsubsection{Cấu trúc bản tin LoRa ở lớp vật lý}
+	
+	Ở lớp vật lý, một bản tin LoRa được tổ chức theo cấu trúc gồm nhiều trường liên tiếp nhau, trong đó mỗi trường đảm nhiệm một chức năng riêng nhằm đảm bảo quá trình truyền và thu dữ liệu diễn ra chính xác, ổn định. \textbf{Preamble} là phần mở đầu của gói tin, có nhiệm vụ hỗ trợ bộ thu phát hiện tín hiệu và thực hiện đồng bộ trước khi giải điều chế dữ liệu. Trường này đồng thời giúp kích hoạt cơ chế phát hiện kênh rảnh và có thể được cấu hình độ dài trong một khoảng rộng tùy theo yêu cầu hệ thống. Sau đó là \textbf{Header}, chứa các thông tin quan trọng như độ dài gói tin, tham số mã hóa và các dữ liệu cần thiết để phía thu có thể giải mã đúng nội dung truyền. Header có thể được bật hoặc tắt tùy theo chế độ cấu hình. Để đảm bảo tính toàn vẹn cho phần Header, hệ thống có thể sử dụng thêm \textbf{CRC Header} nhằm kiểm tra lỗi trước khi xử lý dữ liệu chính. Tiếp theo là \textbf{Payload}, phần mang nội dung dữ liệu thực tế được gửi từ thiết bị phát đến thiết bị thu. Cuối cùng, trường \textbf{CRC} được thêm vào cuối bản tin nhằm kiểm tra lỗi cho toàn bộ gói tin, giúp tăng độ tin cậy trong quá trình truyền thông, đặc biệt trong môi trường có nhiễu hoặc suy hao lớn.
+	
+	\subsubsection{Thời gian phát khung}
+	
+	Thời gian phát một khung dữ liệu trong LoRa (Time on Air – ToA) phụ thuộc trực tiếp vào các tham số cấu hình của hệ thống, bao gồm băng thông (BW), hệ số trải phổ (SF) và tỷ lệ mã hóa (CR). Các tham số này quyết định thời gian tồn tại của mỗi symbol, đồng thời ảnh hưởng đến tổng thời gian truyền của hai thành phần chính trong gói tin là preamble và payload. Do đó, việc tính toán chính xác thời gian phát khung là cần thiết nhằm đánh giá tốc độ truyền dữ liệu, mức tiêu thụ năng lượng và hiệu quả truyền thông trong từng kịch bản ứng dụng.
+	
+	Trước hết, thời gian truyền phần preamble được xác định theo công thức \ref{eq16}:
+	
+	\begin{equation}\label{eq16}
+		T_{\text{preamble}} = \left(n_{\text{preamble}} + 4.25\right) \cdot T_s
+	\end{equation}
+	
+	trong đó $n_{\text{preamble}}$ là số symbol trong phần preamble (thường nằm trong khoảng từ 10 đến 65540) và $T_s$ là thời gian của một symbol.
+	
+	Tiếp theo, số symbol của phần payload được tính tùy theo chế độ header mà gói tin sử dụng. Với explicit header, chiều dài payload theo số symbol được xác định bởi phương trình \ref{eq17}.
+	
+	\begin{equation}\label{eq17}
+		n_{\text{payload}} = 8 + \max \left(\left\lceil\frac{2P + 4CRC - SF + 7}{SF - 2D}\right\rceil (CR + 4), 0\right)
+	\end{equation}
+	
+	Trong trường hợp sử dụng implicit header, công thức được điều chỉnh thành phương trình \ref{eq18}.
+	
+	\begin{equation}\label{eq18}
+		n_{\text{payload}} = 8 + \max \left(\left\lceil\frac{2P + 4CRC - SF + 2}{SF - 2D}\right\rceil (CR + 4), 0\right)
+	\end{equation}
+	
+	Trong các biểu thức trên, $P$ là độ dài payload (từ 1 đến 255 byte), $CRC$ nhận giá trị 1 nếu bật kiểm tra CRC và bằng 0 nếu tắt, $D$ bằng 1 khi bật chế độ tối ưu tốc độ thấp (Low Data Rate Optimization) và bằng 0 nếu không sử dụng. Ngoài ra, $CR$ là hệ số mã hóa (Coding Rate) phản ánh mức độ sửa lỗi của gói tin và $SF$ là hệ số trải phổ.
+	
+	Sau khi xác định được số symbol của payload, thời gian truyền phần payload được tính theo phương trình \ref{eq19}.
+	
+	\begin{equation}\label{eq19}
+		T_{\text{payload}} = n_{\text{payload}} \cdot T_s
+	\end{equation}
+	
+	Cuối cùng, tổng thời gian phát toàn bộ khung LoRa được tính bằng tổng thời gian truyền preamble và payload (phương trình \ref{eq20}).
+	
+	\begin{equation}\label{eq20}
+		T_{\text{packet}} = T_{\text{payload}} + T_{\text{preamble}}
+	\end{equation}
+	
+	\subsubsection{Những đặc điểm kỹ thuật nổi bật của công nghệ LoRa}
+	
+	Công nghệ LoRa nổi bật nhờ khả năng hoạt động ổn định trong môi trường truyền dẫn phức tạp, đặc biệt là các khu vực có nhiều nhiễu và suy hao. Một trong những ưu điểm quan trọng của LoRa là khả năng phân tách tín hiệu theo miền tần số – thời gian rất hiệu quả nhờ kỹ thuật điều chế đặc trưng, giúp hệ thống lọc nhiễu tốt và hạn chế ảnh hưởng của các tín hiệu không mong muốn trong băng tần hoạt động. Bên cạnh đó, LoRa còn thể hiện tính linh hoạt cao về băng thông, cho phép cấu hình từ dải hẹp đến dải rộng tùy theo yêu cầu về tốc độ dữ liệu và phạm vi truyền, nhờ khả năng mở rộng của phương pháp điều chế chirp.
+	
+	Ngoài ra, LoRa được đánh giá cao ở mức tiêu thụ năng lượng cực thấp, do sử dụng dạng sóng biên độ gần như không đổi tương tự điều chế FSK, giúp hệ thống có thể hoạt động với công suất thấp mà không cần bộ khuếch đại tuyến tính phức tạp. Đồng thời, độ lợi xử lý lớn từ kỹ thuật trải phổ CSS cho phép giảm công suất phát nhưng vẫn duy trì chất lượng liên kết ở mức chấp nhận được, từ đó kéo dài thời gian hoạt động của thiết bị dùng pin. LoRa cũng có khả năng chống đa đường (multipath) tốt nhờ đặc tính trải phổ băng rộng, giúp giảm ảnh hưởng của phản xạ tín hiệu và fading trong môi trường đô thị. Nhờ những đặc tính này, LoRa đạt được phạm vi truyền xa vượt trội, tạo ra link budget lớn hơn đáng kể so với các kỹ thuật điều chế truyền thống như FSK trong cùng điều kiện năng lượng. Đồng thời, hệ thống còn có khả năng kháng hiệu ứng Doppler, do không yêu cầu đồng bộ quá chặt về thời gian và tần số, phù hợp với các ứng dụng có đối tượng chuyển động. Cuối cùng, với kỹ thuật chirp modulation, LoRa có thể được đồng bộ và giải điều chế hiệu quả bằng các máy thu hiện đại, giúp duy trì khả năng thu tín hiệu ngay cả khi tín hiệu yếu hoặc khi nền nhiễu cao.
 	
 	\subsection{Các thông số của Anten}
 	
 	Trong lĩnh vực tần số vô tuyến (RF) và vi sóng (microwave), việc truyền tín hiệu điện giữa các thiết bị qua không gian đóng vai trò then chốt. Anten là thành phần quan trọng, vừa phát vừa thu sóng điện từ. Để anten hoạt động hiệu quả, cần nắm vững các thông số đặc trưng của anten, bao gồm trở kháng đầu vào, độ phản xạ, hệ số truyền, cũng như khả năng phối hợp trở kháng với đường truyền.
 	
 	\subsubsection{Tham số $S_{11}$}
+	
+	Với một hệ thống hai cổng (2-port), ma trận S bao gồm bốn phần tử chính là $S_{11}$, $S_{12}$, $S_{21}$ và $S_{22}$, lần lượt đại diện cho các đặc tính phản xạ và truyền dẫn của hệ thống. Trong đó, $S_{11}$ là hệ số phản xạ tại cổng vào, $S_{21}$ là hệ số truyền thuận từ cổng vào sang cổng ra, $S_{12}$ là hệ số truyền ngược từ cổng ra về cổng vào, và $S_{22}$ là hệ số phản xạ tại cổng ra. Nhờ các tham số này, người thiết kế có thể đánh giá được mức độ suy hao, mức truyền năng lượng và sự phù hợp trở kháng của hệ thống.
+	
+	Riêng đối với tham số $S_{11}$, đây là một trong những chỉ tiêu quan trọng nhất khi đánh giá mức độ phối hợp trở kháng của anten. Tham số này phản ánh lượng năng lượng bị phản xạ trở lại tại cổng vào, nguyên nhân chủ yếu đến từ sự không phù hợp trở kháng giữa anten và đường truyền (thường chuẩn hóa ở $50\Omega$).
+	
+	Khi $S_{11}$ có giá trị nhỏ (thường biểu diễn dưới dạng dB và nhỏ hơn $-10$ dB), điều đó cho thấy mức phản xạ thấp, tức là phần lớn công suất đã được truyền vào anten, giúp hệ thống hoạt động ổn định và hiệu quả hơn. Ngược lại, nếu $S_{11}$ lớn (tiệm cận 0 dB), năng lượng phản xạ tăng lên đáng kể, làm giảm hiệu suất phát/thu và có thể gây ảnh hưởng không mong muốn đến chất lượng liên kết RF.
+	
+	Một số mốc giá trị thường được dùng để tham khảo gồm: $S_{11}$ = 0 dB tương ứng phản xạ gần như toàn phần (hầu như không truyền công suất vào anten), $S_{11}$ = $-10$ dB cho thấy khoảng 10\% công suất bị phản xạ (mức có thể chấp nhận trong nhiều ứng dụng), và $S_{11}$ = $-20$ dB thể hiện phản xạ rất thấp, chứng tỏ anten được phối hợp trở kháng tốt và hiệu quả truyền năng lượng cao.
+	
+	\subsubsection{Đồ thị Smith}
+	
+	Đồ thị Smith (Smith Chart) là một công cụ đồ họa quan trọng trong lĩnh vực RF – vi ba, được sử dụng để biểu diễn trở kháng phức và hệ số phản xạ của mạch cao tần. Nhờ khả năng thể hiện trực quan quá trình phản xạ và phối hợp trở kháng, đồ thị Smith giúp kỹ sư dễ dàng đánh giá mức độ khớp trở giữa anten và đường truyền, từ đó tối ưu hiệu suất truyền năng lượng.
+	
+	Cấu trúc của đồ thị Smith được biểu diễn trên Hình \ref{fig11}.
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[trim = 15pt 15pt 15pt 15pt, clip, width=12cm]{SmithChart.pdf}
+		\caption[Đồ thị Smith]{\bfseries \fontsize{12pt}{0pt}\selectfont Đồ thị Smith}
+		\label{fig11}
+	\end{figure}
+	
+	Đồ thị Smith được biểu diễn dưới dạng một hình tròn trong mặt phẳng phức, với các đặc điểm chính như sau:
+	
+	- Tâm đồ thị: là điểm phối hợp trở kháng hoàn hảo (thường chuẩn hóa về $Z_0 = 50\Omega$, tương ứng với $|\Gamma|=0$ hay $S_{11} = 0$.
+	
+	- Vòng tròn ngoài cùng: biểu thị trạng thái phản xạ toàn phần, tương ứng $|\Gamma|=1$.
+	
+	- Nửa trên của đồ thị: biểu diễn trở kháng có thành phần cảm kháng ($+jX$), tương đương đặc tính cuộn cảm.
+	
+	- Nửa dưới của đồ thị: biểu diễn trở kháng có thành phần dung kháng ($-jX$), tương đương đặc tính tụ điện.
+	
+	\paragraph{Cơ sở toán học}\mbox{}
+	
+	Đồ thị Smith dựa trên mối quan hệ giữa trở kháng phức của tải $Z = R+jX$ và hệ số phản xạ $\Gamma$ theo công thức \ref{eq21}.
+	
+	\begin{equation}\label{eq21}
+		\Gamma = \dfrac{Z - Z_0}{Z + Z_0}
+	\end{equation}
+	
+	trong đó $Z_0$ là trở kháng đặc trưng của đường truyền (thường là $50\Omega$). Mọi giá trị $\Gamma$ khả thi sẽ nằm trong đường tròn đơn vị trên mặt phẳng phức, vì vậy Smith Chart giúp biểu diễn trực quan trở kháng từ 0 đến vô cùng thông qua vị trí điểm trên biểu đồ.
+	
+	\paragraph{Ứng dụng}\mbox{}
+	
+	Đồ thị Smith được sử dụng rộng rãi trong các bài toán đo lường và thiết kế mạch RF, tiêu biểu gồm:
+	
+	- Phân tích tham số $S_{11}$: vị trí điểm đo trên Smith Chart cho biết mức độ phản xạ và khả năng phối hợp trở kháng của anten với đường truyền.
+	
+	- Thiết kế mạch phối hợp trở kháng: thông qua việc thêm các phần tử cuộn cảm và tụ điện, kỹ sư có thể “dịch chuyển” điểm trở kháng về tâm đồ thị để giảm phản xạ và tăng hiệu suất truyền.
+	
+	- Phân tích đường truyền: hỗ trợ tính toán ảnh hưởng của chiều dài dây dẫn, đặc biệt trong các trường hợp có độ dài tương đương $\lambda/4, \lambda/2$, ...
+	
+	- Thiết kế mạch vi sóng: ứng dụng trong thiết kế anten, bộ lọc (filter), mạng phối hợp (matching network) và các hệ thống RF đa tần.
+	
+	\paragraph{Ưu điểm}\mbox{}
+	
+	- Biểu diễn trực quan, dễ theo dõi quá trình khớp trở và phản xạ.
+	
+	- Giảm sai số trong tính toán thủ công các đại lượng phức.
+	
+	- Hỗ trợ thiết kế RF hiệu quả, đặc biệt khi kết hợp với phần mềm mô phỏng như ADS, CST hoặc HFSS.
+	
+	\paragraph{Nhược điểm}\mbox{}
+	
+	- Khó tiếp cận đối với người mới do sử dụng mặt phẳng phức và chuẩn hóa trở kháng.
+	
+	- Cần thực hành và kinh nghiệm để đọc biểu đồ và thao tác chính xác trong thiết kế.
+	
+	\subsection{Anten monopole, anten dipole và anten Yagi}
+	
+	\subsubsection{Anten monopole}
+	
+	\paragraph{Cấu trúc và nguyên lý hoạt động}\mbox{}
+	
+	Anten Monopole (Hình \ref{fig12}) là một trong những loại anten bức xạ cơ bản và phổ biến nhất trong hệ thống thông tin vô tuyến. Cấu trúc của anten thường gồm một dây dẫn thẳng đứng có chiều dài xấp xỉ $\lambda/4$, được đặt trên một mặt phẳng dẫn điện lớn gọi là mặt đất (ground plane). Mặt đất đóng vai trò như một bề mặt phản xạ, tạo ra một “ảnh ảo” của phần anten đối xứng phía dưới, nhờ đó anten Monopole có thể được xem như tương đương với một anten lưỡng cực $\lambda/2$ về mặt nguyên lý bức xạ.
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[clip, width=2.5cm]{fig13.jpg}
+		\caption[Một anten monopole điển hình]{\bfseries \fontsize{12pt}{0pt}\selectfont Một anten monopole điển hình}
+		\label{fig12}
+	\end{figure}
+	
+	Tín hiệu RF được cấp vào chân anten tại điểm nối giữa phần tử bức xạ và mặt đất. Khi dòng điện cao tần chạy dọc theo dây dẫn, nó tạo ra trường điện từ biến thiên và phát xạ năng lượng ra không gian xung quanh, hình thành sóng điện từ lan truyền trong môi trường truyền dẫn.
+	
+	\paragraph{Đặc tính điện từ}\mbox{}
+	
+	Anten Monopole có nhiều đặc tính phù hợp với các ứng dụng truyền thông không dây nhờ cấu tạo đơn giản và khả năng phát sóng theo mọi hướng trong mặt phẳng ngang. Độ lợi của anten Monopole lý tưởng trên mặt đất vô hạn đạt khoảng 5.14 dBi (so với anten đẳng hướng). Trong thực tế, độ lợi này có thể thay đổi tùy thuộc vào kích thước và chất lượng của ground plane, cũng như điều kiện môi trường xung quanh anten.
+	
+	Về trở kháng vào, anten Monopole $\lambda/4$ lý tưởng có trở kháng xấp xỉ $36.5 + j21 \Omega$. Khi anten được điều chỉnh để làm việc tại trạng thái cộng hưởng, phần phản kháng có thể được triệt tiêu và trở kháng được đưa về gần $50\Omega$ nhằm phối hợp tốt với đường truyền, giúp giảm phản xạ và tăng hiệu quả truyền năng lượng.
+	
+	Bên cạnh đó, băng thông của anten Monopole thường tương đối hẹp, đặc biệt đối với các anten kích thước nhỏ. Để cải thiện băng thông, có thể áp dụng một số phương pháp như tải cảm ứng, tải điện dung hoặc thiết kế đa băng tần. Về mẫu bức xạ, anten Monopole có tính đa hướng trong mặt phẳng ngang (azimuth), tạo thành dạng hình xuyến. Trong mặt phẳng đứng (elevation), năng lượng bức xạ mạnh nhất tại góc khoảng $90^{\circ}$ so với trục anten và suy giảm dần về phía trên hoặc phía dưới.
+	
+	\paragraph{Ứng dụng}\mbox{}
+	
+	Nhờ ưu điểm nhỏ gọn, dễ chế tạo và phù hợp với nhiều môi trường triển khai, anten Monopole được sử dụng rộng rãi trong các hệ thống yêu cầu vùng phủ sóng đa hướng hoặc bị giới hạn không gian lắp đặt. Một số ứng dụng điển hình gồm:
+	
+	- Anten cho các thiết bị radio di động (anten xe hơi, bộ đàm).
+	
+	- Trạm phát/thu di động phục vụ vùng phủ sóng rộng.
+	
+	- Các thiết bị IoT và hệ thống cảm biến không dây.
+	
+	- Anten trên máy bay dạng “vây cá mập”.
+	
+	- Hệ thống phát thanh AM/FM với cột anten cao.
+	
+	\subsubsection{Anten dipole}
+	
+	\paragraph{Cấu trúc và nguyên lý hoạt động}\mbox{}
+	
+	Anten Dipole (anten lưỡng cực - Hình \ref{fig13}) là một trong những loại anten cơ bản nhất trong kỹ thuật vô tuyến, thường được sử dụng làm mô hình tham chiếu trong nhiều bài toán phân tích và thiết kế anten. Cấu trúc của anten Dipole gồm hai phần tử dẫn điện đối xứng, đặt thẳng hàng và được cấp tín hiệu tại điểm giữa. Trong đó, loại dipole phổ biến nhất là half-wave dipole, có tổng chiều dài xấp xỉ $\lambda/2$, nghĩa là mỗi nhánh anten có chiều dài gần $\lambda/4$
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[clip, width=6cm]{fig14.jpg}
+		\caption[Một anten dipole điển hình]{\bfseries \fontsize{12pt}{0pt}\selectfont Một anten dipole điển hình}
+		\label{fig13}
+	\end{figure}
+	
+	Khi tín hiệu cao tần được đưa vào điểm cấp nguồn, dòng điện dao động sẽ phân bố dọc theo hai nhánh anten theo dạng gần sin, tạo ra trường điện từ biến thiên và phát xạ năng lượng ra không gian dưới dạng sóng điện từ. Anten Dipole có thể hoạt động hiệu quả khi được điều chỉnh đúng tần số cộng hưởng, giúp tối ưu khả năng bức xạ và giảm tổn hao phản xạ công suất về phía nguồn phát.
+	
+	\paragraph{Đặc tính điện từ}\mbox{}
+	
+	Anten Dipole có các đặc tính điện từ tương đối ổn định và dễ dự đoán, nhờ cấu trúc đối xứng và nguyên lý hoạt động đơn giản. Về độ lợi, anten Dipole lý tưởng (half-wave dipole trong không gian tự do) có độ lợi khoảng 2.15 dBi, thường được sử dụng làm chuẩn so sánh trong nhiều hệ thống anten.
+	
+	Về trở kháng vào, anten Dipole cộng hưởng có trở kháng xấp xỉ $73\Omega$ (thuần trở trong điều kiện lý tưởng). Trong thực tế, trở kháng này có thể thay đổi do ảnh hưởng của môi trường xung quanh, vật cản gần anten, độ cao lắp đặt hoặc sai số chế tạo. Do đó, trong nhiều ứng dụng, anten Dipole thường cần thêm mạch phối hợp trở kháng để phù hợp với đường truyền chuẩn $50\Omega$.
+	
+	Về băng thông, dipole có băng thông tương đối hẹp nếu chỉ sử dụng dây dẫn mảnh. Tuy nhiên, băng thông có thể được cải thiện bằng cách tăng đường kính phần tử bức xạ hoặc sử dụng các biến thể như folded dipole. Về mẫu bức xạ, anten Dipole có dạng hình “số 8” trong mặt phẳng ngang vuông góc với trục anten, nghĩa là bức xạ mạnh nhất theo phương vuông góc với anten và yếu nhất theo hướng dọc theo trục anten.
+	
+	\paragraph{Ứng dụng}\mbox{}
+	
+	Nhờ đặc tính bức xạ ổn định và cấu tạo đơn giản, anten Dipole được ứng dụng rộng rãi trong nhiều hệ thống truyền thông và đo lường. Một số ứng dụng điển hình có thể kể đến:
+	
+	- Anten phát/thu trong các hệ thống vô tuyến cơ bản.
+	
+	- Anten cho thiết bị thu phát VHF/UHF, radio dân dụng.
+	
+	- Anten tham chiếu trong các bài toán mô phỏng và đo kiểm RF.
+	
+	- Là phần tử cơ sở để thiết kế các anten mảng như Yagi-Uda, log-periodic.
+	
+	- Hệ thống truyền thông không dây và các thiết bị đo kiểm trong phòng thí nghiệm.
+	
+	\subsubsection{Anten Yagi}
+	
+	\paragraph{Cấu trúc và nguyên lý hoạt động}\mbox{}
+	
+	Anten Yagi-Uda (thường gọi tắt là anten Yagi - Hình \ref{fig14}) là một loại anten định hướng nổi bật, được phát minh bởi Shintaro Uda và Hidetsugu Yagi, và hiện nay được ứng dụng rất rộng rãi trong các hệ thống truyền thông cần tăng cường tín hiệu theo một hướng xác định. Anten Yagi có cấu trúc gồm một phần tử chủ động (được cấp nguồn) kết hợp với các phần tử thụ động để tạo hiệu ứng tập trung năng lượng bức xạ.
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[clip, width=5cm]{fig12.jpg}
+		\caption[Một anten Yagi điển hình]{\bfseries \fontsize{12pt}{0pt}\selectfont Một anten Yagi điển hình}
+		\label{fig14}
+	\end{figure}
+	
+	Về cơ bản, anten Yagi bao gồm: phần tử bức xạ chủ động (driven element), phần tử phản xạ (reflector) và một hoặc nhiều phần tử dẫn hướng (director). Trong đó, driven element thường là dipole đơn hoặc dipole gập và là nơi tín hiệu được cấp từ máy phát hoặc đưa về máy thu. Reflector được đặt phía sau driven element và có chiều dài nhỉnh hơn một chút, giúp phản xạ sóng điện từ về phía trước, làm giảm bức xạ phía sau và tăng hiệu quả theo hướng mong muốn. Ngược lại, các director được đặt phía trước driven element và có chiều dài ngắn hơn, có nhiệm vụ “kéo” và dẫn hướng sóng điện từ, từ đó tạo ra búp sóng chính mạnh theo một hướng cụ thể.
+	
+	Nhờ sự tương tác điện từ giữa các phần tử thông qua việc tối ưu chiều dài và khoảng cách bố trí, anten Yagi tạo được mẫu bức xạ định hướng rõ rệt và đạt độ lợi cao hơn đáng kể so với các anten đa hướng thông thường.
+	
+	\paragraph{Đặc tính điện từ}\mbox{}
+	
+	Anten Yagi có ưu điểm nổi bật là độ lợi lớn, thường dao động từ vài dBi cho đến trên 20 dBi, tùy thuộc vào số lượng phần tử và thiết kế cụ thể. Khi tăng số lượng director, độ lợi thường tăng lên, tuy nhiên đồng thời kích thước anten cũng lớn hơn và việc căn chỉnh thiết kế sẽ phức tạp hơn.
+	
+	Về trở kháng vào, anten Yagi phụ thuộc nhiều vào cấu trúc của phần tử bức xạ chủ động và sự ghép tương hỗ giữa các phần tử thụ động. Do đó, trong thực tế anten thường cần thêm các giải pháp phối hợp trở kháng như balun, gamma match hoặc mạch matching để đảm bảo truyền công suất hiệu quả và giảm phản xạ.
+	
+	Về băng thông, anten Yagi thường có băng thông tương đối hẹp, đặc biệt đối với các thiết kế độ lợi cao. Điều này khiến anten phù hợp hơn cho các hệ thống hoạt động ở một dải tần cố định, và yêu cầu độ chính xác cao trong chế tạo cũng như hiệu chỉnh.
+	
+	Về mẫu bức xạ, anten Yagi có tính định hướng mạnh với búp sóng chính tập trung theo hướng từ reflector hướng về các director. Các búp phụ (side lobes) và búp ngược (back lobe) thường nhỏ hơn và có thể được tối ưu để giảm nhiễu. Một chỉ số quan trọng của anten Yagi là tỷ số trước–sau (Front-to-Back Ratio), thể hiện khả năng tập trung năng lượng về phía trước và hạn chế bức xạ phía sau.
+	
+	\paragraph{Ứng dụng}\mbox{}
+	
+	Nhờ đặc tính định hướng tốt và khả năng khuếch đại tín hiệu theo hướng mong muốn, anten Yagi đặc biệt phù hợp trong các ứng dụng cần truyền xa hoặc thu tín hiệu yếu. Một số ứng dụng tiêu biểu gồm:
+	
+	- Anten truyền hình mặt đất (anten TV gia đình).
+	
+	- Hệ thống radio nghiệp dư (Ham Radio).
+	
+	- Liên lạc định hướng điểm–điểm (Point-to-Point Communication).
+	
+	- Các hệ thống giám sát và viễn thông chuyên dụng.
+	
+	- Trạm quan trắc thời tiết, hệ thống theo dõi vệ tinh hoặc tín hiệu định hướng.
 	
 	\newpage
 	
@@ -300,6 +581,8 @@
 	\setcounter{figure}{0}
 	\setcounter{table}{0}
 	\setcounter{equation}{0}
+	
+	Chương 2 trình bày tổng quan về hệ thống phần cứng được sử dụng trong đề tài, bao gồm các linh kiện và module chính cấu thành nên thiết bị. Nội dung tập trung giới thiệu vi điều khiển ESP32, module truyền thông Ra-02, màn hình OLED SSD1306, mạch ổn áp LM2596 và các loại anten phục vụ quá trình truyền/nhận tín hiệu. Bên cạnh đó, chương cũng mô tả cách kết nối giữa các khối phần cứng nhằm đảm bảo hệ thống hoạt động ổn định và đúng yêu cầu thiết kế. 
 	
 	\subsection{Vi điều khiển ESP32}
 	
@@ -320,7 +603,7 @@
 	
 	\begin{figure}[!ht]
 		\centering
-		\includegraphics[clip, width=3.5cm]{fig22.png}
+		\includegraphics[clip, width=3cm]{fig22.png}
 		\caption[ESP-WROOM-32]{\bfseries \fontsize{12pt}{0pt}\selectfont ESP-WROOM-32}
 		\label{fig22}
 	\end{figure}
@@ -353,7 +636,7 @@
 		\caption[Thông số kỹ thuật của vi điều khiển ESP32]{\bfseries \fontsize{12pt}{0pt}\selectfont Thông số kỹ thuật của vi điều khiển ESP32}
 		\label{tab21}
 		\centering
-		\begin{tabular}{|p{4cm}|p{9cm}|}
+		\begin{tabular}{|p{3.5cm}|p{11cm}|}
 			\hline
 			\textbf{Thành phần} & \textbf{Mô tả} \\ 
 			\hline
@@ -460,16 +743,464 @@
 	
 	\subsection{Màn hình SSD-1306}
 	
+	Màn hình OLED SSD1306 (Hình \ref{fig24}) là loại màn hình hiển thị đơn sắc sử dụng công nghệ OLED (Organic Light Emitting Diode), trong đó mỗi điểm ảnh có khả năng tự phát sáng mà không cần đèn nền. Nhờ đặc tính này, màn hình OLED có độ tương phản cao, góc nhìn rộng và mức tiêu thụ năng lượng thấp, đặc biệt phù hợp cho các hệ thống nhúng và thiết bị IoT sử dụng nguồn pin.
+	
+	Màn hình SSD1306 thường có kích thước nhỏ gọn, phổ biến nhất là loại 0.96 inch với độ phân giải 128×64 pixel. Bộ điều khiển SSD1306 được tích hợp sẵn trên module, cho phép giao tiếp trực tiếp với vi điều khiển thông qua các chuẩn truyền thông phổ biến như I\textsuperscript{2}C hoặc SPI. Trong hệ thống của nhóm, màn hình OLED được sử dụng để hiển thị các thông số trạng thái như dữ liệu nhận được, RSSI, SNR và trạng thái hoạt động của module LoRa, giúp việc theo dõi và đánh giá quá trình thử nghiệm trở nên trực quan hơn.
+	
+	
 	\begin{figure}[!ht]
 		\centering
-		\includegraphics[clip, width=4.5cm]{fig241.jpg}
+		\includegraphics[clip, width=4cm]{fig241.jpg}
 		\caption[Màn hình OLED SSD1306]{\bfseries \fontsize{12pt}{0pt}\selectfont Màn hình OLED SSD-1306}
 		\label{fig24}
 	\end{figure}
 	
+	\subsubsection{Thông số kỹ thuật}
+	
+	Bảng \ref{tab23} trình bày các thông số kỹ thuật cơ bản của màn hình OLED SSD1306.
+	
+	\begin{table}[H]
+		\caption[Thông số kỹ thuật của màn hình OLED SSD1306]{\bfseries \fontsize{12pt}{0pt}\selectfont Thông số kỹ thuật của màn hình OLED SSD1306}
+		\label{tab23}
+		\centering
+		\begin{tabular}{|p{4.5cm}|p{8.5cm}|}
+			\hline
+			\textbf{Thành phần} & \textbf{Mô tả} \\ 
+			\hline
+			Controller & SSD1306 \\ 
+			\hline
+			Công nghệ hiển thị & OLED đơn sắc \\ 
+			\hline
+			Kích thước màn hình & 0.96 inch \\ 
+			\hline
+			Độ phân giải & 128 × 64 pixel \\ 
+			\hline
+			Màu hiển thị & Trắng / Xanh dương (đơn sắc) \\ 
+			\hline
+			Giao tiếp & I\textsuperscript{2}C hoặc SPI \\ 
+			\hline
+			Địa chỉ I\textsuperscript{2}C & 0x3C hoặc 0x3D \\ 
+			\hline
+			Điện áp hoạt động & 3.3 V – 5 V \\ 
+			\hline
+			Dòng tiêu thụ & 20 – 30 mA (phụ thuộc nội dung hiển thị) \\ 
+			\hline
+			Góc nhìn & Gần 180$^\circ$ \\ 
+			\hline
+			Kích thước module & Xấp xỉ 27 mm × 27 mm \\ 
+			\hline
+		\end{tabular}
+	\end{table}
+	
+	\subsubsection{Ưu điểm của màn hình OLED SSD1306}
+	
+	Màn hình OLED SSD1306 có nhiều ưu điểm nổi bật khi sử dụng trong các hệ thống nhúng. Trước hết, công nghệ OLED cho phép hiển thị với độ tương phản rất cao, giúp các ký tự và đồ họa rõ nét ngay cả trong điều kiện ánh sáng môi trường mạnh. Thời gian đáp ứng nhanh và góc nhìn rộng cũng là những đặc điểm giúp màn hình duy trì chất lượng hiển thị ổn định ở nhiều góc quan sát khác nhau.
+	
+	Bên cạnh đó, màn hình có mức tiêu thụ năng lượng thấp do không cần đèn nền, rất phù hợp với các hệ thống IoT sử dụng pin. Chuẩn giao tiếp I\textsuperscript{2}C phổ biến giúp giảm số lượng chân kết nối với vi điều khiển, đơn giản hóa thiết kế phần cứng. Ngoài ra, SSD1306 được hỗ trợ bởi nhiều thư viện phần mềm như Adafruit SSD1306 và U8g2, giúp quá trình lập trình và tích hợp vào hệ thống trở nên thuận tiện và nhanh chóng.
+	
+	\subsubsection{Nhược điểm của màn hình OLED SSD1306}
+	
+	Mặc dù có nhiều ưu điểm, màn hình OLED SSD1306 cũng tồn tại một số hạn chế. Do chỉ hỗ trợ hiển thị đơn sắc và có độ phân giải thấp, màn hình không phù hợp với các ứng dụng yêu cầu hiển thị hình ảnh phức tạp hoặc nhiều màu sắc. Kích thước nhỏ cũng giới hạn lượng thông tin có thể hiển thị đồng thời trên màn hình.
+	
+	Ngoài ra, công nghệ OLED có thể gặp hiện tượng suy giảm độ sáng theo thời gian nếu hiển thị nội dung tĩnh trong thời gian dài. Tốc độ truyền dữ liệu qua giao tiếp I\textsuperscript{2}C cũng tương đối thấp so với SPI, điều này có thể ảnh hưởng đến tốc độ làm mới màn hình trong một số ứng dụng yêu cầu cập nhật liên tục.
+	
+	\subsubsection{Ứng dụng phổ biến của màn hình OLED SSD1306}
+	
+	Màn hình OLED SSD1306 được sử dụng rộng rãi trong các hệ thống nhúng và thiết bị IoT để hiển thị thông tin trạng thái, dữ liệu cảm biến và các thông báo hệ thống. Trong các dự án nghiên cứu và thử nghiệm, màn hình thường được dùng để hiển thị các tham số như RSSI, SNR, tốc độ truyền dữ liệu hoặc trạng thái kết nối không dây.
+	
+	Ngoài ra, SSD1306 còn xuất hiện trong các thiết bị đo lường cầm tay, đồng hồ thông minh, thiết bị đeo và các bộ điều khiển nhỏ gọn. Nhờ kích thước nhỏ, tiêu thụ năng lượng thấp và khả năng hiển thị rõ ràng, màn hình OLED SSD1306 là một giải pháp hiển thị hiệu quả cho các hệ thống yêu cầu tính gọn nhẹ và độ tin cậy cao.
+	
 	\subsection{Mạch ổn áp LM2596}
 	
+	Mạch ổn áp LM2596 (Hình \ref{fig25}) là mạch nguồn chuyển mạch kiểu buck (hạ áp DC-DC), sử dụng IC LM2596 của hãng Texas Instruments. Mạch cho phép hạ điện áp đầu vào DC ở mức cao xuống mức điện áp thấp hơn với hiệu suất cao, thường đạt từ 80\% đến 90\%, vượt trội so với các mạch ổn áp tuyến tính truyền thống.
+	
+	Nhờ đặc tính hiệu suất cao, dòng tải lớn và khả năng hoạt động ổn định, mạch LM2596 được sử dụng rộng rãi trong các hệ thống nhúng, thiết bị IoT, các mạch RF và các ứng dụng dùng pin hoặc adapter DC, nơi yêu cầu nguồn cấp ổn định và tổn hao công suất thấp.
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[clip, width=4.5cm]{fig210.jpg}
+		\caption[Mạch ổn áp LM2596]{\bfseries \fontsize{12pt}{0pt}\selectfont Mạch ổn áp LM2596}
+		\label{fig25}
+	\end{figure}
+	
+	\subsubsection{Thông số kỹ thuật}
+	
+	Bảng \ref{tab_lm2596} trình bày các thông số kỹ thuật cơ bản của mạch ổn áp LM2596.
+	
+	\begin{table}[H]
+		\caption[Thông số kỹ thuật của mạch LM2596]{\bfseries \fontsize{12pt}{0pt}\selectfont Thông số kỹ thuật của mạch LM2596}
+		\label{tab_lm2596}
+		\centering
+		\begin{tabular}{|p{4.5cm}|p{9cm}|}
+			\hline
+			\textbf{Thành phần} & \textbf{Mô tả} \\ 
+			\hline
+			IC nguồn & LM2596 (Buck DC--DC Converter) \\ 
+			\hline
+			Điện áp đầu vào & 4 V đến 40 V DC \\ 
+			\hline
+			Điện áp đầu ra & 1.25 V đến 35 V (điều chỉnh bằng biến trở) \\ 
+			\hline
+			Dòng tải tối đa & 3 A \\ 
+			\hline
+			Tần số chuyển mạch & 150 kHz \\ 
+			\hline
+			Hiệu suất & Lên tới 90\% (tùy điều kiện tải) \\ 
+			\hline
+			Bảo vệ & Quá dòng, quá nhiệt \\ 
+			\hline
+			Phương pháp điều chỉnh & Biến trở (potentiometer) \\ 
+			\hline
+			Kích thước module & Khoảng 43 mm × 21 mm × 14 mm \\ 
+			\hline
+		\end{tabular}
+	\end{table}
+	
+	\subsubsection{Ưu điểm của mạch ổn áp LM2596}
+	
+	Mạch LM2596 có ưu điểm lớn nhất là hiệu suất chuyển đổi cao, giúp giảm đáng kể tổn hao công suất và nhiệt lượng sinh ra trong quá trình hoạt động. Điều này đặc biệt quan trọng đối với các hệ thống sử dụng nguồn pin hoặc yêu cầu hoạt động liên tục trong thời gian dài.
+	
+	Ngoài ra, mạch có khả năng cung cấp dòng tải lớn lên tới 3 A, đáp ứng tốt nhu cầu cấp nguồn cho các vi điều khiển, module RF như Ra-02, màn hình OLED, cảm biến và các thiết bị ngoại vi khác. Việc tích hợp sẵn các chức năng bảo vệ quá dòng và quá nhiệt giúp mạch hoạt động an toàn và ổn định hơn trong điều kiện thực tế.
+	
+	Bên cạnh đó, mạch LM2596 có thiết kế nhỏ gọn, dễ sử dụng, không yêu cầu tính toán phức tạp trong thiết kế nguồn, phù hợp cho cả mục đích học tập, nghiên cứu và triển khai nhanh trong các dự án thực tế.
+	
+	\subsubsection{Nhược điểm của mạch ổn áp LM2596}
+	
+	Mặc dù có hiệu suất cao, mạch LM2596 là nguồn chuyển mạch nên đầu ra có thể xuất hiện nhiễu xung và gợn sóng điện áp (ripple), đặc biệt khi cấp nguồn cho các mạch analog hoặc RF nhạy cảm. Trong một số trường hợp, cần bổ sung thêm tụ lọc hoặc mạch LC để cải thiện chất lượng nguồn.
+	
+	Ngoài ra, do sử dụng biến trở cơ học để điều chỉnh điện áp đầu ra, giá trị điện áp có thể bị trôi nhẹ theo thời gian hoặc rung động cơ học. Mạch cũng không phù hợp cho các ứng dụng yêu cầu độ ổn định điện áp cực cao hoặc nhiễu cực thấp như các hệ thống đo lường chính xác.
+	
+	\subsubsection{Ứng dụng phổ biến của mạch ổn áp LM2596}
+	
+	Mạch LM2596 được sử dụng rộng rãi trong các hệ thống nhúng và IoT để hạ áp từ nguồn adapter 12 V hoặc 24 V xuống các mức điện áp tiêu chuẩn như 5 V hoặc 3.3 V, phục vụ cho vi điều khiển, module truyền thông và cảm biến.
+	
+	Ngoài ra, mạch còn được ứng dụng trong các hệ thống nguồn di động, bộ nguồn cho module RF, thiết bị đo đạc, robot, xe tự hành và các hệ thống điện tử công suất nhỏ. Với tính linh hoạt cao, chi phí thấp và khả năng hoạt động ổn định, LM2596 là lựa chọn phổ biến trong nhiều đồ án và dự án kỹ thuật điện tử.
+	
 	\subsection{Anten truyền/nhận sóng}
+	
+	Trong hệ thống truyền thông LoRa, anten đóng vai trò quyết định đến hiệu quả bức xạ và khả năng thiết lập liên kết ở khoảng cách xa. Việc lựa chọn loại anten phù hợp ảnh hưởng trực tiếp đến suy hao đường truyền, độ ổn định tín hiệu cũng như vùng phủ sóng của hệ thống. Trong quá trình thử nghiệm, nhóm sử dụng nhiều loại anten khác nhau nhằm đánh giá và so sánh hiệu năng truyền - nhận trong các điều kiện môi trường thực tế.
+	
+	\subsubsection{Anten monopole 12dBi}
+	
+	Anten monopole 12dBi là loại anten bức xạ đẳng hướng theo phương ngang, thường được sử dụng trong các hệ thống truyền thông vô tuyến tầm trung. Với đặc tính bức xạ đều theo mặt phẳng ngang, anten monopole phù hợp cho các ứng dụng cần vùng phủ sóng rộng xung quanh điểm đặt anten.
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[clip, width=3.5cm]{fig211.png}
+		\caption[Anten monopole 12dBi]{\bfseries \fontsize{12pt}{0pt}\selectfont Anten monopole 12dBi}
+		\label{fig26}
+	\end{figure}
+	
+	\paragraph{Thông số kỹ thuật}\mbox{}
+	
+	Bảng \ref{tab_mono12} trình bày các thông số kỹ thuật cơ bản của anten monopole 12dBi được sử dụng trong thử nghiệm.
+	
+	\begin{table}[H]
+		\caption[Thông số kỹ thuật anten monopole 12dBi]{\bfseries \fontsize{12pt}{0pt}\selectfont Thông số kỹ thuật anten monopole 12dBi}
+		\label{tab_mono12}
+		\centering
+		\begin{tabular}{|p{4cm}|p{9cm}|}
+			\hline
+			\textbf{Thông số} & \textbf{Giá trị} \\ 
+			\hline
+			Loại anten & Monopole \\ 
+			\hline
+			Độ lợi (Gain) & 12 dBi \\ 
+			\hline
+			Dải tần hoạt động & 423 - 433 MHz \\ 
+			\hline
+			Tần số sử dụng & 433 MHz \\ 
+			\hline
+			Trở kháng & $50\Omega$ \\ 
+			\hline
+			Kiểu phân cực & Phân cực thẳng đứng \\ 
+			\hline
+			Đầu nối & SMA / N-type (tùy phiên bản) \\ 
+			\hline
+		\end{tabular}
+	\end{table}
+	
+	\paragraph{Ưu điểm}\mbox{}
+	
+	Anten monopole 12dBi có cấu trúc đơn giản, dễ lắp đặt và không yêu cầu căn chỉnh phức tạp về hướng. Với độ lợi tương đối cao so với các anten whip thông thường, anten cho phép cải thiện đáng kể cường độ tín hiệu thu và mở rộng phạm vi truyền trong môi trường ngoài trời. Đặc tính bức xạ đều giúp hệ thống duy trì liên kết ổn định khi các nút truyền hoặc nhận có sự thay đổi vị trí nhỏ.
+	
+	\paragraph{Nhược điểm}\mbox{}
+	
+	Do đặc tính bức xạ gần đẳng hướng, anten monopole không tập trung năng lượng theo một hướng cụ thể, dẫn đến hiệu quả truyền xa theo một hướng nhất định không cao bằng các anten định hướng như Yagi. Ngoài ra, hiệu suất của anten phụ thuộc đáng kể vào vị trí lắp đặt và mặt phẳng tiếp địa; việc đặt anten gần vật cản hoặc bề mặt kim loại có thể gây suy giảm hiệu năng.
+	
+	\subsubsection{Anten NL-770R băng tần kép 144/430 MHz}
+	
+	Anten NL-770R là anten vô tuyến di động băng tần kép, được thiết kế để hoạt động trên cả hai dải tần VHF (144 MHz) và UHF (430 MHz). Anten có cấu trúc monopole kéo dài, đặc tính bức xạ đẳng hướng theo phương ngang, thường được sử dụng trong các hệ thống thông tin di động, vô tuyến nghiệp dư và các ứng dụng truyền thông tầm trung.
+	
+	Với chiều dài gần 1 m và độ lợi tương đối cao trong dải UHF, anten NL-770R có khả năng cải thiện cường độ tín hiệu thu – phát so với các anten whip ngắn thông thường. Trong đồ án này, anten được sử dụng làm anten so sánh nhằm đánh giá hiệu quả truyền thông của hệ thống LoRa khi sử dụng các loại anten thương mại phổ biến trên thị trường.
+	
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[clip, width=5cm]{fig212.jpg}
+		\caption[Anten NL-770R băng tần kép 144/430 MHz]{\bfseries \fontsize{12pt}{0pt}\selectfont Anten NL-770R băng tần kép 144/430 MHz}
+		\label{fig27}
+	\end{figure}
+	
+	\paragraph{Thông số kỹ thuật}\mbox{}
+	
+	Bảng \ref{tab_nl770r} trình bày các thông số kỹ thuật chính của anten NL-770R.
+	
+	\begin{table}[H]
+		\caption[Thông số kỹ thuật anten NL-770R]{\bfseries \fontsize{12pt}{0pt}\selectfont Thông số kỹ thuật anten NL-770R}
+		\label{tab_nl770r}
+		\centering
+		\begin{tabular}{|p{4cm}|p{9cm}|}
+			\hline
+			\textbf{Thông số} & \textbf{Giá trị} \\ 
+			\hline
+			Loại anten & Monopole băng tần kép \\ 
+			\hline
+			Băng tần hoạt động & 144 MHz / 430 MHz (VHF/UHF) \\ 
+			\hline
+			Độ lợi & 3.0 dBi (144 MHz) / 5.5 dBi (430 MHz) \\ 
+			\hline
+			Công suất tối đa & 150 W \\ 
+			\hline
+			VSWR & $< 1.5$ \\ 
+			\hline
+			Trở kháng & $50\Omega$ \\ 
+			\hline
+			Chiều dài anten & 97.5 cm \\ 
+			\hline
+			Phân cực & Phân cực dọc \\ 
+			\hline
+			Đặc tính bức xạ & Đẳng hướng (Omnidirectional) \\ 
+			\hline
+			Đầu nối & UHF / SL16-J (Male) – PL-259 \\ 
+			\hline
+		\end{tabular}
+	\end{table}
+	
+	\paragraph{Ưu điểm}\mbox{}
+	
+	Anten NL-770R có độ bền cơ học cao, khả năng chịu công suất lớn và dễ dàng lắp đặt trên các phương tiện di động hoặc trụ anten đơn giản. Độ lợi ở dải UHF đạt tới 5.5 dBi giúp cải thiện đáng kể cường độ tín hiệu so với các anten whip ngắn. Đặc tính bức xạ đẳng hướng theo phương ngang giúp duy trì liên kết ổn định khi vị trí hoặc hướng của nút truyền – nhận thay đổi.
+	
+	\paragraph{Nhược điểm}\mbox{}
+	
+	Do được thiết kế tối ưu cho các dải tần VHF/UHF thông dụng, anten NL-770R không được tinh chỉnh riêng cho tần số 433 MHz của hệ thống LoRa. Vì vậy, hiệu suất bức xạ tại tần số 433 MHz có thể chưa đạt mức tối ưu tuyệt đối so với các anten được thiết kế chuyên biệt hoặc anten định hướng như Yagi. Ngoài ra, do đặc tính bức xạ đẳng hướng, anten không tập trung năng lượng theo một hướng nhất định, hạn chế khả năng truyền xa theo phương xác định.
+	
+	\subsubsection{Anten monopole 38dBi}
+	
+	Anten 433 MHz 38dBi là loại anten có độ lợi cao, được thiết kế nhằm tối ưu khả năng truyền thông vô tuyến ở khoảng cách xa trong dải tần 433 MHz. Nhờ độ lợi lớn và phân cực thẳng đứng, anten phù hợp cho các hệ thống truyền dữ liệu không dây yêu cầu liên kết ổn định và suy hao thấp, đặc biệt trong các ứng dụng IoT, giám sát từ xa và truyền thông công suất thấp.
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[clip, width=2.75cm]{fig213.png}
+		\caption[Anten monopole 38dBi]{\bfseries \fontsize{12pt}{0pt}\selectfont Anten monopole 38dBi}
+		\label{fig28}
+	\end{figure}
+	
+	\paragraph{Thông số kỹ thuật}\mbox{}
+	
+	Bảng \ref{tab_anten38} trình bày các thông số kỹ thuật chính của anten 433 MHz 38dBi được sử dụng trong hệ thống.
+	
+	\begin{table}[H]
+		\caption[Thông số kỹ thuật anten 433 MHz 38dBi]{\bfseries \fontsize{12pt}{0pt}\selectfont Thông số kỹ thuật anten 433 MHz 38dBi}
+		\label{tab_anten38}
+		\centering
+		\begin{tabular}{|p{5cm}|p{8cm}|}
+			\hline
+			\textbf{Thông số} & \textbf{Giá trị} \\ 
+			\hline
+			Dải tần hoạt động & 433 MHz \\ 
+			\hline
+			Độ lợi (Gain) & 38 dBi \\ 
+			\hline
+			Trở kháng & $50\Omega$ \\ 
+			\hline
+			Phân cực & Phân cực thẳng đứng \\ 
+			\hline
+			Tỷ lệ sóng đứng (VSWR) & $\leq 1.5$ \\ 
+			\hline
+			Công suất phát cực đại & 50 W \\ 
+			\hline
+			Công suất phát danh định & 20 dBm (100 mW) \\ 
+			\hline
+			Khoảng cách truyền & Lên đến 8000 m \\ 
+			\hline
+			Đầu nối & SMA kim trong (đường kính 6 mm) \\ 
+			\hline
+		\end{tabular}
+	\end{table}
+	
+	\paragraph{Ưu điểm}\mbox{}
+	
+	Anten 433 MHz 38dBi có độ lợi rất cao, cho phép mở rộng đáng kể khoảng cách truyền và cải thiện chất lượng liên kết trong môi trường có nhiều suy hao. Thiết kế nhỏ gọn nhưng bền bỉ, kết hợp đế hút nam châm giúp anten dễ dàng lắp đặt trên nhiều bề mặt kim loại. Ngoài ra, tỷ lệ sóng đứng thấp giúp giảm phản xạ công suất và nâng cao hiệu suất truyền dẫn.
+	
+	\paragraph{Nhược điểm}\mbox{}
+	
+	Do độ lợi lớn, anten có tính định hướng cao hơn so với các anten đẳng hướng, yêu cầu việc bố trí và căn chỉnh vị trí lắp đặt cần được thực hiện cẩn thận để đạt hiệu quả tối ưu. Bên cạnh đó, hiệu năng của anten có thể bị ảnh hưởng nếu sử dụng cáp nối dài hoặc đặt trong môi trường có nhiều vật cản kim loại gây nhiễu xạ sóng.
+	
+	\subsubsection{Anten Yagi tự chế}
+	
+	\paragraph{Anten Yagi tự chế - Phiên bản 1}\mbox{}
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[clip, width=8cm]{fig214a.jpg}
+		\caption[Hình ảnh vật lý của anten Yagi tự chế - Phiên bản 1]{\bfseries \fontsize{12pt}{0pt}\selectfont Hình ảnh vật lý của anten Yagi tự chế - Phiên bản 1}
+		\label{fig29}
+	\end{figure}
+	
+	Bảng \ref{tab_yagi_v1} trình bày các thông số hình học chính của anten Yagi tự chế phiên bản 1 được sử dụng trong mô phỏng HFSS.
+	
+	\begin{table}[H]
+		\caption[Thông số thiết kế anten Yagi tự chế phiên bản 1]{\bfseries \fontsize{12pt}{0pt}\selectfont Thông số thiết kế anten Yagi tự chế phiên bản 1}
+		\label{tab_yagi_v1}
+		\centering
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			\textbf{Phần tử} & \textbf{Chiều dài (mm)} & \textbf{Bán kính (mm)} & \textbf{Vị trí tâm (mm)} \\ 
+			\hline
+			Reflector (R) & 355 & 1.5 & $-138$ \\ 
+			\hline
+			Driven Element (DE) & 342.5 & 1.5 & $0$ \\ 
+			\hline
+			Director 1 (D1) & 308.7 & 1.5 & $51.8$ \\ 
+			\hline
+			Director 2 (D2) & 305.1 & 1.5 & $176.1$ \\ 
+			\hline
+			Director 3 (D3) & 301.8 & 1.5 & $324.6$ \\ 
+			\hline
+			Khe hở cấp nguồn (Gap) & 10 & 1.5 & $0$ \\ 
+			\hline
+		\end{tabular}
+	\end{table}
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[clip, width=11cm]{fig215.jpg}
+		\caption[Thiết kế anten Yagi phiên bản 1 trên HFSS]{\bfseries \fontsize{12pt}{0pt}\selectfont Thiết kế anten Yagi phiên bản 1 trên HFSS}
+		\label{fig210}
+	\end{figure}
+	
+	Kết quả mô phỏng hệ số phản xạ $S_{11}$ của anten Yagi phiên bản 1 trên phần mềm HFSS cho thấy tại tần số 433 MHz, giá trị $S_{11}$ đạt khoảng $-13.65$ dB (Hình \ref{fig211}). Kết quả đo thực tế bằng máy phân tích mạng vector PNA có xu hướng tương đồng với kết quả mô phỏng, bằng $-13.30$ dB (Hình \ref{fig212}).
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[clip, width=13cm]{fig216.jpg}
+		\caption[Kết quả mô phỏng $S_{11}$ của anten Yagi phiên bản 1 trên HFSS]{\bfseries \fontsize{12pt}{0pt}\selectfont Kết quả mô phỏng $S_{11}$ của anten Yagi phiên bản 1 trên HFSS}
+		\label{fig211}
+	\end{figure}
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[clip, width=8cm]{fig25.png}
+		\caption[Kết quả đo $S_{11}$ bằng máy PNA của anten Yagi phiên bản 1]{\bfseries \fontsize{12pt}{0pt}\selectfont Kết quả đo $S_{11}$ bằng máy PNA của anten Yagi phiên bản 1}
+		\label{fig212}
+	\end{figure}
+	
+	\paragraph{Anten Yagi tự chế - Phiên bản 2}\mbox{}
+	
+	Anten Yagi tự chế phiên bản 2 được phát triển dựa trên cấu trúc của phiên bản 1 với mục tiêu cải thiện khả năng phối hợp trở kháng và giảm hệ số phản xạ tại tần số làm việc 433 MHz. Điểm thay đổi chính trong phiên bản này là việc điều chỉnh chiều dài và vị trí của phần tử dẫn hướng thứ hai (Director 2), trong đó khoảng cách của Director 2 so với phần tử kích thích được tăng thêm 30 mm nhằm tối ưu đặc tính bức xạ và trở kháng vào của anten.
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[clip, width=8cm]{fig217.jpg}
+		\caption[Hình ảnh vật lý của anten Yagi tự chế - Phiên bản 2]{\bfseries \fontsize{12pt}{0pt}\selectfont Hình ảnh vật lý của anten Yagi tự chế - Phiên bản 2}
+		\label{fig213}
+	\end{figure}
+	
+	Bảng \ref{tab_yagi_v2} trình bày các thông số hình học chính của anten Yagi tự chế phiên bản 1 được sử dụng trong mô phỏng HFSS.
+	
+	\begin{table}[H]
+		\caption[Thông số thiết kế anten Yagi tự chế phiên bản 2]{\bfseries \fontsize{12pt}{0pt}\selectfont Thông số thiết kế anten Yagi tự chế phiên bản 2}
+		\label{tab_yagi_v2}
+		\centering
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			\textbf{Phần tử} & \textbf{Chiều dài (mm)} & \textbf{Bán kính (mm)} & \textbf{Vị trí tâm (mm)} \\ 
+			\hline
+			Reflector (R) & 355 & 1.5 & $-138$ \\ 
+			\hline
+			Driven Element (DE) & 342.5 & 1.5 & $0$ \\ 
+			\hline
+			Director 1 (D1) & 308.7 & 1.5 & $51.8$ \\ 
+			\hline
+			Director 2 (D2) & 305.1 & 1.5 & $206.1$ \\ 
+			\hline
+			Director 3 (D3) & 301.8 & 1.5 & $324.6$ \\ 
+			\hline
+			Khe hở cấp nguồn (Gap) & 10 & 1.5 & $0$ \\ 
+			\hline
+		\end{tabular}
+	\end{table}
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[clip, width=11cm]{fig218.jpg}
+		\caption[Thiết kế anten Yagi phiên bản 2 trên HFSS]{\bfseries \fontsize{12pt}{0pt}\selectfont Thiết kế anten Yagi phiên bản 2 trên HFSS}
+		\label{fig214}
+	\end{figure}
+	
+	Kết quả mô phỏng hệ số phản xạ $S_{11}$ của anten Yagi phiên bản 2 trên phần mềm HFSS cho thấy tại tần số 433 MHz, giá trị $S_{11}$ đạt khoảng $-19.91$ dB (Hình \ref{fig215}), cải thiện đáng kể so với phiên bản 1. Điều này cho thấy việc điều chỉnh vị trí Director 2 đã giúp anten được phối hợp trở kháng tốt hơn với trở kháng chuẩn $50\Omega$, đồng thời làm giảm công suất phản xạ tại cổng vào.
+	
+	Kết quả đo thực tế bằng máy phân tích mạng vector PNA (Hình \ref{fig216}) cho xu hướng tương đồng với kết quả mô phỏng, xác nhận tính hiệu quả của phương án cải tiến cấu trúc anten trong phiên bản 2.
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[clip, width=14cm]{fig219.jpg}
+		\caption[Kết quả mô phỏng $S_{11}$ của anten Yagi phiên bản 2 trên HFSS]{\bfseries \fontsize{12pt}{0pt}\selectfont Kết quả mô phỏng $S_{11}$ của anten Yagi phiên bản 2 trên HFSS}
+		\label{fig215}
+	\end{figure}
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[clip, width=9cm]{fig222.jpg}
+		\caption[Kết quả đo $S_{11}$ bằng máy PNA của anten Yagi phiên bản 2]{\bfseries \fontsize{12pt}{0pt}\selectfont Kết quả đo $S_{11}$ bằng máy PNA của anten Yagi phiên bản 2}
+		\label{fig216}
+	\end{figure}
+	
+	\subsection{Thiết kế hệ thống}
+	
+	\subsubsection{Tổng quan kết nối hệ thống}
+	
+	Hệ thống bao gồm các thành phần: ESP32, module LoRa RA-02, màn hình OLED SSD1306, và mạch ổn áp LM2596. Kết nối được xây dựng như sau:
+	
+	- ESP32 cấp nguồn 3.3V cho màn hình OLED và module Ra-02.
+	
+	- Mạch LM2596 hạ từ 5V/12V xuống 3.3V đầu vào hệ thống.
+	
+	- Module Ra-02 kết nối với ESP32 qua SPI (MISO, MOSI, SCK, NSS) và DIO0.
+	
+	- OLED kết nối qua I2C với ESP32 (SDA, SCL).
+	
+	- Anten kết nối với module Ra-02 thông qua 1 cổng chuyển IPEX to SMA.
+	
+	Sơ đồ kết nối hệ thống được thể hiện trên Hình \ref{fig217}.
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[trim = 15pt 15pt 15pt 15pt, clip, width=14cm]{fig223.pdf}
+		\caption[Sơ đồ kết nối hệ thống]{\bfseries \fontsize{12pt}{0pt}\selectfont Sơ đồ kết nối hệ thống}
+		\label{fig217}
+	\end{figure}
+	
+	\subsubsection{Sơ đồ nguyên lý và PCB của hệ thống}
+	
+	Sau khi xây dựng sơ đồ nối dây, nhóm sử dụng Altium để thiết kế sơ đồ nguyên lý (Hình \ref{fig218}) và PCB (Hình \ref{fig219}) của hệ thống.
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[trim = 50pt 190pt 435pt 190pt, clip, width=15cm]{LoRa_Interface.pdf}
+		\caption[Sơ đồ nguyên lý hệ thống]{\bfseries \fontsize{12pt}{0pt}\selectfont Sơ đồ nguyên lý hệ thống}
+		\label{fig218}
+	\end{figure}
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[trim = 15pt 15pt 15pt 15pt, clip, width=14cm]{fig224.pdf}
+		\caption[Layout PCB mặt top (trái) và mặt bottom (phải) của hệ thống]{\bfseries \fontsize{12pt}{0pt}\selectfont Layout PCB mặt top (trái) và mặt bottom (phải) của hệ thống}
+		\label{fig219}
+	\end{figure}
+	
+	Hình \ref{fig219} trình bày layout PCB của hệ thống gồm mặt top (trái) và mặt bottom (phải), trong đó các linh kiện chính như ESP32-DevKit, module LoRa Ra-02 và màn hình OLED được bố trí theo từng cụm chức năng để thuận tiện cho đấu nối và kiểm tra. Các đường mạch tín hiệu được định tuyến trực tiếp từ ESP32 đến các module nhằm giảm chiều dài đường đi, hạn chế giao cắt và tăng độ ổn định truyền dữ liệu; đồng thời mặt BOTTOM hỗ trợ đi dây bổ sung giúp tối ưu không gian, cải thiện đường hồi dòng và nâng cao độ tin cậy khi hệ thống hoạt động.
 	
 	\newpage
 	
@@ -630,7 +1361,7 @@
 	
 	Quan sát quá trình truyền thử nghiệm tại Hồ Bảy Mẫu với khoảng cách 593,92 m LOS, ngoài việc RSSI duy trì ở mức thấp quanh $-113$ dBm và SNR dao động chủ yếu trong vùng âm, hệ thống còn ghi nhận hiện tượng mất hoàn toàn 5 gói dữ liệu đầu tiên ngay khi bắt đầu phiên truyền. Hiện tượng này không xuất hiện ở các kịch bản đo với khoảng cách ngắn hơn (75 m LOS), cho thấy sự suy giảm rõ rệt của biên liên kết khi cự ly truyền tăng lên gần 600 m.
 
-	Việc mất các gói đầu có thể được lý giải bởi SNR ban đầu không đủ để bộ thu thực hiện đồng bộ và giải điều chế thành công, đặc biệt trong bối cảnh RSSI đã tiệm cận ngưỡng độ nhạy thu. Chỉ sau khi quá trình truyền ổn định hơn, các gói dữ liệu tiếp theo mới được thu nhận, tuy nhiên chất lượng liên kết vẫn không bền vững do SNR tiếp tục dao động mạnh trong khoảng −10 đến −20 dB. Điều này cho thấy cấu hình anten monopole hiện tại không đảm bảo đủ công suất bức xạ hiệu dụng để thiết lập liên kết một cách tin cậy ngay từ đầu phiên truyền.
+	Việc mất các gói đầu có thể được lý giải bởi SNR ban đầu không đủ để bộ thu thực hiện đồng bộ và giải điều chế thành công, đặc biệt trong bối cảnh RSSI đã tiệm cận ngưỡng độ nhạy thu. Chỉ sau khi quá trình truyền ổn định hơn, các gói dữ liệu tiếp theo mới được thu nhận, tuy nhiên chất lượng liên kết vẫn không bền vững do SNR tiếp tục dao động mạnh trong khoảng $-10$ đến $-20$ dB. Điều này cho thấy cấu hình anten monopole hiện tại không đảm bảo đủ công suất bức xạ hiệu dụng để thiết lập liên kết một cách tin cậy ngay từ đầu phiên truyền.
 	
 	Trước khi tiến hành phép đo trong môi trường không gian mở với khoảng cách lớn tại Hồ Bảy Mẫu, nhóm đã tiến hành tìm hiểu và lựa chọn phương án anten phù hợp nhằm cải thiện chất lượng liên kết so với cấu hình monopole ban đầu. Trên cơ sở phân tích đặc tính bức xạ, dải tần hoạt động và khả năng triển khai thực tế, anten NI-770r được lựa chọn để sử dụng trong kịch bản đo này.
 	
@@ -669,35 +1400,35 @@
 	
 	\begin{figure}[!ht]
 		\centering
-		\includegraphics[clip, width=16cm]{measure_img/rssi_snr_600m_hotay.png}
+		\includegraphics[clip, width=16cm]{measure_img/rssi_snr_1km_hotay.png}
 		\caption[Kết quả đo RSSI và SNR tại Hồ Tây tại điểm thu 2 - Đối diện 151 Trích Sài]{\bfseries \fontsize{12pt}{0pt}\selectfont Kết quả đo RSSI và SNR tại Hồ Tây tại điểm thu 2 - Đối diện 151 Trích Sài}
 		\label{fig311}
 	\end{figure}
 	
 	\begin{figure}[!ht]
 		\centering
-		\includegraphics[clip, width=16cm]{measure_img/rssi_snr_600m_hotay.png}
+		\includegraphics[clip, width=16cm]{measure_img/rssi_snr_1km300m_hotay.png}
 		\caption[Kết quả đo RSSI và SNR tại Hồ Tây tại điểm thu 3 - Sân chơi Cụm 10]{\bfseries \fontsize{12pt}{0pt}\selectfont Kết quả đo RSSI và SNR tại Hồ Tây tại điểm thu 3 - Sân chơi Cụm 10}
 		\label{fig312}
 	\end{figure}
 	
 	\begin{figure}[!ht]
 		\centering
-		\includegraphics[clip, width=16cm]{measure_img/rssi_snr_600m_hotay.png}
+		\includegraphics[clip, width=16cm]{measure_img/rssi_snr_2km_hotay.png}
 		\caption[Kết quả đo RSSI và SNR tại Hồ Tây tại điểm thu 4 - Đối diện 441 Lạc Long Quân]{\bfseries \fontsize{12pt}{0pt}\selectfont Kết quả đo RSSI và SNR tại Hồ Tây tại điểm thu 4 - Đối diện 441 Lạc Long Quân}
 		\label{fig313}
 	\end{figure}
 	
 	\begin{figure}[!ht]
 		\centering
-		\includegraphics[clip, width=16cm]{measure_img/rssi_snr_600m_hotay.png}
+		\includegraphics[clip, width=16cm]{measure_img/rssi_snr_2km400m_hotay.png}
 		\caption[Kết quả đo RSSI và SNR tại Hồ Tây tại điểm thu 5 - Đối diện Chùa Vạn Niên]{\bfseries \fontsize{12pt}{0pt}\selectfont Kết quả đo RSSI và SNR tại Hồ Tây tại điểm thu 5 - Đối diện Chùa Vạn Niên}
 		\label{fig314}
 	\end{figure}
 	
 	\begin{figure}[!ht]
 		\centering
-		\includegraphics[clip, width=16cm]{measure_img/rssi_snr_600m_hotay.png}
+		\includegraphics[clip, width=16cm]{measure_img/rssi_snr_3km_hotay.png}
 		\caption[Kết quả đo RSSI và SNR tại Hồ Tây tại điểm thu 6 - Cạnh Công viên nước Hồ Tây]{\bfseries \fontsize{12pt}{0pt}\selectfont Kết quả đo RSSI và SNR tại Hồ Tây tại điểm thu 6 - Cạnh Công viên nước Hồ Tây}
 		\label{fig315}
 	\end{figure}
@@ -769,6 +1500,346 @@
 	\textbf{Giai đoạn 3:} Anten phát ở dưới nước, anten thu ở trong không khí: Sau khi hoán đổi vị trí, anten phát được đặt dưới nước trong khi anten thu ở trên không khí. Trong giai đoạn này, RSSI giảm trở lại về khoảng $-114$ dBm đến $-110$ dBm, và SNR chủ yếu âm, dao động trong khoảng $-12$ dB đến $-3$ dB. Điều này cho thấy việc phát tín hiệu từ môi trường nước gây suy hao lớn ngay tại phía phát, làm giảm đáng kể năng lượng bức xạ ra ngoài không khí. 
 	
 	\textbf{Giai đoạn 4:} Cả hai anten ở dưới nước: SNR giảm sâu rõ rệt, nhiều mẫu đạt mức $-18$ dB đến $-22$ dB, trong khi RSSI gần như không cải thiện và tiếp tục nằm sát ngưỡng thu. Trên biểu đồ, giai đoạn này thể hiện bằng một “vùng đáy” của SNR, phản ánh môi trường truyền hoàn toàn trong nước có hệ số hấp thụ cao, làm suy giảm mạnh tín hiệu và khiến liên kết trở nên rất kém ổn định, dù vẫn có thể thu rải rác một số gói tin nhờ link budget lớn của LoRa.
+	
+	\subsubsection{Kịch bản kiểm thử trong điều kiện di động}
+	
+	Nhóm tiến hành thử nghiệm nhằm đánh giá khả năng truyền thông của công nghệ LoRa trong điều kiện các nút truyền - nhận có sự thay đổi vị trí tương đối, mô phỏng các kịch bản ứng dụng thực tế khi thiết bị được mang theo hoặc lắp đặt trên phương tiện di chuyển. Thử nghiệm được thực hiện với một nút di chuyển, cụ thể là nút phát, trong môi trường không gian rộng có nhiều vật cản, trong khi nút thu được đặt cố định tại vị trí thuận lợi. Mục tiêu là đánh giá sự suy giảm tín hiệu theo khoảng cách và hướng di chuyển, đồng thời khảo sát ảnh hưởng của các yếu tố môi trường và hiện tượng fading đến chất lượng liên kết. Các thông số RSSI và SNR được ghi nhận liên tục trong suốt quá trình thử nghiệm.
+	
+	Kịch bản thử nghiệm cụ thể được triển khai trên tuyến đường sắt trên cao Cát Linh - Hà Đông. Trong đó, thiết bị thu được đặt cố định tại ga Phùng Khoang, trong khi thiết bị phát di chuyển cùng đoàn tàu theo hai chiều từ ga Thượng Đình đến ga Hà Đông và ngược lại. Kết quả đo đạc của kịch bản này được tổng hợp và biểu diễn dưới dạng biểu đồ như trình bày trong Hình \ref{fig319}.
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[clip, width=16cm]{measure_img/rssi_snr_metro.png}
+		\caption[Kết quả đo RSSI và SNR trong chuyến Thượng Đình - Hà Đông (trái) và chuyến Hà Đông - Thượng Đình (phải)]{\bfseries \fontsize{12pt}{0pt}\selectfont Kết quả đo RSSI và SNR trong chuyến Thượng Đình - Hà Đông (trái) và chuyến Hà Đông - Thượng Đình (phải)}
+		\label{fig319}
+	\end{figure}
+	
+	Trong chuyến từ ga Thượng Đình đến ga Hà Đông, tín hiệu LoRa bắt đầu được thu nhận khi đoàn tàu đi qua khu vực phía trên đường Vành đai 3, thể hiện qua mức RSSI ban đầu dao động quanh $-105$ dBm và SNR âm. Khi tàu tiếp tục di chuyển về phía ga Văn Quán, RSSI tăng dần và đạt giá trị tốt nhất khoảng $-70$ đến $-75$ dBm, đồng thời SNR cải thiện rõ rệt, đạt mức dương từ 10 đến 13 dB. Giai đoạn này tương ứng với khu vực có điều kiện truyền dẫn thuận lợi hơn, tầm nhìn gần thẳng (ga Phùng Khoang) giữa nút phát và nút thu. Sau khi tàu vượt qua ga Phùng Khoang, cả RSSI và SNR suy giảm nhanh chóng; RSSI giảm về dưới $-100$ dBm và SNR chuyển sang giá trị âm sâu, dẫn đến hiện tượng tín hiệu chập chờn và mất gói khi tàu đến ga Văn Quán. Điều này cho thấy ảnh hưởng rõ rệt của che khuất địa hình và vật cản đô thị khi khoảng cách tăng và điều kiện truyền dẫn xấu đi.
+	
+	Ở chiều di chuyển ngược lại từ Hà Đông về Thượng Đình, tín hiệu chỉ bắt đầu được thu nhận ổn định khi đoàn tàu ở khu vực ga Văn Quán. Tại đây, RSSI tăng từ mức nền khoảng $-105$ dBm lên khoảng $-80$ dBm, đồng thời SNR chuyển từ âm sang dương và đạt giá trị cao nhất xấp xỉ 10 đến 12 dB. Khoảng tín hiệu ổn định này kéo dài khi tàu di chuyển trong vùng có điều kiện truyền tốt, phản ánh đặc điểm đối xứng với kịch bản chiều đi nhưng không hoàn toàn trùng khớp do ảnh hưởng của hướng anten, phân bố vật cản và hiệu ứng fading theo hướng truyền. Khi tàu tiếp tục tiến về khu vực đường Vành đai 3, RSSI suy giảm nhanh và SNR giảm mạnh xuống dưới $-15$ dB, dẫn đến tín hiệu trở nên chập chờn và cuối cùng bị mất hoàn toàn. Kết quả này cho thấy chất lượng liên kết LoRa trong môi trường đô thị phụ thuộc mạnh vào vị trí tương đối, hướng di chuyển và điều kiện che khuất, ngay cả khi khoảng cách truyền không thay đổi đáng kể.
+	
+	\subsection{Kiểm thử và tối đa hóa khoảng cách truyền tín hiệu LoRa}
+	
+	\subsubsection{Xây dựng kịch bản kiểm thử ở bán kính gần}
+	
+	Trong phần này, nhóm tiến hành các thử nghiệm nhằm tối ưu hóa khoảng cách truyền của hệ thống LoRa mà không sử dụng bộ khuếch đại công suất ngoài. Trước đó, nhóm đã thực hiện các phép đo truyền dẫn với nhiều loại anten monopole thương mại và đạt được khoảng cách truyền tối đa xấp xỉ 10 km trong điều kiện môi trường cận lý tưởng.
+	
+	Để tiếp tục nâng cao hiệu quả truyền dẫn, nhóm lựa chọn cấu hình sử dụng anten định hướng cho phía phát và anten có độ lợi cao cho phía thu. Cụ thể, anten phát được thay thế bằng anten monopole có độ lợi danh định 38 dBi (Hình \ref{fig28}), trong khi anten thu được thay thế bằng anten dipole Yagi tự chế (Hình \ref{fig29}).
+	
+	Trong lần đo đầu tiên, nhóm bố trí điểm phát tại tầng 19, tòa CT1A - Chung cư Hateco Apollo, đường Xuân Phương, phường Xuân Phương, quận Nam Từ Liêm, Hà Nội. Vị trí này được lựa chọn do có độ cao lớn, tầm nhìn tương đối thoáng và phù hợp để đánh giá khả năng phủ sóng của hệ thống trong môi trường đô thị.
+	
+	Các điểm thu được đặt tại những vị trí cách điểm phát lần lượt khoảng 3 km, 4,2 km và 4,6 km, ưu tiên các vị trí có thể quan sát trực tiếp tòa nhà chung cư, nhằm giảm ảnh hưởng của che khuất địa hình và tập trung đánh giá suy hao theo khoảng cách. Phân bố không gian giữa các điểm phát - thu được thể hiện trên bản đồ tại Hình \ref{fig320}.
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[trim = 15pt 15pt 15pt 15pt, clip, width=16cm]{fig310.pdf}
+		\caption[Bản đồ các địa điểm đo tại quận Bắc Từ Liêm]{\bfseries \fontsize{12pt}{0pt}\selectfont Bản đồ các địa điểm đo tại quận Bắc Từ Liêm}
+		\label{fig320}
+	\end{figure}
+	
+	Tại khoảng cách 3 km, tín hiệu thu được duy trì tương đối ổn định trong suốt quá trình đo. Giá trị RSSI dao động chủ yếu quanh $-108$ đến $-111$ dBm, cho thấy mức công suất thu thấp nhưng vẫn nằm trong ngưỡng có thể giải điều chế. Tham số SNR biến thiên trong khoảng từ khoảng $-7$ dB đến $+1,25$ dB, với phần lớn mẫu đo tập trung quanh vùng $-3$ dB đến 0 dB. Điều này cho thấy liên kết ở khoảng cách 3 km vẫn hoạt động ổn định, tuy nhiên đã bắt đầu chịu ảnh hưởng rõ rệt của nhiễu nền và fading trong môi trường đô thị.
+	
+	Khi tăng khoảng cách lên 4,2 km, giá trị RSSI không suy giảm quá mạnh, chủ yếu nằm trong khoảng $-105$ đến $-109$ dBm. Tuy nhiên, SNR giảm đáng kể, dao động quanh mức $-18$ dB đến $-22$ dB. Việc SNR giảm sâu trong khi RSSI thay đổi không nhiều cho thấy ảnh hưởng của nhiễu và đa đường tăng lên rõ rệt, khiến chất lượng liên kết suy giảm dù vẫn còn thu được gói tin liên tục.
+	
+	Tại khoảng cách 4,6 km, liên kết tiếp tục duy trì nhưng ở trạng thái biên. Giá trị RSSI dao động quanh $-110$ đến $-113$ dBm, trong khi SNR chủ yếu nằm trong khoảng $-19$ dB đến $-22$ dB. Các gói tin thu được không còn đều đặn, phản ánh rõ giới hạn truyền dẫn của hệ thống trong cấu hình anten và điều kiện đo của ngày đầu tiên. Điều này cho thấy khoảng cách xấp xỉ 5 km là ngưỡng truyền tối đa ổn định trong kịch bản đo ban đầu tại khu vực Bắc Từ Liêm. 
+	
+	Đồ thị biểu diễn các giá trị của RSSI và SNR được biểu diễn trên các Hình \ref{fig321}, \ref{fig322}, \ref{fig323}.
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[clip, width=16cm]{measure_img/rssi_snr_3km_btl.png}
+		\caption[Kết quả đo RSSI và SNR tại khoảng cách 3km ở Bắc Từ Liêm]{\bfseries \fontsize{12pt}{0pt}\selectfont Kết quả đo RSSI và SNR tại khoảng cách 3km ở Bắc Từ Liêm}
+		\label{fig321}
+	\end{figure}
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[clip, width=16cm]{measure_img/rssi_snr_42km_btl.png}
+		\caption[Kết quả đo RSSI và SNR tại khoảng cách 4.2km ở Bắc Từ Liêm]{\bfseries \fontsize{12pt}{0pt}\selectfont Kết quả đo RSSI và SNR tại khoảng cách 3km ở Bắc Từ Liêm}
+		\label{fig322}
+	\end{figure}
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[clip, width=16cm]{measure_img/rssi_snr_46km_btl.png}
+		\caption[Kết quả đo RSSI và SNR tại khoảng cách 4.6km ở Bắc Từ Liêm]{\bfseries \fontsize{12pt}{0pt}\selectfont Kết quả đo RSSI và SNR tại khoảng cách 3km ở Bắc Từ Liêm}
+		\label{fig323}
+	\end{figure}
+	
+	Từ các kết quả đo đạc và phân tích RSSI, SNR tại khu vực Bắc Từ Liêm, nhóm nhận thấy rằng với cấu hình anten hiện tại, khả năng mở rộng khoảng cách truyền xa hơn là rất hạn chế. Mặc dù tín hiệu vẫn có thể được thu ở khoảng cách xấp xỉ 4,6 km, nhưng chất lượng liên kết đã suy giảm rõ rệt, thể hiện qua việc SNR giảm sâu xuống dưới $-18$ dB và các gói tin bắt đầu xuất hiện hiện tượng không ổn định. Điều này cho thấy hệ thống đã tiệm cận giới hạn truyền dẫn trong điều kiện cấu hình anten và môi trường đo của lần thử nghiệm đầu tiên.
+	
+	Từ nhận định trên, nhóm tiến hành xem xét lại đặc tính của anten Yagi. Kết quả đo và mô phỏng cho thấy tần số cộng hưởng trung tâm của anten chưa trùng khớp tối ưu với băng tần làm việc 433 MHz, dẫn đến hệ số phản xạ $S_{11}$ tại tần số hoạt động chưa đạt giá trị suy giảm sâu nhất. Việc anten không được tối ưu tại tần số trung tâm đã làm giảm hiệu quả bức xạ, ảnh hưởng trực tiếp đến ngân sách liên kết và khoảng cách truyền đạt được.
+	
+	\subsubsection{Xây dựng kịch bản kiểm thử ở khoảng cách xa}
+	
+	Từ các kết quả đo tại khu vực Bắc Từ Liêm, nhóm nhận thấy hiệu năng truyền dẫn của hệ thống bị giới hạn đáng kể bởi đặc tính của anten Yagi phiên bản 1, đặc biệt khi làm việc ở khoảng cách lớn. Nguyên nhân chính được xác định là do anten chưa được tối ưu hoàn toàn tại tần số trung tâm 433 MHz, dẫn đến hệ số phản xạ $S_{11}$ chưa đạt giá trị suy giảm sâu nhất. Trên cơ sở đó, nhóm đã tiến hành cải tiến anten Yagi sang phiên bản thứ 2 (Hình \ref{fig213}) nhằm cải thiện phối hợp trở kháng và nâng cao hiệu suất bức xạ. Sau khi cải tiến anten, một kịch bản kiểm thử mới ở khoảng cách xa hơn được xây dựng để đánh giá lại khả năng truyền dẫn của hệ thống trong điều kiện thực tế. Các vị trí đo được lựa chọn theo hướng Tây Bắc Hà Nội, như thể hiện trong Hình \ref{fig324}.
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[trim = 15pt 15pt 15pt 15pt, clip, width=16cm]{fig39.pdf}
+		\caption[Bản đồ các địa điểm đo tại phía Tây Bắc Hà Nội]{\bfseries \fontsize{12pt}{0pt}\selectfont Bản đồ các địa điểm đo tại phía Tây Bắc Hà Nội}
+		\label{fig324}
+	\end{figure}
+	
+	Kết quả đo RSSI và SNR của nhóm tại các khoảng cách 5 km, 7.7 km, 11 km, 15 km, 21 km, 25 km và 31 km được trình bày trên các biểu đồ ở các Hình \ref{fig325}, \ref{fig326}, \ref{fig327}, \ref{fig328}, \ref{fig329}, \ref{fig330}, \ref{fig331} và được tổng hợp trong Bảng \ref{tab34}.
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[clip, width=16cm]{measure_img/rssi_snr_5km.png}
+		\caption[Kết quả đo RSSI và SNR tại khoảng cách 5km (chân cầu Phùng)]{\bfseries \fontsize{12pt}{0pt}\selectfont Kết quả đo RSSI và SNR tại khoảng cách 5km (chân cầu Phùng)}
+		\label{fig325}
+	\end{figure}
+	
+	\textbf{Tại điểm đo 5 km:} tín hiệu thu được có giá trị RSSI dao động trong khoảng -110 đến -116 dBm, với giá trị trung bình xấp xỉ -113 dBm. Tỷ số tín hiệu trên nhiễu (SNR) chủ yếu nằm trong vùng âm, từ -0.5 đến -5 dB, một số thời điểm giảm sâu hơn. Điều này cho thấy liên kết truyền dẫn tại khoảng cách 5 km đang tiệm cận ngưỡng nhạy thu của thiết bị, chất lượng tín hiệu không thực sự ổn định và dễ bị ảnh hưởng bởi nhiễu môi trường cũng như điều kiện lan truyền. Tuy hệ thống vẫn duy trì được liên lạc, nhưng biên an toàn thấp, làm giảm độ tin cậy trong vận hành lâu dài.
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[clip, width=16cm]{measure_img/rssi_snr_77km.png}
+		\caption[Kết quả đo RSSI và SNR tại khoảng cách 7.7km (Gần trạm gác đê số 15, xã Tam Hiệp)]{\bfseries \fontsize{12pt}{0pt}\selectfont Kết quả đo RSSI và SNR tại khoảng cách 7.7km (Gần trạm gác đê số 15, xã Tam Hiệp)}
+		\label{fig326}
+	\end{figure}
+	
+	\textbf{Tại điểm đo 7.7 km:} giá trị RSSI thu được nằm trong khoảng -105 đến -110 dBm, trung bình khoảng -108 dBm. So với điểm đo 5 km, RSSI không suy giảm đáng kể, trong khi SNR phần lớn duy trì giá trị dương từ 0.5 đến 3 dB. Kết quả này cho thấy điều kiện lan truyền tại khu vực đo thuận lợi hơn, vùng Fresnel ít bị che khuất, đồng thời anten Yagi phiên bản 2 sau cải tiến đã phát huy hiệu quả rõ rệt. Liên kết truyền dẫn tại điểm đo này đạt độ ổn định tốt, đảm bảo khả năng thu nhận và giải mã gói tin đáng tin cậy.
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[clip, width=16cm]{measure_img/rssi_snr_11km.png}
+		\caption[Kết quả đo RSSI và SNR tại khoảng cách 11km (Ven Quốc lộ 32, xã Tam Hiệp)]{\bfseries \fontsize{12pt}{0pt}\selectfont Kết quả đo RSSI và SNR tại khoảng cách 11km (Ven Quốc lộ 32, xã Tam Hiệp)}
+		\label{fig327}
+	\end{figure}
+	
+	\textbf{Tại điểm đo 11 km:} giá trị RSSI dao động chủ yếu trong khoảng từ -108 dBm đến -111 dBm, cho thấy cường độ tín hiệu suy giảm theo khoảng cách nhưng vẫn duy trì quanh mức tương đối ổn định. Trong khi đó, SNR nằm trong khoảng từ -1.75 dB đến -6.75 dB, với phần lớn các mẫu tập trung quanh giá trị -4 dB đến -5 dB. Mặc dù SNR đã giảm xuống vùng âm, chất lượng liên kết vẫn đảm bảo cho việc truyền dữ liệu nhờ đặc tính thu nhạy của module thu và hiệu quả bức xạ của anten sau khi cải tiến. Kết quả này cho thấy tại mốc 11 km, hệ thống vẫn hoạt động trong giới hạn chấp nhận được, đồng thời khẳng định khả năng mở rộng khoảng cách truyền dẫn so với cấu hình ban đầu.
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[clip, width=16cm]{measure_img/rssi_snr_15km.png}
+		\caption[Kết quả đo RSSI và SNR tại khoảng cách 15km (Ven Quốc lộ 32, xã Đại Đồng)]{\bfseries \fontsize{12pt}{0pt}\selectfont Kết quả đo RSSI và SNR tại khoảng cách 15km (Ven Quốc lộ 32, xã Đại Đồng)}
+		\label{fig328}
+	\end{figure}
+	
+	\textbf{Tại điểm đo 15 km:} chất lượng liên kết suy giảm rõ rệt so với mốc 11 km. Kết quả đo cho thấy RSSI dao động trong khoảng từ -109 dBm đến -114 dBm, phản ánh mức suy hao công suất lớn hơn do khoảng cách tăng và ảnh hưởng của môi trường truyền dẫn. Đáng chú ý, SNR giảm mạnh xuống vùng từ -12.5 dB đến -18 dB, với phần lớn các mẫu tập trung quanh giá trị -15 dB đến -17 dB. Đây là mức SNR tiệm cận ngưỡng hoạt động tối thiểu của hệ thống, khiến chất lượng liên kết trở nên nhạy cảm hơn với nhiễu và các biến động kênh truyền.
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[clip, width=16cm]{measure_img/rssi_snr_21km.png}
+		\caption[Kết quả đo RSSI và SNR tại khoảng cách 21km (Đối diện 432 đường La Thành, Sơn Tây)]{\bfseries \fontsize{12pt}{0pt}\selectfont Kết quả đo RSSI và SNR tại khoảng cách 21km (Đối diện 432 đường La Thành, Sơn Tây)}
+		\label{fig329}
+	\end{figure}
+	
+	\textbf{Tại điểm đo 21 km:} hệ thống truyền dẫn đã tiến sát và vượt qua vùng làm việc ổn định thông thường. Kết quả đo cho thấy RSSI gần như cố định quanh -109 dBm đến -111 dBm, phản ánh mức suy hao đường truyền rất lớn và gần đạt ngưỡng nhạy thu của thiết bị. Đồng thời, SNR suy giảm mạnh xuống vùng từ -18.5 dB đến -22.25 dB, với phần lớn các mẫu tập trung quanh -20 dB đến -21 dB. Đây là mức SNR rất thấp, cho thấy tín hiệu thu đã bị nhiễu lấn át đáng kể và biên an toàn liên kết gần như không còn. Mặc dù các gói tin vẫn được ghi nhận trong quá trình đo, liên kết tại mốc 21 km thể hiện tính chất không ổn định và phụ thuộc mạnh vào điều kiện tức thời của kênh truyền, bao gồm hướng anten, địa hình và nhiễu môi trường.
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[clip, width=16cm]{measure_img/rssi_snr_25km.png}
+		\caption[Kết quả đo RSSI và SNR tại khoảng cách 25km (Trên cầu Vĩnh Thịnh, Sơn Tây)]{\bfseries \fontsize{12pt}{0pt}\selectfont Kết quả đo RSSI và SNR tại khoảng cách 25km (Trên cầu Vĩnh Thịnh, Sơn Tây)}
+		\label{fig330}
+	\end{figure}
+	
+	\textbf{Tại điểm đo 25 km:} mặc dù cự ly truyền dẫn lớn hơn so với mốc 21 km, chất lượng liên kết lại cho kết quả tốt hơn một cách rõ rệt nhờ điều kiện đo đặc biệt thuận lợi khi anten được đặt trên cầu, có không gian thoáng và ít vật cản. Kết quả đo cho thấy RSSI dao động trong khoảng từ -109 dBm đến -115 dBm, tương đương với các mốc khoảng cách ngắn hơn, cho thấy suy hao công suất không tăng đột biến. Hơn nữa, SNR duy trì trong khoảng từ -9 dB đến -12 dB, cao hơn đáng kể so với mốc 21 km, nơi SNR thường xuyên xuống dưới -20 dB. Mức SNR này vẫn nằm trong vùng có thể đảm bảo khả năng thu nhận gói tin ổn định, phản ánh hiệu quả truyền dẫn được cải thiện rõ rệt nhờ điều kiện đường truyền thoáng. 
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[clip, width=16cm]{measure_img/rssi_snr_31km.png}
+		\caption[Kết quả đo RSSI và SNR tại khoảng cách 31km (Đường đê sông Hồng, huyện Ba Vì)]{\bfseries \fontsize{12pt}{0pt}\selectfont Kết quả đo RSSI và SNR tại khoảng cách 31km (Đường đê sông Hồng, huyện Ba Vì)}
+		\label{fig331}
+	\end{figure}
+	
+	\textbf{Tại điểm đo 31 km:} đây là vị trí xa nhất mà hệ thống còn thu nhận được tín hiệu. Tại đây, RSSI giảm mạnh và tập trung quanh -113 dBm đến -117 dBm, trong khi SNR xuống rất thấp, phổ biến từ -19 dB đến -22 dB. Dữ liệu thu cho thấy tín hiệu xuất hiện không liên tục và chất lượng suy giảm rõ rệt. Khi khoảng cách lớn hơn 31 km, hệ thống không còn thu được gói tin hợp lệ, chứng tỏ liên kết đã vượt quá giới hạn truyền.
+	
+	\begin{table}[H]
+		\centering
+		\caption{Tổng hợp đánh giá tín hiệu theo khoảng cách truyền}
+		\label{tab34}
+		\begin{tabular}{|c|c|c|p{6cm}|}
+			\hline
+			\textbf{Khoảng cách} & \textbf{RSSI (dBm)} & \textbf{SNR (dB)} & \textbf{Đánh giá kết nối} \\
+			\hline
+			5 km    & $-110$ đến $-100$ & 3 đến 8    & Ổn định, tín hiệu đều, hầu như không mất gói \\
+			\hline
+			7.7 km  & $-112$ đến $-105$ & 0 đến 6    & Ổn định, dao động nhẹ nhưng vẫn đảm bảo truyền \\
+			\hline
+			11 km   & $-113$ đến $-108$ & $-5$ đến 3   & Bắt đầu suy giảm, xuất hiện nhiễu cục bộ \\
+			\hline
+			15 km   & $-114$ đến $-109$ & $-10$ đến $-2$ & Không đều, có hiện tượng mất gói rải rác \\
+			\hline
+			21 km   & $-111$ đến $-109$ & $-22$ đến $-18$ & Tín hiệu yếu, nhiễu cao, truyền không ổn định \\
+			\hline
+			25 km  & $-115$ đến $-109$ & $-12$ đến $-9$ & Môi trường thoáng giúp duy trì kết nối nhưng vẫn dao động \\
+			\hline
+			31 km   & $-117$ đến $-112$ & $-22$ đến $-19$ & Giới hạn thu, kết nối chập chờn, dễ mất gói \\
+			\hline
+		\end{tabular}
+	\end{table}
+	
+	\subsection{Xây dựng kịch bản kiểm thử ở môi trường nội đô}
+	
+	Để đánh giá khả năng truyền xa và mức độ ổn định của liên kết LoRa trong điều kiện truyền trong thành phố, nhóm tiến hành xây dựng kịch bản kiểm thử và triển khai đo đạc tại môi trường nội đô. Đây là khu vực có đặc trưng bởi mật độ nhà cao tầng lớn, nhiều vật cản (tường bê tông, cây cối, phương tiện giao thông) và tồn tại nhiễu điện từ từ các hệ thống vô tuyến khác, từ đó gây ảnh hưởng đáng kể đến chất lượng tín hiệu thu.
+	
+	Trong kịch bản kiểm thử này, nhóm tiến hành bố trí bộ phát (TX) đặt trong khu nhà tập thể ở độ cao khoảng 10 m so với mặt đất (tương đương tầng 3). Bộ thu (RX) được di chuyển và thu tín hiệu tại các vị trí khác nhau trên mặt đất với khoảng cách lần lượt là 150 m (RX1), 317 m (RX2) và 724 m (RX3), như thể hiện trên bản đồ khảo sát (Hình \ref{fig332}).
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[clip, width=10cm]{fig310.png}
+		\caption[Bản đồ địa điểm thu/phát trong nội đô]{\bfseries \fontsize{12pt}{0pt}\selectfont Bản đồ địa điểm thu/phát trong nội đô}
+		\label{fig332}
+	\end{figure}
+	
+	Đây là môi trường đo có mức độ “khắc nghiệt” cao đối với truyền thông không dây, do tồn tại nhiều vật cản dày đặc như tường bê tông, công trình xây dựng, kết cấu sắt thép, cây cối và các khu vực che khuất đường truyền trực tiếp. Bên cạnh đó, nội đô còn có mật độ tín hiệu vô tuyến lớn (WiFi, 4G/5G và các thiết bị phát khác), làm tăng nguy cơ nhiễu và gây suy giảm chất lượng liên kết. Kết quả đo của nhóm được tổng hợp bằng biểu đồ tại các Hình \ref{fig333}, \ref{fig334}, \ref{fig335}.
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[clip, width=16cm]{measure_img/rssi_snr_150m_urban.png}
+		\caption[Kết quả đo RSSI và SNR tại khoảng cách 150 m trong nội đô]{\bfseries \fontsize{12pt}{0pt}\selectfont Kết quả đo RSSI và SNR tại khoảng cách 150 m trong nội đô}
+		\label{fig333}
+	\end{figure}
+	
+	\textbf{Tại vị trí RX1 (khoảng cách 150 m):} tín hiệu thu được khá ổn định trong điều kiện nội đô. Giá trị RSSI dao động trong khoảng từ $-109$ dBm đến $-107$ dBm, cho thấy cường độ tín hiệu vẫn duy trì tốt dù môi trường xung quanh có nhiều vật cản. Đặc biệt, chỉ số SNR đạt mức dương từ 2.5 dB đến 5.5 dB (phổ biến quanh 3 đến 4 dB), chứng tỏ tín hiệu vẫn nổi lên rõ ràng so với nền nhiễu.
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[clip, width=16cm]{measure_img/rssi_snr_317m_urban.png}
+		\caption[Kết quả đo RSSI và SNR tại khoảng cách 317 m trong nội đô]{\bfseries \fontsize{12pt}{0pt}\selectfont Kết quả đo RSSI và SNR tại khoảng cách 317 m trong nội đô}
+		\label{fig334}
+	\end{figure}
+	
+	\textbf{Tại vị trí RX2 (khoảng cách 317 m):} chất lượng đường truyền bắt đầu suy giảm rõ rệt do ảnh hưởng mạnh hơn của che khuất và nhiễu đa đường từ các công trình xung quanh. RSSI đo được chủ yếu nằm trong vùng $-113$ dBm đến $-109$ dBm, tức chỉ giảm nhẹ so với mốc 150 m, tuy nhiên SNR lại giảm sâu xuống vùng âm, dao động khoảng $-19.75$ dB đến $-15.25$ dB. Điều này cho thấy mặc dù tín hiệu vẫn thu được, nhưng nền nhiễu trong môi trường nội đô đã tăng đáng kể.
+	
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[clip, width=16cm]{measure_img/rssi_snr_724m_urban.png}
+		\caption[Kết quả đo RSSI và SNR tại khoảng cách 724 m trong nội đô]{\bfseries \fontsize{12pt}{0pt}\selectfont Kết quả đo RSSI và SNR tại khoảng cách 724 m trong nội đô}
+		\label{fig335}
+	\end{figure}
+	
+	\textbf{Tại vị trí RX3 (khoảng cách 724 m):} khả năng truyền nhận tiếp tục suy giảm và tiệm cận giới hạn trong điều kiện đô thị nhiều vật cản. RSSI có mức dao động rộng hơn, khoảng $-117$ dBm đến $-112$ dBm, phản ánh tín hiệu đã yếu đi đáng kể và chịu tác động rõ ràng từ che chắn bởi nhà cửa, tường bê tông và các kết cấu kim loại. Đồng thời, SNR giảm xuống rất thấp, nằm trong khoảng $-23.0$ dB đến $-19.75$ dB, cho thấy tín hiệu bị “chìm” mạnh trong nền nhiễu. Dù hệ thống vẫn thu được gói tin ở khoảng cách này, nhưng chất lượng đường truyền không còn ổn định và dễ bị ảnh hưởng bởi thay đổi môi trường như hướng anten, vật cản di động và mức nhiễu xung quanh.
+	
+	\newpage
+	
+	\section*{PHÂN CÔNG NHIỆM VỤ}
+	\phantomsection\addcontentsline{toc}{section}{\numberline {}PHÂN CÔNG NHIỆM VỤ}
+	
+	\subsection*{Bảng phân công nhiệm vụ}
+	
+	\begin{table}[H]
+		\centering
+		\renewcommand{\arraystretch}{1.2}
+		\begin{tabular}{|p{5.25cm}|p{6.75cm}|p{3cm}|}
+			\hline
+			\textbf{Công việc} & \textbf{Kết quả đạt được} & \textbf{Thực hiện} \\ \hline
+			
+			Lựa chọn đề tài & Chốt chủ đề kiểm thử giao thức LoRa & Cả nhóm \\ \hline
+			
+			Tìm hiểu LoRa (1), mua linh kiện (2), thiết kế sơ đồ (3) 
+			& Hoàn thành tìm hiểu, chuẩn bị linh kiện và thiết kế sơ đồ hệ thống 
+			& Cả nhóm (1), Vũ (2), Luật (3) \\ \hline
+			
+			Code hệ thống (1), kiểm thử truyền nhận (2) 
+			& Code xong, truyền 0m 
+			& Vũ (1), Quỳnh, Luật (2) \\ \hline
+			
+			Xây dựng kịch bản kiểm thử 
+			& Kịch bản đo tĩnh, động, môi trường 
+			& Cả nhóm \\ \hline
+			
+			Kiểm thử 1 
+			& Khoảng cách 0m, 8m
+			& Cả nhóm \\ \hline
+			
+			Báo cáo tiến độ
+			& Hoàn thiện báo cáo tiến độ
+			& Cả nhóm \\ \hline
+			
+			Kiểm thử 2 
+			& Khoảng cách 15m, 70m LOS, trong nước hồ Tiền 
+			& Cả nhóm \\ \hline
+			
+			Kiểm thử 3 
+			& Hồ Bảy Mẫu: 600m (giới hạn hồ) 
+			& Cả nhóm \\ \hline
+			
+			Nâng cấp anten 
+			& Tạo anten Yagi 5 phần tử 
+			& Cả nhóm \\ \hline
+			
+			Kiểm thử 4 
+			& Quanh hồ Tây: 3.2km (giới hạn hồ) 
+			& Cả nhóm \\ \hline
+			
+			Kiểm thử 5 
+			& Đường sắt trên cao: 1-2km
+			& Vũ, Luật \\ \hline
+			
+			Kiểm thử 6 
+			& Chung cư Hateco Apollo
+			& Cả nhóm \\ \hline
+			
+			Nâng cấp anten 
+			& Nâng cấp anten Yagi 5 phần tử 
+			& Cả nhóm \\ \hline
+			
+			Kiểm thử 7 
+			& Sông Hồng - Sơn Tây: 31km
+			& Cả nhóm \\ \hline
+			
+			Kiểm thử 8 
+			& Nội đô: 700m
+			& Vũ \\ \hline
+			
+			Xử lý số liệu (1), slide (2), báo cáo (3) 
+			& Hoàn thiện số liệu, slide và báo cáo tổng kết 
+			& Vũ (1)(3), Quỳnh (2)(3) \\ \hline
+			
+		\end{tabular}
+	\end{table}
+	
+	\subsection*{Phần trăm công việc}
+	
+	\begin{table}[H]
+		\centering
+		\renewcommand{\arraystretch}{1.2}
+		\begin{tabular}{|c|p{5.5cm}|c|}
+			\hline
+			\textbf{STT} & \textbf{Tên thành viên} & \textbf{Phần trăm đóng góp} \\ \hline
+			
+			1 & Bùi Thị Quỳnh & 33\% \\ \hline
+			
+			2 & Vũ Văn Luật & 33\% \\ \hline
+			
+			3 & Đặng Quang Vũ & 34\% \\ \hline
+			
+		\end{tabular}
+	\end{table}
+	
+	\newpage
+	
+	\section*{KẾT LUẬN}
+	\phantomsection\addcontentsline{toc}{section}{\numberline {}KẾT LUẬN}
+	
+	\subsection*{Kết luận chung}
+	\phantomsection\addcontentsline{toc}{section}{\numberline {}Kết luận chung}
+	
+	Trong khuôn khổ bài tập lớn môn học Hệ thống nhúng và thiết kế giao tiếp nhúng, nhóm đã tiến hành nghiên cứu và triển khai hệ thống truyền thông sử dụng công nghệ LoRa nhằm đánh giá hiệu năng liên kết vô tuyến trong nhiều điều kiện môi trường khác nhau. Hệ thống được xây dựng hoàn chỉnh theo mô hình phát--thu, bao gồm các khối phần cứng chính như vi điều khiển, module LoRa, anten và khối hiển thị/giám sát, đồng thời được phát triển phần mềm nhúng để thực hiện truyền nhận dữ liệu, ghi nhận các tham số chất lượng liên kết và hỗ trợ kiểm thử thực tế.
+	
+	Thông qua quá trình thiết kế kịch bản đo, nhóm đã thực hiện các bài kiểm thử ở nhiều bối cảnh khác nhau như môi trường nội đô, khu vực có vật cản và nhiễu cao, môi trường mở và các tuyến đường truyền xa. Các kết quả thu được cho thấy chất lượng tín hiệu phụ thuộc rõ rệt vào khoảng cách truyền, điều kiện địa hình, mức độ che chắn, cũng như loại anten và cách bố trí hệ thống. Các tham số RSSI và SNR thay đổi theo từng điểm đo, phản ánh đặc tính suy hao đường truyền và ảnh hưởng của nhiễu trong môi trường thực tế; trong đó các khu vực có nhiều nhà cao tầng, vật cản hoặc nguồn nhiễu mạnh thường gây suy giảm chất lượng liên kết và làm tín hiệu không ổn định hơn so với môi trường thoáng.
+	
+	Bên cạnh việc đánh giá định lượng, nhóm cũng rút ra được nhiều kinh nghiệm quan trọng trong quá trình triển khai hệ thống nhúng và giao tiếp không dây, bao gồm việc cấu hình tham số LoRa phù hợp, đảm bảo tính ổn định khi truyền nhận, tối ưu phần cứng ngoại vi, cũng như quy trình thu thập và xử lý số liệu đo để đưa ra nhận xét khách quan. Nhìn chung, đồ án đã đạt được mục tiêu đề ra, chứng minh được khả năng ứng dụng của LoRa trong các bài toán truyền thông tầm xa công suất thấp và cung cấp cơ sở thực nghiệm để lựa chọn cấu hình phù hợp trong từng môi trường triển khai.
+	
+	\subsection*{Hướng phát triển}
+	\phantomsection\addcontentsline{toc}{section}{\numberline {}Hướng phát triển}
+	
+	Mặc dù hệ thống đã được triển khai và kiểm thử thành công, đề tài vẫn còn nhiều tiềm năng để mở rộng và cải tiến trong các nghiên cứu tiếp theo. Một số hướng phát triển có thể xem xét bao gồm:
+	
+	- Mở rộng phạm vi đánh giá bằng cách thử nghiệm nhiều cấu hình LoRa khác nhau (BW, SF, CR, TX Power) để phân tích sâu hơn mối quan hệ giữa tốc độ dữ liệu, độ trễ, độ ổn định liên kết và khoảng cách truyền.
+	
+	- Tích hợp cơ chế ghi log dữ liệu tự động theo thời gian thực (kèm timestamp, GPS) và xây dựng công cụ trực quan hóa dữ liệu để hỗ trợ phân tích hiệu năng, phát hiện vùng phủ sóng yếu và đánh giá tính ổn định theo từng tuyến đường.
+	
+	- So sánh hiệu năng LoRa với các công nghệ truyền thông khác như WiFi, ZigBee hoặc NB-IoT trong cùng điều kiện đo nhằm làm rõ ưu/nhược điểm và tính phù hợp của từng giải pháp.
+	
+	- Nghiên cứu các giải pháp cải thiện chất lượng liên kết như tối ưu anten (thiết kế, định hướng, độ cao lắp đặt), sử dụng anten định hướng trong các bài toán truyền xa, hoặc bổ sung mạch phối hợp trở kháng để giảm phản xạ và tăng hiệu suất bức xạ.
+	
+	- Phát triển hệ thống theo mô hình mạng LoRa/LoRaWAN với nhiều node và gateway, từ đó đánh giá khả năng mở rộng, độ tin cậy khi có nhiều thiết bị truy cập, cũng như các vấn đề về collision và hiệu suất kênh trong thực tế.
+	
+	- Bổ sung các cơ chế đảm bảo truyền tin như kiểm tra lỗi nâng cao, tự động truyền lại (retransmission), mã hóa dữ liệu và xác thực gói tin để tăng tính an toàn và độ tin cậy cho các ứng dụng IoT triển khai ngoài thực địa.
 	
 	\newpage
 	

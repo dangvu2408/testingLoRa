@@ -1,6 +1,14 @@
-\contentsline {table}{\numberline {1.1}{\ignorespaces Bảng trạng thái của mã tích chập (2, 1, 2)}}{1}{table.caption.9}%
-\contentsline {table}{\numberline {2.1}{\ignorespaces Thông số kỹ thuật của vi điều khiển ESP32}}{5}{table.caption.12}%
-\contentsline {table}{\numberline {2.2}{\ignorespaces Thông số kỹ thuật của Module Ra-02}}{6}{table.caption.14}%
-\contentsline {table}{\numberline {3.1}{\ignorespaces Bảng thông số cấu hình bản tin LoRa}}{9}{table.caption.16}%
-\contentsline {table}{\numberline {3.2}{\ignorespaces Bảng tổng hợp khả năng truyền ở các khoảng cách khác nhau}}{12}{table.caption.20}%
-\contentsline {table}{\numberline {3.3}{\ignorespaces Bảng tổng hợp khả năng truyền ở các khoảng cách khác nhau tại Hồ Tây}}{20}{table.caption.34}%
+\babel@toc {vietnamese}{}\relax 
+\contentsline {table}{\numberline {2.1}{\ignorespaces Thông số kỹ thuật của vi điều khiển ESP32}}{17}{table.caption.15}%
+\contentsline {table}{\numberline {2.2}{\ignorespaces Thông số kỹ thuật của Module Ra-02}}{19}{table.caption.17}%
+\contentsline {table}{\numberline {2.3}{\ignorespaces Thông số kỹ thuật của màn hình OLED SSD1306}}{21}{table.caption.19}%
+\contentsline {table}{\numberline {2.4}{\ignorespaces Thông số kỹ thuật của mạch LM2596}}{23}{table.caption.21}%
+\contentsline {table}{\numberline {2.5}{\ignorespaces Thông số kỹ thuật anten monopole 12dBi}}{25}{table.caption.23}%
+\contentsline {table}{\numberline {2.6}{\ignorespaces Thông số kỹ thuật anten NL-770R}}{26}{table.caption.25}%
+\contentsline {table}{\numberline {2.7}{\ignorespaces Thông số kỹ thuật anten 433 MHz 38dBi}}{27}{table.caption.27}%
+\contentsline {table}{\numberline {2.8}{\ignorespaces Thông số thiết kế anten Yagi tự chế phiên bản 1}}{28}{table.caption.29}%
+\contentsline {table}{\numberline {2.9}{\ignorespaces Thông số thiết kế anten Yagi tự chế phiên bản 2}}{30}{table.caption.34}%
+\contentsline {table}{\numberline {3.1}{\ignorespaces Bảng thông số cấu hình bản tin LoRa}}{34}{table.caption.41}%
+\contentsline {table}{\numberline {3.2}{\ignorespaces Bảng tổng hợp khả năng truyền ở các khoảng cách khác nhau}}{37}{table.caption.45}%
+\contentsline {table}{\numberline {3.3}{\ignorespaces Bảng tổng hợp khả năng truyền ở các khoảng cách khác nhau tại Hồ Tây}}{45}{table.caption.59}%
+\contentsline {table}{\numberline {3.4}{\ignorespaces Tổng hợp đánh giá tín hiệu theo khoảng cách truyền}}{56}{table.caption.76}%

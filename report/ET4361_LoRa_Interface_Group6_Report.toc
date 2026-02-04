@@ -1,30 +1,89 @@
+\babel@toc {vietnamese}{}\relax 
 \thispagestyle {empty}
 \contentsline {section}{\hbox to\@tempdima {\hfil } DANH MỤC KÝ HIỆU VÀ CHỮ VIẾT TẮT}{i}{section*.5}%
-\contentsline {section}{\hbox to\@tempdima {\hfil }DANH MỤC HÌNH VẼ}{iii}{section*.7}%
-\contentsline {section}{\hbox to\@tempdima {\hfil } DANH MỤC BẢNG BIỂU}{iv}{section*.8}%
+\contentsline {section}{\hbox to\@tempdima {\hfil }DANH MỤC HÌNH VẼ}{iv}{section*.7}%
+\contentsline {section}{\hbox to\@tempdima {\hfil } DANH MỤC BẢNG BIỂU}{v}{section*.8}%
 \contentsline {section}{\hbox to\@tempdima {\hfil }CHƯƠNG 1. CƠ SỞ LÝ THUYẾT}{1}{section*.8}%
 \contentsline {subsection}{\numberline {1.1}Giới thiệu về công nghệ truyền thông Lora}{1}{subsection.1.1}%
-\contentsline {subsubsection}{\numberline {1.1.1}Kỹ thuật trải phổ}{2}{subsubsection.1.1.1}%
-\contentsline {subsection}{\numberline {1.2}Các thông số của Anten}{2}{subsection.1.2}%
-\contentsline {subsubsection}{\numberline {1.2.1}Tham số $S_{11}$}{2}{subsubsection.1.2.1}%
-\contentsline {section}{\hbox to\@tempdima {\hfil }CHƯƠNG 2. HỆ THỐNG PHẦN CỨNG}{3}{subsubsection.1.2.1}%
-\contentsline {subsection}{\numberline {2.1}Vi điều khiển ESP32}{3}{subsection.2.1}%
-\contentsline {subsubsection}{\numberline {2.1.1}Thông số kỹ thuật}{3}{subsubsection.2.1.1}%
-\contentsline {subsubsection}{\numberline {2.1.2}Ưu điểm của ESP32}{5}{subsubsection.2.1.2}%
-\contentsline {subsubsection}{\numberline {2.1.3}Nhược điểm của ESP32}{5}{subsubsection.2.1.3}%
-\contentsline {subsubsection}{\numberline {2.1.4}Ứng dụng phổ biến của ESP32}{5}{subsubsection.2.1.4}%
-\contentsline {subsection}{\numberline {2.2}Module Ra-02}{6}{subsection.2.2}%
-\contentsline {subsubsection}{\numberline {2.2.1}Thông số kỹ thuật}{6}{subsubsection.2.2.1}%
-\contentsline {subsubsection}{\numberline {2.2.2}Ưu điểm của Module Ra-02}{7}{subsubsection.2.2.2}%
-\contentsline {subsubsection}{\numberline {2.2.3}Nhược điểm của Module Ra-02}{7}{subsubsection.2.2.3}%
-\contentsline {subsubsection}{\numberline {2.2.4}Ứng dụng phổ biến của Module Ra-02}{7}{subsubsection.2.2.4}%
-\contentsline {subsection}{\numberline {2.3}Màn hình SSD-1306}{8}{subsection.2.3}%
-\contentsline {subsection}{\numberline {2.4}Mạch ổn áp LM2596}{8}{subsection.2.4}%
-\contentsline {subsection}{\numberline {2.5}Anten truyền/nhận sóng}{8}{subsection.2.5}%
-\contentsline {section}{\hbox to\@tempdima {\hfil }CHƯƠNG 3. KẾT QUẢ THỰC NGHIỆM}{9}{subsection.2.5}%
-\contentsline {subsection}{\numberline {3.1}Kiểm thử truyền tín hiệu LoRa trong các điều kiện cơ bản}{9}{subsection.3.1}%
-\contentsline {subsubsection}{\numberline {3.1.1}Kịch bản kiểm thử trong điều kiện truyền thẳng, không vật cản}{9}{subsubsection.3.1.1}%
-\contentsline {paragraph}{\numberline {3.1.1.1}Môi trường hành lang kín, không che khuất trực tiếp}{9}{paragraph.3.1.1.1}%
-\contentsline {paragraph}{\numberline {3.1.1.2}Môi trường không gian mở, truyền thẳng với phản xạ tối thiểu}{12}{paragraph.3.1.1.2}%
-\contentsline {subsubsection}{\numberline {3.1.2}Kịch bản kiểm thử trong môi trường nước}{20}{subsubsection.3.1.2}%
-\contentsline {section}{\hbox to\@tempdima {\hfil }TÀI LIỆU THAM KHẢO}{24}{section*.38}%
+\contentsline {subsubsection}{\numberline {1.1.1}Kỹ thuật trải phổ}{1}{subsubsection.1.1.1}%
+\contentsline {subsubsection}{\numberline {1.1.2}LoRa Chirp Spread Spectrum (CSS)}{2}{subsubsection.1.1.2}%
+\contentsline {subsubsection}{\numberline {1.1.3}Các thông số kỹ thuật quan trọng của LoRa}{3}{subsubsection.1.1.3}%
+\contentsline {subsubsection}{\numberline {1.1.4}Cấu trúc bản tin LoRa ở lớp vật lý}{4}{subsubsection.1.1.4}%
+\contentsline {subsubsection}{\numberline {1.1.5}Thời gian phát khung}{5}{subsubsection.1.1.5}%
+\contentsline {subsubsection}{\numberline {1.1.6}Những đặc điểm kỹ thuật nổi bật của công nghệ LoRa}{6}{subsubsection.1.1.6}%
+\contentsline {subsection}{\numberline {1.2}Các thông số của Anten}{6}{subsection.1.2}%
+\contentsline {subsubsection}{\numberline {1.2.1}Tham số $S_{11}$}{7}{subsubsection.1.2.1}%
+\contentsline {subsubsection}{\numberline {1.2.2}Đồ thị Smith}{7}{subsubsection.1.2.2}%
+\contentsline {paragraph}{\numberline {1.2.2.1}Cơ sở toán học}{8}{paragraph.1.2.2.1}%
+\contentsline {paragraph}{\numberline {1.2.2.2}Ứng dụng}{9}{paragraph.1.2.2.2}%
+\contentsline {paragraph}{\numberline {1.2.2.3}Ưu điểm}{9}{paragraph.1.2.2.3}%
+\contentsline {paragraph}{\numberline {1.2.2.4}Nhược điểm}{9}{paragraph.1.2.2.4}%
+\contentsline {subsection}{\numberline {1.3}Anten monopole, anten dipole và anten Yagi}{9}{subsection.1.3}%
+\contentsline {subsubsection}{\numberline {1.3.1}Anten monopole}{9}{subsubsection.1.3.1}%
+\contentsline {paragraph}{\numberline {1.3.1.1}Cấu trúc và nguyên lý hoạt động}{9}{paragraph.1.3.1.1}%
+\contentsline {paragraph}{\numberline {1.3.1.2}Đặc tính điện từ}{10}{paragraph.1.3.1.2}%
+\contentsline {paragraph}{\numberline {1.3.1.3}Ứng dụng}{11}{paragraph.1.3.1.3}%
+\contentsline {subsubsection}{\numberline {1.3.2}Anten dipole}{11}{subsubsection.1.3.2}%
+\contentsline {paragraph}{\numberline {1.3.2.1}Cấu trúc và nguyên lý hoạt động}{11}{paragraph.1.3.2.1}%
+\contentsline {paragraph}{\numberline {1.3.2.2}Đặc tính điện từ}{12}{paragraph.1.3.2.2}%
+\contentsline {paragraph}{\numberline {1.3.2.3}Ứng dụng}{12}{paragraph.1.3.2.3}%
+\contentsline {subsubsection}{\numberline {1.3.3}Anten Yagi}{12}{subsubsection.1.3.3}%
+\contentsline {paragraph}{\numberline {1.3.3.1}Cấu trúc và nguyên lý hoạt động}{12}{paragraph.1.3.3.1}%
+\contentsline {paragraph}{\numberline {1.3.3.2}Đặc tính điện từ}{13}{paragraph.1.3.3.2}%
+\contentsline {paragraph}{\numberline {1.3.3.3}Ứng dụng}{14}{paragraph.1.3.3.3}%
+\contentsline {section}{\hbox to\@tempdima {\hfil }CHƯƠNG 2. HỆ THỐNG PHẦN CỨNG}{15}{paragraph.1.3.3.3}%
+\contentsline {subsection}{\numberline {2.1}Vi điều khiển ESP32}{15}{subsection.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.1}Thông số kỹ thuật}{16}{subsubsection.2.1.1}%
+\contentsline {subsubsection}{\numberline {2.1.2}Ưu điểm của ESP32}{17}{subsubsection.2.1.2}%
+\contentsline {subsubsection}{\numberline {2.1.3}Nhược điểm của ESP32}{17}{subsubsection.2.1.3}%
+\contentsline {subsubsection}{\numberline {2.1.4}Ứng dụng phổ biến của ESP32}{18}{subsubsection.2.1.4}%
+\contentsline {subsection}{\numberline {2.2}Module Ra-02}{18}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}Thông số kỹ thuật}{18}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2}Ưu điểm của Module Ra-02}{19}{subsubsection.2.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.3}Nhược điểm của Module Ra-02}{19}{subsubsection.2.2.3}%
+\contentsline {subsubsection}{\numberline {2.2.4}Ứng dụng phổ biến của Module Ra-02}{20}{subsubsection.2.2.4}%
+\contentsline {subsection}{\numberline {2.3}Màn hình SSD-1306}{20}{subsection.2.3}%
+\contentsline {subsubsection}{\numberline {2.3.1}Thông số kỹ thuật}{20}{subsubsection.2.3.1}%
+\contentsline {subsubsection}{\numberline {2.3.2}Ưu điểm của màn hình OLED SSD1306}{21}{subsubsection.2.3.2}%
+\contentsline {subsubsection}{\numberline {2.3.3}Nhược điểm của màn hình OLED SSD1306}{21}{subsubsection.2.3.3}%
+\contentsline {subsubsection}{\numberline {2.3.4}Ứng dụng phổ biến của màn hình OLED SSD1306}{22}{subsubsection.2.3.4}%
+\contentsline {subsection}{\numberline {2.4}Mạch ổn áp LM2596}{22}{subsection.2.4}%
+\contentsline {subsubsection}{\numberline {2.4.1}Thông số kỹ thuật}{22}{subsubsection.2.4.1}%
+\contentsline {subsubsection}{\numberline {2.4.2}Ưu điểm của mạch ổn áp LM2596}{23}{subsubsection.2.4.2}%
+\contentsline {subsubsection}{\numberline {2.4.3}Nhược điểm của mạch ổn áp LM2596}{23}{subsubsection.2.4.3}%
+\contentsline {subsubsection}{\numberline {2.4.4}Ứng dụng phổ biến của mạch ổn áp LM2596}{24}{subsubsection.2.4.4}%
+\contentsline {subsection}{\numberline {2.5}Anten truyền/nhận sóng}{24}{subsection.2.5}%
+\contentsline {subsubsection}{\numberline {2.5.1}Anten monopole 12dBi}{24}{subsubsection.2.5.1}%
+\contentsline {paragraph}{\numberline {2.5.1.1}Thông số kỹ thuật}{24}{paragraph.2.5.1.1}%
+\contentsline {paragraph}{\numberline {2.5.1.2}Ưu điểm}{25}{paragraph.2.5.1.2}%
+\contentsline {paragraph}{\numberline {2.5.1.3}Nhược điểm}{25}{paragraph.2.5.1.3}%
+\contentsline {subsubsection}{\numberline {2.5.2}Anten NL-770R băng tần kép 144/430 MHz}{25}{subsubsection.2.5.2}%
+\contentsline {paragraph}{\numberline {2.5.2.1}Thông số kỹ thuật}{25}{paragraph.2.5.2.1}%
+\contentsline {paragraph}{\numberline {2.5.2.2}Ưu điểm}{26}{paragraph.2.5.2.2}%
+\contentsline {paragraph}{\numberline {2.5.2.3}Nhược điểm}{26}{paragraph.2.5.2.3}%
+\contentsline {subsubsection}{\numberline {2.5.3}Anten monopole 38dBi}{27}{subsubsection.2.5.3}%
+\contentsline {paragraph}{\numberline {2.5.3.1}Thông số kỹ thuật}{27}{paragraph.2.5.3.1}%
+\contentsline {paragraph}{\numberline {2.5.3.2}Ưu điểm}{27}{paragraph.2.5.3.2}%
+\contentsline {paragraph}{\numberline {2.5.3.3}Nhược điểm}{28}{paragraph.2.5.3.3}%
+\contentsline {subsubsection}{\numberline {2.5.4}Anten Yagi tự chế}{28}{subsubsection.2.5.4}%
+\contentsline {paragraph}{\numberline {2.5.4.1}Anten Yagi tự chế - Phiên bản 1}{28}{paragraph.2.5.4.1}%
+\contentsline {paragraph}{\numberline {2.5.4.2}Anten Yagi tự chế - Phiên bản 2}{29}{paragraph.2.5.4.2}%
+\contentsline {subsection}{\numberline {2.6}Thiết kế hệ thống}{31}{subsection.2.6}%
+\contentsline {subsubsection}{\numberline {2.6.1}Tổng quan kết nối hệ thống}{31}{subsubsection.2.6.1}%
+\contentsline {subsubsection}{\numberline {2.6.2}Sơ đồ nguyên lý và PCB của hệ thống}{32}{subsubsection.2.6.2}%
+\contentsline {section}{\hbox to\@tempdima {\hfil }CHƯƠNG 3. KẾT QUẢ THỰC NGHIỆM}{34}{figure.caption.40}%
+\contentsline {subsection}{\numberline {3.1}Kiểm thử truyền tín hiệu LoRa trong các điều kiện cơ bản}{34}{subsection.3.1}%
+\contentsline {subsubsection}{\numberline {3.1.1}Kịch bản kiểm thử trong điều kiện truyền thẳng, không vật cản}{34}{subsubsection.3.1.1}%
+\contentsline {paragraph}{\numberline {3.1.1.1}Môi trường hành lang kín, không che khuất trực tiếp}{34}{paragraph.3.1.1.1}%
+\contentsline {paragraph}{\numberline {3.1.1.2}Môi trường không gian mở, truyền thẳng với phản xạ tối thiểu}{37}{paragraph.3.1.1.2}%
+\contentsline {subsubsection}{\numberline {3.1.2}Kịch bản kiểm thử trong môi trường nước}{45}{subsubsection.3.1.2}%
+\contentsline {subsubsection}{\numberline {3.1.3}Kịch bản kiểm thử trong điều kiện di động}{48}{subsubsection.3.1.3}%
+\contentsline {subsection}{\numberline {3.2}Kiểm thử và tối đa hóa khoảng cách truyền tín hiệu LoRa}{49}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}Xây dựng kịch bản kiểm thử ở bán kính gần}{49}{subsubsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2}Xây dựng kịch bản kiểm thử ở khoảng cách xa}{52}{subsubsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.3}Xây dựng kịch bản kiểm thử ở môi trường nội đô}{57}{subsection.3.3}%
+\contentsline {section}{\hbox to\@tempdima {\hfil }PHÂN CÔNG NHIỆM VỤ}{60}{section*.81}%
+\contentsline {section}{\hbox to\@tempdima {\hfil }KẾT LUẬN}{61}{section*.84}%
+\contentsline {section}{\hbox to\@tempdima {\hfil }Kết luận chung}{61}{section*.85}%
+\contentsline {section}{\hbox to\@tempdima {\hfil }Hướng phát triển}{61}{section*.86}%
+\contentsline {section}{\hbox to\@tempdima {\hfil }TÀI LIỆU THAM KHẢO}{63}{section*.87}%
